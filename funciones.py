@@ -1,3 +1,4 @@
+
 def limpiar_df(url_pdf: str, nombre_archivo: str = "odm.pdf") -> pd.DataFrame:
     """
     Descarga, extrae y limpia datos de un PDF en un DataFrame listo para análisis.
