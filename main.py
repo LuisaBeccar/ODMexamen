@@ -12,7 +12,8 @@ if __name__ == "__main__":
 
     # creacion de variable sexo
     url = "https://raw.githubusercontent.com/LuisaBeccar/ODMexamen/main/generar_data/borrador/ns_def.csv"
-    df = mapear_sexo_por_primer_nombre(df, url, nombre_col_original='primer_nombre', sexo_col='SEXO')
+    #df.columns = df.columns.str.strip().str.upper()
+    df = mapear_sexo_por_primer_nombre(df, url, nombre_col_original='NOMBRE', sexo_col='SEXO')
 
     # creacion de variables universidad
     url = "https://raw.githubusercontent.com/LuisaBeccar/ODMexamen/main/universidades.csv"
@@ -20,6 +21,6 @@ if __name__ == "__main__":
 
 
     print(df)
-    #df.to_csv("odm_limpio.csv", index=False)
-    #print("Análisis finalizado. Archivo 'odm_limpio.csv' creado.")
+    df.to_csv("odm_2.0.csv", index=False)
+    print("Análisis finalizado. Archivo 'odm_2.0.csv' creado.")
 
