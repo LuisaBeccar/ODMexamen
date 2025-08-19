@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>README</title>
+  <title></title>
 </head>
 <body>
   <h1>Examen Unico Orden de Merito</h1>
@@ -14,6 +14,6 @@
   <p>A partir de odm_limpio.csv procedere a realizar el analisis</p>
     <li>Descriptivo de cada variable</li>
     <li>Buscar correlaciones y ver si son estadisticamente significativas</li>
-<pre><code>Código o instrucciones de uso</code></pre>
+
 </body>
 </html>
