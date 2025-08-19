@@ -28,3 +28,9 @@ pip install -r requirements.txt
 
 3- Probar ejecución:
 python main.py
+
+> EN LIMPIO 
+1) Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+2) .venv\Scripts\Activate.ps1
+3) pip install -r requirements.txt
+4) python main.py

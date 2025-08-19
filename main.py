@@ -1,4 +1,4 @@
-from funciones import limpiar_df, mapear_sexo_por_primer_nombre, mapear_universidades
+from funciones import limpiar_df, mapear_sexo_por_primer_nombre, asignar_origen, mapear_universidades
 
 if __name__ == "__main__":
     # Lógica principal
@@ -14,6 +14,9 @@ if __name__ == "__main__":
     url = "https://raw.githubusercontent.com/LuisaBeccar/ODMexamen/main/generar_data/borrador/ns_def.csv"
     #df.columns = df.columns.str.strip().str.upper()
     df = mapear_sexo_por_primer_nombre(df, url, nombre_col_original='NOMBRE', sexo_col='SEXO')
+
+    # creacion de variable origen
+    df = asignar_origen(df, columna_dni='DNI')
 
     # creacion de variables universidad
     url = "https://raw.githubusercontent.com/LuisaBeccar/ODMexamen/main/universidades.csv"

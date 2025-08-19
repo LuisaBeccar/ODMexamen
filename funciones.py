@@ -121,6 +121,14 @@ def mapear_sexo_por_primer_nombre(df, url, nombre_col_original='NOMBRE', sexo_co
     return df
 
 
+def asignar_origen(df, columna_dni='DNI'):
+    # Crear columna ORIGEN según condición del DNI
+    df['DNI'] = pd.to_numeric(df['DNI'], errors='coerce').astype('Int64')
+    df['ORIGEN'] = df[columna_dni].apply(lambda x: 'arg' if x < 50000000 else 'extr')
+    
+    return df
+
+
 def mapear_universidades(df, url, nombre_col_original='UNIVERSIDAD'):
 
     # Descargar y leer el archivo CSV si no existe localmente
