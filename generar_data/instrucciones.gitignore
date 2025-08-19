@@ -1,0 +1,30 @@
+🚀 Pasos para correr en VS Code y GitHub
+
+1- Crear un entorno virtual:
+    1.1 Arriba en la barra de menu, los ..., selecciona "Terminal" y luego "Nueva Terminal".
+    1.2 En la terminal que se abre, ejecuta el siguiente comando para crear un entorno virtual:
+        1.2.1 python -m venv .venv
+        1.2.2 a) .venv\Scripts\activate   # en Windows
+        1.2.2 b) source .venv/bin/activate  # en Linux/Mac
+
+--- dio error, pegue el siguiente comando en la terminal:
+   ✅ Opción 1 – Cambiar la política solo para tu sesión: En tu PowerShell, antes de activar el entorno, ejecuta:
+            Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+        Después activás el entorno:
+            .venv\Scripts\Activate.ps1
+        Esto solo vale para esa ventana, no cambia nada en tu sistema.
+        HICE ESTE, y apaerece en verde (.venv) al inicio de la terminal. Sigo por unto 2-
+
+    ✅ Opción 2 – Usar cmd en lugar de PowerShell: Abrí Símbolo del sistema (cmd.exe) y ejecutá:
+            .venv\Scripts\activate.bat
+
+    ✅ Opción 3 – Usar python directo sin activar: Podés instalar dependencias y correr el código sin activar el venv, usando la ruta completa:
+            .\.venv\Scripts\python.exe -m pip install -r requirements.txt
+            .\.venv\Scripts\python.exe main.py
+
+
+2- Instalar dependencias:
+pip install -r requirements.txt
+
+3- Probar ejecución:
+python main.py

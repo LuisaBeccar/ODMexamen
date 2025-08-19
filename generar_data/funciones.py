@@ -1,3 +1,9 @@
+import os
+import pandas as pd
+import pdfplumber
+import requests
+
+
 
 def limpiar_df(url_pdf: str, nombre_archivo: str = "odm.pdf") -> pd.DataFrame:
     """
@@ -11,7 +17,10 @@ def limpiar_df(url_pdf: str, nombre_archivo: str = "odm.pdf") -> pd.DataFrame:
 
     # Descargar PDF si no existe localmente
     if not os.path.isfile(nombre_archivo):
-        os.system(f"wget {url_pdf} -O {nombre_archivo}")
+        r = requests.get(url_pdf)
+        with open(nombre_archivo, "wb") as f:
+            f.write(r.content)
+
 
     # Extraer tablas del PDF
     data = []
@@ -57,8 +66,10 @@ def limpiar_df(url_pdf: str, nombre_archivo: str = "odm.pdf") -> pd.DataFrame:
 
     cols_f = ["PROMEDIO_CARRERA", "PUNTAJE"]
     df[cols_f] = df[cols_f].replace(",", ".", regex=True).replace("", float('nan')).astype(float)
+    
     cols_i = ['NOTA_EXAMEN', 'COMPONENTE', 'ODM']
-    df[cols_i] = df[cols_i].replace("", float('nan')).astype(int)
+    for col in cols_i:
+        df[col] = pd.to_numeric(df[col], errors="coerce").astype("Int64")
     df['PUNTAJE_CRUDO'] = df['PUNTAJE']-df['COMPONENTE']
 
     # Tiempo entre recibido y inscripcion aprox al examen (1 abril 2025)
@@ -76,9 +87,13 @@ def limpiar_df(url_pdf: str, nombre_archivo: str = "odm.pdf") -> pd.DataFrame:
 def mapear_sexo_por_primer_nombre(df, url, nombre_col_original='NOMBRE', sexo_col='SEXO'):
 
     # Descargar y leer el archivo CSV si no existe localmente
+    # Nombre del archivo local
     file_name = url.split("/")[-1]
+
     if not os.path.isfile(file_name):
-        os.system(f"wget {url}")
+        r = requests.get(url)
+        with open(file_name, "wb") as f:
+            f.write(r.content)
 
     ns_def = pd.read_csv(file_name)
 

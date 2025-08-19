@@ -1,6 +1,0 @@
-pdfplumber
-pdfplumber
-requests
-BeautifulSoup
-os
-pandas

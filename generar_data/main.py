@@ -15,3 +15,6 @@ if __name__ == "__main__":
     df = mapear_sexo_por_primer_nombre(df, url, nombre_col_original='NOMBRE', sexo_col='SEXO')
 
     print(df)
+    df.to_csv("odm_limpio.csv", index=False)
+    print("Análisis finalizado. Archivo 'odm_limpio.csv' creado.")
+
