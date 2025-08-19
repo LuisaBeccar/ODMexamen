@@ -12,7 +12,7 @@ if __name__ == "__main__":
 
     # creacion de variable sexo
     url = "https://raw.githubusercontent.com/LuisaBeccar/ODMexamen/main/generar_data/borrador/ns_def.csv"
-    df = mapear_sexo_por_primer_nombre(df, url, nombre_col_original='NOMBRE', sexo_col='SEXO')
+    df = mapear_sexo_por_primer_nombre(df, url, nombre_col_original='primer_nombre', sexo_col='SEXO')
 
     # creacion de variables universidad
     url = "https://raw.githubusercontent.com/LuisaBeccar/ODMexamen/main/universidades.csv"
