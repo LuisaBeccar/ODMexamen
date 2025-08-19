@@ -119,3 +119,26 @@ def mapear_sexo_por_primer_nombre(df, url, nombre_col_original='NOMBRE', sexo_co
     df.drop(columns=['primer_nombre'], inplace=True)
 
     return df
+
+
+def mapear_universidades(df, url, nombre_col_original='UNIVERSIDAD'):
+
+    # Descargar y leer el archivo CSV si no existe localmente
+    # Nombre del archivo local
+    file_name = url.split("/")[-1]
+
+    if not os.path.isfile(file_name):
+        r = requests.get(url)
+        with open(file_name, "wb") as f:
+            f.write(r.content)
+
+    universidades = pd.read_csv(file_name)
+
+    # Hacer merge con el df original usando la columna UNIVERSIDAD como clave
+    df_merged = df.merge(universidades[['UNIVERSIDAD', 'TIPO_UNI', 'PAIS_UNI', 'UNI']],
+                         left_on=nombre_col_original, right_on='UNIVERSIDAD', how='left')
+
+    # Eliminar la columna original de universidad
+    df_merged = df_merged.drop(columns=[nombre_col_original])
+
+    return df_merged
