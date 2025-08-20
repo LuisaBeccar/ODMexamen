@@ -128,6 +128,12 @@ def asignar_origen(df, columna_dni='DNI'):
     
     return df
 
+def asignar_ranking(df):
+    df['RANKING'] = df.sort_values(
+        by=['ESPECIALIDAD', 'PUNTAJE_CRUDO', 'ODM_CRUDO', 'PROMEDIO', 'DNI'],
+        ascending=[True, False, False, False, True]
+    ).groupby('ESPECIALIDAD').cumcount() + 1
+    return df
 
 def mapear_universidades(df, url, nombre_col_original='UNIVERSIDAD'):
 
