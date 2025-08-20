@@ -11,7 +11,7 @@
   
   <h2>Base de datos: df</h2>
 
-  <p>Como punto de partida se toma el pdf público del orden de merito provisorio. A este se le realizan ciertos pasos de limpieza de datos.</p>
+  <p>Como punto de partida se toma el pdf público del orden de merito provisorio (Y por qué no el definitivo? pues habia empezado con el provisorio antes de que publicaran el definitivo, y luego cuando subieron el definitivo el 20 de agosto, el nombre y apellido estaba todo junto en una misma celda, entonces) ((FUTUROS PASOS, HACER UN JOIN CON EL DNI ENTRE odm y ODM2025 que es el definitivo para que si hubo algun cambio en los puntajes de las notas, se use para el analisis las notas y puntajes definitivos, pero conservar las columnas creadas (sexo a partir del nombre) y las funciones que definen de donde es cada universidad y si es publica o privada, quizas aplicado a la nueva lista que podria llegar a tener corecciones?)). A este se le realizan ciertos pasos de limpieza de datos.</p>
 
   <p>Uso archivos que dejo dentro de la carpeta generar_data: registro_civil y prompts en perplexity.ia, especificamente para:</p>
     <li>Para buscar el sexo de los nombres: </li>
@@ -21,6 +21,8 @@
     <li>Para buscar el país al que pertenece cada universidad:</li>
       <tr>"ahora con la misma metodologia en tandas y devolviendo una tabla quiero que busques el pais a donde pertenece cada institucion"</tr>
     <li> Para estimar si el postulante es argentino o extranjero, mas alla de si estudio en una universidad en argentina o en el exterior, creo la variable ORIGEN donde a modo arbitrario pero pensando en la edad de los postulantes, si el DNI es menor a 50millones sera arg (argentino) y si es mayor, extr (extranjero).</li>
+
+    Columna ODM_CRUDO: columna en mi dataframe df a partir de la columna PUNTAJE_CRUDO que para cada categoria de ESPECIALIDAD ordene de 1 (el mayor) a n° el menor valor de la columna ODM_CRUDO. En caso de que tengan el mismo Puntaje_crudo, que tenga puesto con nuemero mas bajo aquel con mejor nota de examen, en caso de que tengan tambien misma nota de examen, mejor puntaje el que tenga mejor promedio, y en caso de que tengan tambien igual promedio, que se ranquee mejor a aquel con dni con numeno menor.
 
   
   <h2>Analisis</h2>

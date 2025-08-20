@@ -35,15 +35,15 @@ def limpiar_df(url_pdf: str, nombre_archivo: str = "odm.pdf") -> pd.DataFrame:
     df = pd.DataFrame(data[1:], columns=data[1])
     df.columns = df.columns.str.replace("\n", " ", regex=True)
 
-    # Reemplazos globales en todas las celdas
+     # Reemplazos globales en todas las celdas
     df = df.replace({r'\n': ' ', "en tramite": "01-07-2025"}, regex=True) #crear el espacio entre los nombres en vez de "\n" y poner la fecha que elegi en vez de "en tramite"
-    df["COMPONENTE"] = df["COMPONENTE"].replace("", 0) # que ne vez de vacio diga cero
+    df["COMPONENTE"] = df["COMPONENTE"].replace("", 0) # que en vez de vacio diga cero
 
     # Eliminar filas no deseadas
-    df = df[~df.isin(["Número de documento"]).any(axis=1)] # filas donde se repite el encabezado
-    df = df[df['Apellido'].str.strip().astype(bool)]  # elimina filas vacías (con la celda de apellido vacio)
+    df = df[~df.isin(["DNI"]).any(axis=1)] # filas donde se repite el encabezado
+    df = df[df['APELLIDO'].str.strip().astype(bool)]  # elimina filas vacías (con la celda de apellido vacio)
     df = df.dropna().reset_index(drop=True) # reindexar
-
+    
     # Renombrar columnas
     rename_dict = {
         "Número de documento": "DNI",
@@ -58,6 +58,8 @@ def limpiar_df(url_pdf: str, nombre_archivo: str = "odm.pdf") -> pd.DataFrame:
         "PUNTAJE FINAL": "PUNTAJE"
     }
     df = df.rename(columns=rename_dict)
+
+   
 
     # Ajustes de formato
     df["NOMBRE"] = df["NOMBRE"].str.upper()

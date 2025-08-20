@@ -7,7 +7,7 @@ if __name__ == "__main__":
     # Llamar funciones
     
     #primera obtencion del PDF y limpieza con creacion de variable ODM sin puntos Nacionales
-    urlPDFgh = "https://raw.githubusercontent.com/LuisaBeccar/ODMexamen/main/generar_data/ODM2025.pdf"
+    urlPDFgh = "https://raw.githubusercontent.com/LuisaBeccar/ODMexamen/main/generar_data/odm.pdf"
     df = limpiar_df(urlPDFgh)
 
     # creacion de variable sexo
