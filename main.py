@@ -1,4 +1,4 @@
-from funciones import limpiar_df, mapear_sexo_por_primer_nombre, asignar_origen, mapear_universidades
+from funciones import limpiar_df, mapear_sexo_por_primer_nombre, asignar_origen, asignar_ranking, mapear_universidades
 
 if __name__ == "__main__":
     # Lógica principal
