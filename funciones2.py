@@ -55,7 +55,7 @@ def obtener_odm(url_pdf: str, nombre_archivo: str = "odm.pdf") -> pd.DataFrame:
     dfodm = dfodm.rename(columns=rename_dict)
     return dfodm
 
-def mergeODFS (df1, df2)
+def mergeODFS (df1, df2):
   # Supongamos que ya tienes los DataFrames:
   # df1 con columnas: DNI, NOMBRE, APELLIDO (dfodm) 
   # df2 con columnas incluyendo DNI, NOMBRE, APELLIDO, PUNTAJE_CRUDO, ODM_CRUDO, PROMEDIO, ESPECIALIDAD (dfODM2025)
