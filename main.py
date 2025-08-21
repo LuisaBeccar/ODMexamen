@@ -1,4 +1,4 @@
-from funciones import limpiar_df, mapear_sexo_por_primer_nombre, asignar_origen, asignar_ranking, mapear_universidades
+from funciones import limpiar_df, mapear_sexo_por_primer_nombre, asignar_origen, asignar_ranking, mapear_universidades, limpiar_ODM2025
 
 if __name__ == "__main__":
     # Lógica principal
@@ -9,6 +9,9 @@ if __name__ == "__main__":
     #primera obtencion del PDF y limpieza con creacion de variable ODM sin puntos Nacionales
     urlPDFgh = "https://raw.githubusercontent.com/LuisaBeccar/ODMexamen/main/generar_data/odm.pdf"
     df = limpiar_df(urlPDFgh)
+
+    urlPDFODM2025gh = "https://raw.githubusercontent.com/LuisaBeccar/ODMexamen/main/generar_data/ODM2025.pdf"
+    df = limpiar_df(urlPDFODM2025gh)
 
     # creacion de variable sexo
     url = "https://raw.githubusercontent.com/LuisaBeccar/ODMexamen/main/generar_data/ns_def.csv"
