@@ -3,36 +3,8 @@ import pandas as pd
 import pdfplumber
 import requests
 
-def limpiar_ODM2025(url_pdf: str, nombre_archivo: str = "ODM2025.pdf") -> pd.DataFrame:
-    """
-    Descarga, extrae y limpia datos de un PDF en un DataFrame listo para análisis.
-    Args:
-        url_pdf (str): URL del archivo PDF a descargar.
-        nombre_archivo (str): Nombre con que se guardará el PDF localmente.
-    Returns:
-        pd.DataFrame: DataFrame limpio y transformado.
-    """
+def limpiar_df2(df) -> pd.DataFrame:
 
-    # Descargar PDF si no existe localmente
-    if not os.path.isfile(nombre_archivo):
-        r = requests.get(url_pdf)
-        with open(nombre_archivo, "wb") as f:
-            f.write(r.content)
-
-
-    # Extraer tablas del PDF
-    data = []
-    with pdfplumber.open(nombre_archivo) as pdf:
-        for page in pdf.pages:
-            table = page.extract_table()
-            if table:
-                data.extend(table)
-
-    # -----------------
-    # Crear DataFrame y limpiar encabezados
-    df = pd.DataFrame(data[1:], columns=data[1])
-    df.columns = df.columns.str.replace("\n", " ", regex=True)
- 
     # Renombrar columnas
     rename_dict = {
         "Institución formadora": "UNIVERSIDAD",
@@ -77,15 +49,16 @@ def limpiar_ODM2025(url_pdf: str, nombre_archivo: str = "ODM2025.pdf") -> pd.Dat
 
     return df
 
+"""
 def limpiar_df(url_pdf: str, nombre_archivo: str = "odm.pdf") -> pd.DataFrame:
-    """
-    Descarga, extrae y limpia datos de un PDF en un DataFrame listo para análisis.
-    Args:
-        url_pdf (str): URL del archivo PDF a descargar.
-        nombre_archivo (str): Nombre con que se guardará el PDF localmente.
-    Returns:
-        pd.DataFrame: DataFrame limpio y transformado.
-    """
+    
+    #Descarga, extrae y limpia datos de un PDF en un DataFrame listo para análisis.
+    #Args:
+        #url_pdf (str): URL del archivo PDF a descargar.
+        #nombre_archivo (str): Nombre con que se guardará el PDF localmente.
+    #Returns:
+        #pd.DataFrame: DataFrame limpio y transformado.
+    
 
     # Descargar PDF si no existe localmente
     if not os.path.isfile(nombre_archivo):
@@ -154,7 +127,7 @@ def limpiar_df(url_pdf: str, nombre_archivo: str = "odm.pdf") -> pd.DataFrame:
     df["DIAS_DESDE_TITULO"] = (fecha_cero - df["FECHA_TITULO"]).dt.days
 
     return df
-
+"""
 
 def mapear_sexo_por_primer_nombre(df, url, nombre_col_original='NOMBRE', sexo_col='SEXO'):
 
