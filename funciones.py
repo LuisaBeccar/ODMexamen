@@ -200,7 +200,7 @@ def mapear_universidades(df, url, nombre_col_original='UNIVERSIDAD'):
     universidades = pd.read_csv(file_name)
 
     # Hacer merge con el df original usando la columna UNIVERSIDAD como clave
-    df_merged = df.merge(universidades[['UNIVERSIDAD', 'TIPO_UNI', 'PAIS_UNI', 'UNI']],
+    df_merged = df.merge(universidades[['UNIVERSIDAD', 'CLASE_UNI', 'PAIS_UNI', 'UNI']],
                          left_on=nombre_col_original, right_on='UNIVERSIDAD', how='left')
 
     # Eliminar la columna original de universidad
