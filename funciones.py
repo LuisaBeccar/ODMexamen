@@ -3,12 +3,14 @@ import pandas as pd
 import pdfplumber
 import requests
 
-def limpiar_df2(df) -> pd.DataFrame:
+def limpiar_df2(df):
 
     # Renombrar columnas
     rename_dict = {
         "Institución formadora": "UNIVERSIDAD",
         "Promedio": "PROMEDIO_CARRERA",
+        "Apellido": "APELLIDO",
+        "Nombre": "NOMBRE",
         "Fecha de Expedición de Título": "FECHA_TITULO",
         "Especialidad": "ESPECIALIDAD",
         "Puntaje obtenido en el examen": "NOTA_EXAMEN",
@@ -26,6 +28,7 @@ def limpiar_df2(df) -> pd.DataFrame:
     
     # Ajustes de formato
     df["FECHA_TITULO"] = pd.to_datetime(df["FECHA_TITULO"], format="%d-%m-%Y", errors="coerce")
+    
     # Floats
     cols_f = ["PROMEDIO_CARRERA", "PUNTAJE"]
     df[cols_f] = df[cols_f].replace(",", ".", regex=True).replace("", float('nan')).astype(float)
@@ -33,9 +36,11 @@ def limpiar_df2(df) -> pd.DataFrame:
     cols_i = ['NOTA_EXAMEN', 'COMPONENTE', 'ODM']
     for col in cols_i:
         df[col] = pd.to_numeric(df[col], errors="coerce").astype("Int64")
-    df['PUNTAJE_CRUDO'] = df['PUNTAJE']-df['COMPONENTE']
-    df["COMPONENTE"] = df["COMPONENTE"].replace("", 0) # que en vez de vacio diga cero
     
+    df["COMPONENTE"] = df["COMPONENTE"].fillna(0)
+
+    df['PUNTAJE_CRUDO'] = df['PUNTAJE']-df['COMPONENTE']
+      
     # Reemplazos globales en todas las celdas
     df = df.replace({r'\n': ' ', "en tramite": "01-07-2025"}, regex=True) #crear el espacio entre los nombres en vez de "\n" y poner la fecha que elegi en vez de "en tramite"
     # Tiempo entre recibido y el examen (1 julio 2025)
@@ -48,6 +53,7 @@ def limpiar_df2(df) -> pd.DataFrame:
     df["DIAS_DESDE_TITULO"] = (fecha_cero - df["FECHA_TITULO"]).dt.days
 
     return df
+
 
 """
 def limpiar_df(url_pdf: str, nombre_archivo: str = "odm.pdf") -> pd.DataFrame:
