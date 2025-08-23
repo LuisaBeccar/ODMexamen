@@ -4,31 +4,54 @@ import pdfplumber
 import requests
 #-----------------
 
-## Obtener odm provisorio
+## Obtener ODM provisorio (con nombres separados de apellidos)
 """(Solo necesito las columnas DNI, Nombre, Apellido. 
 Para que a partir del nombre habia hecho el join con ns_def.csv 
 donde le asigno el sexo segun el nombre. Esto es asi porque luego 
 en el orden definitivo, pusieron Apellido y Nombre junto, 
 siendo dificil y quizas imposible separar los nombres compuestos 
 y apellidos compuestos para poder obtener solo los nombres y asi estimar 
-si es Femenino o Masculino)"""
-def obtener_odm(url):
-  dfodm = pd.read_csv(url)
-  dfodm.columns = dfodm.columns.str.replace("\n", " ", regex=True)
-    # Renombrar columnas
-  rename_dict = {
+si es Femenino o Masculino)
+"""
+def obtener_odm_provisorio(url_pdf: str, nombre_archivo: str = "odm_provisorio.pdf") -> pd.DataFrame:
+    """
+    Descarga, extrae y limpia datos de un PDF en un DataFrame listo para análisis.
+    Args: url_pdf (str): URL del archivo PDF a descargar.
+          nombre_archivo (str): Nombre con que se guardará el PDF localmente.
+    Returns:  pd.DataFrame: DataFrame
+    """
+    # Descargar PDF si no existe localmente
+    if not os.path.isfile(nombre_archivo):
+        r = requests.get(url_pdf)
+        if r.status_code == 200:
+            with open(nombre_archivo, "wb") as f:
+                f.write(r.content)
+        else:
+            print(f"Error downloading PDF from {url_pdf}. Status code: {r.status_code}")
+            return None
+
+    # Extraer tablas del PDF
+    data = []
+    try:
+        with pdfplumber.open(nombre_archivo) as pdf:
+            for page in pdf.pages:
+                table = page.extract_table()
+                if table:
+                    data.extend(table)
+    except Exception as e:
+        print(f"Error opening or reading PDF file {nombre_archivo}: {e}")
+        return None
+
+    dfodmp = pd.DataFrame(data[1:], columns=data[1])
+    dfodmp.columns = dfodmp.columns.str.replace("\n", " ", regex=True)
+    rename_dict = {
         "Número de documento": "DNI",
         "Apellido": "APELLIDO",
         "Nombre": "NOMBRE" }
-  dfodm = dfodm.rename(columns=rename_dict)
-  columnas_a_eliminar = ['PROMEDIO_CARRERA', 'FECHA_TITULO', 'ESPECIALIDAD', 'NOTA_EXAMEN', 'TIPO_UNI_x',
-                      'COMPONENTE', 'PUNTAJE', 'ODM', 'PUNTAJE_CRUDO', 'DIAS_DESDE_TITULO', 'ORIGEN',
-                      'TIPO_UNI_y', 'PAIS_UNI', 'UNI','SEXO']
-
-  dfodm.drop(columns=columnas_a_eliminar, inplace=True)
-  dfodm['DNI'] = dfodm['DNI'].astype(str)
-  return dfodm
-#-----------------
+    dfodmp = dfodmp.rename(columns=rename_dict)
+    dfodmp['DNI'] = dfodmp['DNI'].astype(str)
+    
+    return dfodmp
 
 ## Obtener ODM definitivo
 def obtener_ODM2025(url_pdf: str, nombre_archivo: str = "ODM2025.pdf") -> pd.DataFrame:
@@ -100,7 +123,6 @@ def limpiar_df(df):
     df = df[~df.isin(["DNI"]).any(axis=1)] # filas donde se repite el encabezado
     df = df[df['DNI'].str.strip().astype(bool)]  # elimina filas vacías (con la celda de apellido vacio)
     df = df.dropna().reset_index(drop=True) # reindexar
-
 
     # Ajustes de formato
     df["FECHA_TITULO"] = pd.to_datetime(df["FECHA_TITULO"], format="%d-%m-%Y", errors="coerce")

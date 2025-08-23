@@ -1,16 +1,16 @@
-from funciones import obtener_odm, obtener_ODM2025, mergeODFS, limpiar_df, mapear_sexo_por_primer_nombre, asignar_origen, asignar_ODM_crudo, mapear_universidades
+from funciones import obtener_odm_provisorio, obtener_ODM2025, mergeODFS, limpiar_df, mapear_sexo_por_primer_nombre, asignar_origen, asignar_ODM_crudo, mapear_universidades
 
 if __name__ == "__main__":
     # Lógica principal
     print("Iniciando análisis")
    
-    urlodm = "https://raw.githubusercontent.com/LuisaBeccar/ODMexamen/refs/heads/main/odm_2.0.csv"
-    dfodm = obtener_odm(urlodm)
+    urlodm = "https://raw.githubusercontent.com/LuisaBeccar/ODMexamen/main/generar_data/odm_provisorio.pdf"
+    dfodmp = obtener_odm_provisorio(urlodm)
 
-    urlPDFODM2025gh = "https://raw.githubusercontent.com/LuisaBeccar/ODMexamen/main/generar_data/ODM2025.pdf"
-    dfODM2025 = obtener_ODM2025(urlPDFODM2025gh)
+    urlODM2025 = "https://raw.githubusercontent.com/LuisaBeccar/ODMexamen/main/generar_data/ODM2025.pdf"
+    dfODM2025 = obtener_ODM2025(urlODM2025)
 
-    df = mergeODFS(dfodm, dfODM2025)
+    df = mergeODFS(dfodmp, dfODM2025)
     df = limpiar_df(df)
 
     urlsexo = "https://raw.githubusercontent.com/LuisaBeccar/ODMexamen/main/generar_data/ns_def.csv"
