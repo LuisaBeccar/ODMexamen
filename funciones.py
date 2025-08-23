@@ -2,8 +2,84 @@ import os
 import pandas as pd
 import pdfplumber
 import requests
+#-----------------
 
-def limpiar_df2(df):
+## Obtener odm provisorio
+"""(Solo necesito las columnas DNI, Nombre, Apellido. 
+Para que a partir del nombre habia hecho el join con ns_def.csv 
+donde le asigno el sexo segun el nombre. Esto es asi porque luego 
+en el orden definitivo, pusieron Apellido y Nombre junto, 
+siendo dificil y quizas imposible separar los nombres compuestos 
+y apellidos compuestos para poder obtener solo los nombres y asi estimar 
+si es Femenino o Masculino)"""
+def obtener_odm(url):
+  dfodm = pd.read_csv(url)
+  dfodm.columns = dfodm.columns.str.replace("\n", " ", regex=True)
+    # Renombrar columnas
+  rename_dict = {
+        "Número de documento": "DNI",
+        "Apellido": "APELLIDO",
+        "Nombre": "NOMBRE" }
+  dfodm = dfodm.rename(columns=rename_dict)
+  columnas_a_eliminar = ['PROMEDIO_CARRERA', 'FECHA_TITULO', 'ESPECIALIDAD', 'NOTA_EXAMEN', 'TIPO_UNI_x',
+                      'COMPONENTE', 'PUNTAJE', 'ODM', 'PUNTAJE_CRUDO', 'DIAS_DESDE_TITULO', 'ORIGEN',
+                      'TIPO_UNI_y', 'PAIS_UNI', 'UNI','SEXO']
+
+  dfodm.drop(columns=columnas_a_eliminar, inplace=True)
+  dfodm['DNI'] = dfodm['DNI'].astype(str)
+  return dfodm
+#-----------------
+
+## Obtener ODM definitivo
+def obtener_ODM2025(url_pdf: str, nombre_archivo: str = "ODM2025.pdf") -> pd.DataFrame:
+    """
+    Descarga, extrae y limpia datos de un PDF en un DataFrame listo para análisis.
+    Args: url_pdf (str): URL del archivo PDF a descargar.
+          nombre_archivo (str): Nombre con que se guardará el PDF localmente.
+    Returns:  pd.DataFrame: DataFrame
+    """
+    # Descargar PDF si no existe localmente
+    if not os.path.isfile(nombre_archivo):
+        r = requests.get(url_pdf)
+        if r.status_code == 200:
+            with open(nombre_archivo, "wb") as f:
+                f.write(r.content)
+        else:
+            print(f"Error downloading PDF from {url_pdf}. Status code: {r.status_code}")
+            return None
+
+    # Extraer tablas del PDF
+    data = []
+    try:
+        with pdfplumber.open(nombre_archivo) as pdf:
+            for page in pdf.pages:
+                table = page.extract_table()
+                if table:
+                    data.extend(table)
+    except Exception as e:
+        print(f"Error opening or reading PDF file {nombre_archivo}: {e}")
+        return None
+
+    dfODM2025 = pd.DataFrame(data[1:], columns=data[1])
+    dfODM2025.columns = dfODM2025.columns.str.replace("\n", " ", regex=True)
+    columnas_a_eliminar = ['Apellido y Nombre']
+    dfODM2025.drop(columns=columnas_a_eliminar, inplace=True)
+
+    return dfODM2025
+#-----------------
+
+## Join odm (Nombre, Apellido) con ODM, a partir del DNI
+def mergeODFS (df1, df2):
+  # df1 con columnas: DNI, NOMBRE, APELLIDO (dfodm)
+  # df2 con columnas incluyendo DNI, NOMBRE, APELLIDO, PUNTAJE_CRUDO, ODM_CRUDO, PROMEDIO, ESPECIALIDAD (dfODM2025)
+  # Hacer merge con df1 para traer NOMBRE y APELLIDO
+  df = df2.merge(df1[['DNI', 'NOMBRE', 'APELLIDO']], on='DNI', how='left')
+
+  return df
+#-----------------
+
+## Limpiar el df
+def limpiar_df(df):
 
     # Renombrar columnas
     rename_dict = {
@@ -25,10 +101,10 @@ def limpiar_df2(df):
     df = df[df['DNI'].str.strip().astype(bool)]  # elimina filas vacías (con la celda de apellido vacio)
     df = df.dropna().reset_index(drop=True) # reindexar
 
-    
+
     # Ajustes de formato
     df["FECHA_TITULO"] = pd.to_datetime(df["FECHA_TITULO"], format="%d-%m-%Y", errors="coerce")
-    
+
     # Floats
     cols_f = ["PROMEDIO_CARRERA", "PUNTAJE"]
     df[cols_f] = df[cols_f].replace(",", ".", regex=True).replace("", float('nan')).astype(float)
@@ -36,13 +112,13 @@ def limpiar_df2(df):
     cols_i = ['NOTA_EXAMEN', 'COMPONENTE', 'ODM']
     for col in cols_i:
         df[col] = pd.to_numeric(df[col], errors="coerce").astype("Int64")
-    
+
     df["COMPONENTE"] = df["COMPONENTE"].fillna(0)
 
     df['PUNTAJE_CRUDO'] = df['PUNTAJE']-df['COMPONENTE']
-      
+
     # Reemplazos globales en todas las celdas
-    df = df.replace({r'\n': ' ', "en tramite": "01-07-2025"}, regex=True) #crear el espacio entre los nombres en vez de "\n" y poner la fecha que elegi en vez de "en tramite"
+    df = df.replace({r'\n': ' ', "En trámite": "30-06-2025"}, regex=True) #crear el espacio entre los nombres en vez de "\n" y poner la fecha que elegi 30 junio 2025 en vez de "en tramite"
     # Tiempo entre recibido y el examen (1 julio 2025)
     # Definir la fecha cero
     fecha_cero = pd.to_datetime("2025-07-01")
@@ -53,88 +129,101 @@ def limpiar_df2(df):
     df["DIAS_DESDE_TITULO"] = (fecha_cero - df["FECHA_TITULO"]).dt.days
 
     return df
+#-----------------
 
+## Mapeo de SEXO segun NOMBRE
+def mapear_sexo_por_primer_nombre(df, url, nombre_col_original='NOMBRE', sexo_col='SEXO'):
 
-"""
-def limpiar_df(url_pdf: str, nombre_archivo: str = "odm.pdf") -> pd.DataFrame:
-    
-    #Descarga, extrae y limpia datos de un PDF en un DataFrame listo para análisis.
-    #Args:
-        #url_pdf (str): URL del archivo PDF a descargar.
-        #nombre_archivo (str): Nombre con que se guardará el PDF localmente.
-    #Returns:
-        #pd.DataFrame: DataFrame limpio y transformado.
-    
+    # Descargar y leer el archivo CSV si no existe localmente
+    # Nombre del archivo local
+    file_name = url.split("/")[-1]
 
-    # Descargar PDF si no existe localmente
-    if not os.path.isfile(nombre_archivo):
-        r = requests.get(url_pdf)
-        with open(nombre_archivo, "wb") as f:
+    if not os.path.isfile(file_name):
+        r = requests.get(url)
+        with open(file_name, "wb") as f:
             f.write(r.content)
 
+    ns_def = pd.read_csv(file_name)
 
-    # Extraer tablas del PDF
-    data = []
-    with pdfplumber.open(nombre_archivo) as pdf:
-        for page in pdf.pages:
-            table = page.extract_table()
-            if table:
-                data.extend(table)
+    # Renombrar columna del archivo descargado para homogeneizar
+    rename_dict = {"primer_nombre": "NOMBRE"}
+    ns_def = ns_def.rename(columns=rename_dict)
 
-    # -----------------
-    # Crear DataFrame y limpiar encabezados
-    df = pd.DataFrame(data[1:], columns=data[1])
-    df.columns = df.columns.str.replace("\n", " ", regex=True)
- 
-    # Renombrar columnas
-    rename_dict = {
-        "Número de documento": "DNI",
-        "Apellido": "APELLIDO",
-        "Nombre": "NOMBRE",
-        "Institución formadora": "UNIVERSIDAD",
-        "Promedio de la carrera con aplazos": "PROMEDIO_CARRERA",
-        "Fecha de expedicion de titulo": "FECHA_TITULO",
-        "Especialidad en la que se inscribe": "ESPECIALIDAD",
-        "Puntaje obtenido en el examen": "NOTA_EXAMEN",
-        "TIPO UNI": "TIPO_UNI",
-        "PUNTAJE FINAL": "PUNTAJE"
-    }
-    df = df.rename(columns=rename_dict)
+    # Extraer primer nombre, limpiar y pasar a mayúscula
+    df['primer_nombre'] = df[nombre_col_original].apply(lambda x: x.split()[0] if isinstance(x, str) else "")
+    df['primer_nombre'] = df['primer_nombre'].str.strip().str.upper()
+    ns_def['NOMBRE'] = ns_def['NOMBRE'].str.strip().str.upper()
 
-    # Eliminar filas no deseadas
-    df = df[~df.isin(["DNI"]).any(axis=1)] # filas donde se repite el encabezado
-    df = df[df['APELLIDO'].str.strip().astype(bool)]  # elimina filas vacías (con la celda de apellido vacio)
-    df = df.dropna().reset_index(drop=True) # reindexar
+    # Crear diccionario para mapeo de sexo
+    dic_sexo = dict(zip(ns_def['NOMBRE'], ns_def[sexo_col]))
 
-    
-    # Ajustes de formato
-    df["NOMBRE"] = df["NOMBRE"].str.upper()
-    df["APELLIDO"] = df["APELLIDO"].str.upper()
-    df["FECHA_TITULO"] = pd.to_datetime(df["FECHA_TITULO"], format="%d-%m-%Y", errors="coerce")
-    # Floats
-    cols_f = ["PROMEDIO_CARRERA", "PUNTAJE"]
-    df[cols_f] = df[cols_f].replace(",", ".", regex=True).replace("", float('nan')).astype(float)
-    # Enteros
-    cols_i = ['NOTA_EXAMEN', 'COMPONENTE', 'ODM']
-    for col in cols_i:
-        df[col] = pd.to_numeric(df[col], errors="coerce").astype("Int64")
-    df['PUNTAJE_CRUDO'] = df['PUNTAJE']-df['COMPONENTE']
-    df["COMPONENTE"] = df["COMPONENTE"].replace("", 0) # que en vez de vacio diga cero
-    
-    # Reemplazos globales en todas las celdas
-    df = df.replace({r'\n': ' ', "en tramite": "01-07-2025"}, regex=True) #crear el espacio entre los nombres en vez de "\n" y poner la fecha que elegi en vez de "en tramite"
-    # Tiempo entre recibido y el examen (1 julio 2025)
-    # Definir la fecha cero
-    fecha_cero = pd.to_datetime("2025-07-01")
+    # Mapear sexo usando el primer nombre
+    df['SEXO'] = df['primer_nombre'].map(dic_sexo)
 
-    # Asegurar que FECHA_TITULO es datetime
-    df["FECHA_TITULO"] = pd.to_datetime(df["FECHA_TITULO"], format="%d-%m-%Y", errors="coerce")
-    # Calcular diferencia en días
-    df["DIAS_DESDE_TITULO"] = (fecha_cero - df["FECHA_TITULO"]).dt.days
+    # Marcar como 'ND' los casos sin coincidencia
+    df['SEXO'] = df['SEXO'].fillna('ND')
+
+    # Eliminar columna auxiliar
+    df.drop(columns=['primer_nombre'], inplace=True)
 
     return df
-"""
+#-----------------
 
+## ORIGEN de postulante segun DNI >/<50millones
+def asignar_origen(df, columna_dni='DNI'):
+    # Crear columna ORIGEN según condición del DNI
+    df['DNI'] = pd.to_numeric(df['DNI'], errors='coerce').astype('Int64')
+    df['ORIGEN'] = df[columna_dni].apply(lambda x: 'arg' if x < 50000000 else 'extr')
+
+    return df
+
+
+## ODM sin 5 puntos de TIPO_UNI (COMPONENTE)
+def asignar_ODM_crudo(df):
+    df = df.sort_values(
+        by=['ESPECIALIDAD', 'PUNTAJE_CRUDO', 'NOTA_EXAMEN', 'PROMEDIO_CARRERA', 'DNI'],
+        ascending=[True, False, False, False, True]
+    )
+    df['ODM_CRUDO'] = df.groupby('ESPECIALIDAD').cumcount() + 1
+    return df
+#-----------------
+
+## Mapeo de UNIVERSIDADES
+"""(En un primer momento identifique en el odm provisorio que los 
+nombres de UNIVERSIDADES no estaban normalizado y tambien que habia 
+hosptales entre esos nombres: hospitales argentinos sin universidad 
+de medicina. A estos los asigne a la UBA.)
+Ademas, con ayuda de perplexity.ai, agregue las coordenadas de latitud
+y longitud de cada localidad, para luego poder graficarlas en un mapa."""
+
+
+def mapear_universidades(df, file_name, nombre_col_original='UNIVERSIDAD'):
+
+    # Descargar y leer el archivo CSV si no existe localmente
+    # Nombre del archivo local
+    """
+    file_name = url.split("/")[-1]
+
+    "if not os.path.isfile(file_name):
+        r = requests.get(url)
+        with open(file_name, "wb") as f:
+            f.write(r.content)
+
+    """
+    universidades = pd.read_csv(file_name)
+
+    # Hacer merge con el df original usando la columna UNIVERSIDAD como clave
+    df = df.merge(universidades[['UNIVERSIDAD','UNI', 'CLASE_UNI', 'PAIS_UNI','lat','long']],
+                         left_on = nombre_col_original, right_on = 'UNIVERSIDAD', how='left')
+
+    # Eliminar la columna original de universidad
+    df = df.drop(columns=[nombre_col_original])
+
+    return df
+
+
+#-----------------
+"""
 def mapear_sexo_por_primer_nombre(df, url, nombre_col_original='NOMBRE', sexo_col='SEXO'):
 
     # Descargar y leer el archivo CSV si no existe localmente
@@ -207,3 +296,4 @@ def mapear_universidades(df, url, nombre_col_original='UNIVERSIDAD'):
     df_merged = df_merged.drop(columns=[nombre_col_original])
 
     return df_merged
+"""
