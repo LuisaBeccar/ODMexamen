@@ -217,21 +217,11 @@ hosptales entre esos nombres: hospitales argentinos sin universidad
 de medicina. A estos los asigne a la UBA.)
 Ademas, con ayuda de perplexity.ai, agregue las coordenadas de latitud
 y longitud de cada localidad, para luego poder graficarlas en un mapa."""
-
-
 def mapear_universidades(df, file_name, nombre_col_original='UNIVERSIDAD'):
 
     # Descargar y leer el archivo CSV si no existe localmente
     # Nombre del archivo local
-    """
-    file_name = url.split("/")[-1]
-
-    "if not os.path.isfile(file_name):
-        r = requests.get(url)
-        with open(file_name, "wb") as f:
-            f.write(r.content)
-
-    """
+   
     universidades = pd.read_csv(file_name)
 
     # Hacer merge con el df original usando la columna UNIVERSIDAD como clave
