@@ -24,10 +24,10 @@ if __name__ == "__main__":
     df = mapear_universidades(df, urluni, nombre_col_original='UNIVERSIDAD')
 
     nuevo_orden = ['DNI', 'NOMBRE', 'APELLIDO', 'SEXO', 'ORIGEN',
-               'UNI','TIPO_UNI', 'PAIS_UNI', 'lat','long', 'CLASE_UNI',
+               'UNI','TIPO_UNI', 'PAIS_UNI','CIUDAD_UNI', 'lat','long', 'CLASE_UNI',
                'FECHA_TITULO', 'DIAS_DESDE_TITULO', 'PROMEDIO_CARRERA', 'ESPECIALIDAD',
                'NOTA_EXAMEN', 'COMPONENTE', 'PUNTAJE', 'PUNTAJE_CRUDO', 'ODM', 'ODM_CRUDO']
 
  
     df = df[nuevo_orden]
-    df.to_csv('BaseODM2025geo.csv', index=False)
+    df.to_csv('BaseODM2025.csv', index=False)

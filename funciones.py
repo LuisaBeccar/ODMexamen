@@ -235,87 +235,10 @@ def mapear_universidades(df, file_name, nombre_col_original='UNIVERSIDAD'):
     universidades = pd.read_csv(file_name)
 
     # Hacer merge con el df original usando la columna UNIVERSIDAD como clave
-    df = df.merge(universidades[['UNIVERSIDAD','UNI', 'CLASE_UNI', 'PAIS_UNI','lat','long']],
+    df = df.merge(universidades[['UNIVERSIDAD','UNI', 'CLASE_UNI', 'PAIS_UNI', 'CIUDAD_UNI','lat','long']],
                          left_on = nombre_col_original, right_on = 'UNIVERSIDAD', how='left')
 
     # Eliminar la columna original de universidad
     df = df.drop(columns=[nombre_col_original])
 
     return df
-
-
-#-----------------
-"""
-def mapear_sexo_por_primer_nombre(df, url, nombre_col_original='NOMBRE', sexo_col='SEXO'):
-
-    # Descargar y leer el archivo CSV si no existe localmente
-    # Nombre del archivo local
-    file_name = url.split("/")[-1]
-
-    if not os.path.isfile(file_name):
-        r = requests.get(url)
-        with open(file_name, "wb") as f:
-            f.write(r.content)
-
-    ns_def = pd.read_csv(file_name)
-
-    # Renombrar columna del archivo descargado para homogeneizar
-    rename_dict = {"primer_nombre": "NOMBRE"}
-    ns_def = ns_def.rename(columns=rename_dict)
-
-    # Extraer primer nombre, limpiar y pasar a mayúscula
-    df['primer_nombre'] = df[nombre_col_original].apply(lambda x: x.split()[0] if isinstance(x, str) else "")
-    df['primer_nombre'] = df['primer_nombre'].str.strip().str.upper()
-    ns_def['NOMBRE'] = ns_def['NOMBRE'].str.strip().str.upper()
-
-    # Crear diccionario para mapeo de sexo
-    dic_sexo = dict(zip(ns_def['NOMBRE'], ns_def[sexo_col]))
-
-    # Mapear sexo usando el primer nombre
-    df['SEXO'] = df['primer_nombre'].map(dic_sexo)
-
-    # Marcar como 'ND' los casos sin coincidencia
-    df['SEXO'] = df['SEXO'].fillna('ND')
-
-    # Eliminar columna auxiliar
-    df.drop(columns=['primer_nombre'], inplace=True)
-
-    return df
-
-
-def asignar_origen(df, columna_dni='DNI'):
-    # Crear columna ORIGEN según condición del DNI
-    df['DNI'] = pd.to_numeric(df['DNI'], errors='coerce').astype('Int64')
-    df['ORIGEN'] = df[columna_dni].apply(lambda x: 'arg' if x < 50000000 else 'extr')
-    
-    return df
-
-def asignar_ranking(df):
-    df['ODM_CRUDO'] = df.sort_values(
-        by=['ESPECIALIDAD', 'PUNTAJE_CRUDO', 'ODM_CRUDO', 'PROMEDIO', 'DNI'],
-        ascending=[True, False, False, False, True]
-    ).groupby('ESPECIALIDAD').cumcount() + 1
-    return df
-
-def mapear_universidades(df, url, nombre_col_original='UNIVERSIDAD'):
-
-    # Descargar y leer el archivo CSV si no existe localmente
-    # Nombre del archivo local
-    file_name = url.split("/")[-1]
-
-    if not os.path.isfile(file_name):
-        r = requests.get(url)
-        with open(file_name, "wb") as f:
-            f.write(r.content)
-
-    universidades = pd.read_csv(file_name)
-
-    # Hacer merge con el df original usando la columna UNIVERSIDAD como clave
-    df_merged = df.merge(universidades[['UNIVERSIDAD', 'CLASE_UNI', 'PAIS_UNI', 'UNI']],
-                         left_on=nombre_col_original, right_on='UNIVERSIDAD', how='left')
-
-    # Eliminar la columna original de universidad
-    df_merged = df_merged.drop(columns=[nombre_col_original])
-
-    return df_merged
-"""
