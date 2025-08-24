@@ -1,3 +1,10 @@
+#para funciones.py
 pdfplumber
 requests
 pandas
+#para creaer mapas
+geopandas
+shapely
+folium
+# ver webbroser
+#webbrowser
