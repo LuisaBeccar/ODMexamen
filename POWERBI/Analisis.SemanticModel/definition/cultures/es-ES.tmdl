@@ -1,0 +1,32 @@
+cultureInfo es-ES
+
+	linguisticMetadata =
+			{
+			  "Version": "2.0.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "baseodm2025g.clase_uni": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "BaseODM2025g",
+			          "ConceptualProperty": "CLASE_UNI"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "CLASE_UNI": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    }
+			  }
+			}
+		contentType: json
+

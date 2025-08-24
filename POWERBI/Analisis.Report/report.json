@@ -1,0 +1,81 @@
+{
+  "config": "{\"version\":\"5.66\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"type\":2,\"version\":{\"visual\":\"1.8.95\",\"report\":\"2.0.95\",\"page\":\"1.3.95\"}}},\"activeSectionIndex\":1,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Página 2",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "22bbb8af797d2b00a222",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"6a754457030771676152\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1256.7900778174155,\"height\":708.6478992994583,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"decompositionTreeVisual\",\"projections\":{\"ExplainBy\":[{\"queryRef\":\"BaseODM2025g.TIPO_UNI\",\"active\":true},{\"queryRef\":\"BaseODM2025g.ORIGEN\",\"active\":true},{\"queryRef\":\"BaseODM2025g.ESPECIALIDAD\",\"active\":true},{\"queryRef\":\"BaseODM2025g.SEXO\",\"active\":true},{\"queryRef\":\"BaseODM2025g.CLASE_UNI\"}],\"Analyze\":[{\"queryRef\":\"CountNonNull(BaseODM2025g.ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"BaseODM2025g\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"ORIGEN\"},\"Name\":\"BaseODM2025g.ORIGEN\",\"NativeReferenceName\":\"ORIGEN\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"TIPO_UNI\"},\"Name\":\"BaseODM2025g.TIPO_UNI\",\"NativeReferenceName\":\"Recuento de TIPO_UNI\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"ID\"}},\"Function\":5},\"Name\":\"CountNonNull(BaseODM2025g.ID)\",\"NativeReferenceName\":\"Recuento de ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"ESPECIALIDAD\"},\"Name\":\"BaseODM2025g.ESPECIALIDAD\",\"NativeReferenceName\":\"ESPECIALIDAD\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"CLASE_UNI\"},\"Name\":\"BaseODM2025g.CLASE_UNI\",\"NativeReferenceName\":\"CLASE_UNI\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"SEXO\"},\"Name\":\"BaseODM2025g.SEXO\",\"NativeReferenceName\":\"SEXO\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"ID\"}},\"Function\":5}}}]},\"expansionStates\":[{\"roles\":[\"ExplainBy\"],\"levels\":[{\"queryRefs\":[\"BaseODM2025g.TIPO_UNI\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"BaseODM2025g\"}},\"Property\":\"TIPO_UNI\"}}],\"isPinned\":true},{\"queryRefs\":[\"BaseODM2025g.ORIGEN\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"BaseODM2025g\"}},\"Property\":\"ORIGEN\"}}],\"isPinned\":true},{\"queryRefs\":[\"BaseODM2025g.ESPECIALIDAD\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"BaseODM2025g\"}},\"Property\":\"ESPECIALIDAD\"}}],\"isPinned\":true},{\"queryRefs\":[\"BaseODM2025g.SEXO\"],\"isCollapsed\":true,\"isPinned\":true},{\"queryRefs\":[\"BaseODM2025g.CLASE_UNI\"],\"isCollapsed\":true}],\"root\":{\"identityValues\":null,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'E'\"}}],\"isToggled\":true,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'extr'\"}}],\"isToggled\":true,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'Clínica médica'\"}}],\"isToggled\":true}]}]}]}}],\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"tree\":[{\"properties\":{\"effectiveBarsPerLevel\":{\"expr\":{\"Literal\":{\"Value\":\"9L\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 708.65,
+          "width": 1256.79,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Página 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "38c878d9dd30d8b10bbc",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"207f3f8078eebedc376e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":37.795566218367206,\"y\":0,\"z\":1000,\"width\":334.4907610325498,\"height\":141.73337331887703,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"CountNonNull(BaseODM2025g.ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"BaseODM2025g\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"ID\"}},\"Function\":5},\"Name\":\"CountNonNull(BaseODM2025g.ID)\",\"NativeReferenceName\":\"Recuento de ID\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"ID\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'TOTAL DE POSTULANTES'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 141.73,
+          "width": 334.49,
+          "x": 37.80,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"6b126386192c31ab600c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":183.30849615908096,\"y\":166.30049136081573,\"z\":0,\"width\":334.4907610325498,\"height\":209.76539251193802,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Category\":[{\"queryRef\":\"BaseODM2025g.CLASE_UNI\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(BaseODM2025g.ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"BaseODM2025g\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"ID\"}},\"Function\":5},\"Name\":\"CountNonNull(BaseODM2025g.ID)\",\"NativeReferenceName\":\"Recuento de ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"CLASE_UNI\"},\"Name\":\"BaseODM2025g.CLASE_UNI\",\"NativeReferenceName\":\"CLASE_UNI\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"ID\"}},\"Function\":5}}}]},\"queryFieldParametersByRole\":{\"Category\":[{\"index\":0,\"length\":1,\"expr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Parámetro\"}},\"Property\":\"Parámetro\"}}}]},\"columnProperties\":{\"BaseODM2025g.CLASE_UNI\":{\"displayName\":\"CLASE_UNI\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":6,\"Percent\":0}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"BaseODM2025g\"}},\"Property\":\"SEXO\"}},\"Right\":{\"Literal\":{\"Value\":\"'F'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":3,\"Percent\":0}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"BaseODM2025g\"}},\"Property\":\"SEXO\"}},\"Right\":{\"Literal\":{\"Value\":\"'M'\"}}}}}]}}],\"labels\":[{\"properties\":{\"labelStyle\":{\"expr\":{\"Literal\":{\"Value\":\"'Percent of total'\"}}}}}],\"slices\":[{\"properties\":{\"startAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"legend\":[{\"properties\":{\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'TopCenter'\"}}},\"showTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 209.77,
+          "width": 334.49,
+          "x": 183.31,
+          "y": 166.30,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"8d236c93050240a208c5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":166.30049136081573,\"z\":2000,\"width\":166.30049136081573,\"height\":553.7050450990796,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Parámetro.Parámetro\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Parámetro\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Parámetro\"},\"Name\":\"Parámetro.Parámetro\",\"NativeReferenceName\":\"Parámetro\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Parámetro\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Parámetro Campos\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'''BaseODM2025g''[CLASE_UNI]'\"}}]]}}}]}}}}],\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}]},\"cachedFilterDisplayItems\":[{\"id\":{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Parámetro\"}},\"Property\":\"Parámetro Campos\"}},\"Right\":{\"Literal\":{\"Value\":\"'''BaseODM2025g''[CLASE_UNI]'\"}}}}},\"displayName\":\"CLASE_UNI\"}]}}",
+          "filters": "[]",
+          "height": 553.71,
+          "width": 166.30,
+          "x": 0.00,
+          "y": 166.30,
+          "z": 2000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

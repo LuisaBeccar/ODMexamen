@@ -1,0 +1,50 @@
+table Parámetro
+	lineageTag: ac3bac2e-cef8-4677-8891-958fb52e5c65
+
+	column Parámetro
+		lineageTag: 2e20605f-1115-454e-89bf-4bdea8301a8f
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Parámetro Orden'
+
+		relatedColumnDetails
+			groupByColumn: 'Parámetro Campos'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parámetro Campos'
+		isHidden
+		lineageTag: 8a4ea523-ac2f-4d5a-b72d-e87b9271a0a5
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Parámetro Orden'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parámetro Orden'
+		isHidden
+		formatString: 0
+		lineageTag: ea963971-b4da-42d5-8726-dabfb10d7dc4
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Parámetro = calculated
+		mode: import
+		source =
+				{
+				    ("SEXO", NAMEOF('BaseODM2025g'[SEXO]), 0),
+				    ("TIPO_UNI", NAMEOF('BaseODM2025g'[TIPO_UNI]), 1),
+				    ("ORIGEN", NAMEOF('BaseODM2025g'[ORIGEN]), 2),
+				    ("CLASE_UNI", NAMEOF('BaseODM2025g'[CLASE_UNI]), 3)
+				}
+
+	annotation PBI_Id = 64e34ddd6c0446c0aeb8924e7353cdbb
+

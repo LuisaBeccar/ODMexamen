@@ -1,0 +1,23 @@
+model Model
+	culture: es-ES
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-AR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["BaseODM2025g"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.146.1026.0 (25.08)+fb98ab832373de81dccd5c01cd96306a48477556
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table BaseODM2025g
+ref table DateTableTemplate_9c35351a-7f2c-4922-9a99-f7d57c576fa7
+ref table LocalDateTable_c814711c-46f2-46be-8161-12337c8ce2e3
+ref table Parámetro
+
+ref cultureInfo es-ES
+

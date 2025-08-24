@@ -1,0 +1,195 @@
+table BaseODM2025g
+	lineageTag: 7593a8dd-dd3e-49e9-b14d-7deae8ba46cd
+
+	column SEXO
+		dataType: string
+		lineageTag: ad6652da-13d3-4025-bc87-497858847975
+		summarizeBy: none
+		sourceColumn: SEXO
+
+		annotation SummarizationSetBy = Automatic
+
+	column ORIGEN
+		dataType: string
+		lineageTag: 07545cc1-db4a-433f-9d34-840911b244ad
+		summarizeBy: none
+		sourceColumn: ORIGEN
+
+		annotation SummarizationSetBy = Automatic
+
+	column UNI
+		dataType: string
+		lineageTag: 68c11d0b-76be-4aab-a56a-33618228ad1e
+		summarizeBy: none
+		sourceColumn: UNI
+
+		annotation SummarizationSetBy = Automatic
+
+	column TIPO_UNI
+		dataType: string
+		lineageTag: 4df03d0d-2038-461b-b8bb-8cf4040c5f83
+		summarizeBy: none
+		sourceColumn: TIPO_UNI
+
+		annotation SummarizationSetBy = Automatic
+
+	column PAIS_UNI
+		dataType: string
+		lineageTag: 19b3358d-3430-4ed1-851d-724cc0fcf1b0
+		summarizeBy: none
+		sourceColumn: PAIS_UNI
+
+		annotation SummarizationSetBy = Automatic
+
+	column CIUDAD_UNI
+		dataType: string
+		lineageTag: 3e973531-f8f3-4eef-aadf-d9655225b4cd
+		summarizeBy: none
+		sourceColumn: CIUDAD_UNI
+
+		annotation SummarizationSetBy = Automatic
+
+	column lat
+		dataType: string
+		lineageTag: 94154fa6-6f9a-4668-bd8c-e60c2227372b
+		summarizeBy: none
+		sourceColumn: lat
+
+		annotation SummarizationSetBy = Automatic
+
+	column long
+		dataType: string
+		lineageTag: 497f6d76-622d-4561-ab3a-a64bf0537a08
+		summarizeBy: none
+		sourceColumn: long
+
+		annotation SummarizationSetBy = Automatic
+
+	column CLASE_UNI
+		dataType: string
+		lineageTag: e7b65099-3952-4735-a2ae-218b7a86d2ad
+		summarizeBy: none
+		sourceColumn: CLASE_UNI
+
+		annotation SummarizationSetBy = Automatic
+
+	column FECHA_TITULO
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 6cb410c8-3783-4036-b78f-17b00022a6e0
+		summarizeBy: none
+		sourceColumn: FECHA_TITULO
+
+		variation Variación
+			isDefault
+			relationship: af16c147-c41c-4aea-b77a-c04beecf8200
+			defaultHierarchy: LocalDateTable_c814711c-46f2-46be-8161-12337c8ce2e3.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DIAS_DESDE_TITULO
+		dataType: int64
+		formatString: 0
+		lineageTag: 750e57fe-b345-4a40-a30a-6e3846f67900
+		summarizeBy: sum
+		sourceColumn: DIAS_DESDE_TITULO
+
+		annotation SummarizationSetBy = Automatic
+
+	column PROMEDIO_CARRERA
+		dataType: double
+		lineageTag: a57f3fa1-7cd2-4faa-909b-1ec826c94fe8
+		summarizeBy: sum
+		sourceColumn: PROMEDIO_CARRERA
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ESPECIALIDAD
+		dataType: string
+		lineageTag: 8bbd1e1b-c92b-40f4-8ca3-3eb904cc5b05
+		summarizeBy: none
+		sourceColumn: ESPECIALIDAD
+
+		annotation SummarizationSetBy = Automatic
+
+	column NOTA_EXAMEN
+		dataType: int64
+		formatString: 0
+		lineageTag: 651b1e20-b286-4179-a3ad-c63c1b040299
+		summarizeBy: sum
+		sourceColumn: NOTA_EXAMEN
+
+		annotation SummarizationSetBy = Automatic
+
+	column PUNTAJE
+		dataType: double
+		lineageTag: 05110a11-8d26-4893-9e26-00d256e0d7e4
+		summarizeBy: sum
+		sourceColumn: PUNTAJE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PUNTAJE_CRUDO
+		dataType: double
+		lineageTag: e5245b51-347c-4a12-9f3c-10f1149a8905
+		summarizeBy: sum
+		sourceColumn: PUNTAJE_CRUDO
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ODM
+		dataType: int64
+		formatString: 0
+		lineageTag: 0642a83e-95b3-41a2-9896-dd7979e57bd4
+		summarizeBy: sum
+		sourceColumn: ODM
+
+		annotation SummarizationSetBy = Automatic
+
+	column ODM_CRUDO
+		dataType: int64
+		formatString: 0
+		lineageTag: 3efb9e02-8345-4236-ad10-9f2edf2a52ca
+		summarizeBy: sum
+		sourceColumn: ODM_CRUDO
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID
+		dataType: int64
+		lineageTag: cf351a20-c503-42e2-ba48-ecb763b7d4a3
+		summarizeBy: none
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition BaseODM2025g = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents("C:\Users\luisa\OneDrive\Documentos\RepositorioVS_Github\ODMexamen\BaseODM2025g.csv"),[Delimiter=",", Columns=22, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    #"Valor reemplazado" = Table.ReplaceValue(#"Encabezados promovidos",".",",",Replacer.ReplaceText,{"PROMEDIO_CARRERA","PUNTAJE","PUNTAJE_CRUDO"}),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Valor reemplazado",{{"FECHA_TITULO", type date}, {"DIAS_DESDE_TITULO", Int64.Type}, {"PROMEDIO_CARRERA", type number}, {"NOTA_EXAMEN", Int64.Type}, {"COMPONENTE", Int64.Type}, {"PUNTAJE", type number}, {"PUNTAJE_CRUDO", type number}, {"ODM", Int64.Type}, {"ODM_CRUDO", Int64.Type}}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Tipo cambiado",{"COMPONENTE"}),
+				    #"Índice agregado" = Table.AddIndexColumn(#"Columnas quitadas", "Índice", 1, 1, Int64.Type),
+				    #"Columnas reordenadas" = Table.ReorderColumns(#"Índice agregado",{"Índice", "DNI", "NOMBRE", "APELLIDO", "SEXO", "ORIGEN", "UNI", "TIPO_UNI", "PAIS_UNI", "CIUDAD_UNI", "lat", "long", "CLASE_UNI", "FECHA_TITULO", "DIAS_DESDE_TITULO", "PROMEDIO_CARRERA", "ESPECIALIDAD", "NOTA_EXAMEN", "PUNTAJE", "PUNTAJE_CRUDO", "ODM", "ODM_CRUDO"}),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Columnas reordenadas",{{"Índice", "ID"}}),
+				    #"Columnas quitadas1" = Table.RemoveColumns(#"Columnas con nombre cambiado",{"DNI", "NOMBRE", "APELLIDO"})
+				in
+				    #"Columnas quitadas1"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+
