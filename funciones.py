@@ -124,6 +124,12 @@ def limpiar_df(df):
     df = df[df['DNI'].str.strip().astype(bool)]  # elimina filas vacías (con la celda de apellido vacio)
     df = df.dropna().reset_index(drop=True) # reindexar
 
+    # Reemplazos globales en todas las celdas
+    df = df.replace({r'\n': ' ', "En trámite": "30-06-2025"}, regex=True) #crear el espacio entre los nombres en vez de "\n" y poner la fecha que elegi 30 junio 2025 en vez de "en tramite"
+    # Tiempo entre recibido y el examen (1 julio 2025)
+    # Definir la fecha cero
+    fecha_cero = pd.to_datetime("2025-07-01")
+
     # Ajustes de formato
     df["FECHA_TITULO"] = pd.to_datetime(df["FECHA_TITULO"], format="%d-%m-%Y", errors="coerce")
 
@@ -139,11 +145,7 @@ def limpiar_df(df):
 
     df['PUNTAJE_CRUDO'] = df['PUNTAJE']-df['COMPONENTE']
 
-    # Reemplazos globales en todas las celdas
-    df = df.replace({r'\n': ' ', "En trámite": "30-06-2025"}, regex=True) #crear el espacio entre los nombres en vez de "\n" y poner la fecha que elegi 30 junio 2025 en vez de "en tramite"
-    # Tiempo entre recibido y el examen (1 julio 2025)
-    # Definir la fecha cero
-    fecha_cero = pd.to_datetime("2025-07-01")
+    
 
     # Asegurar que FECHA_TITULO es datetime
     df["FECHA_TITULO"] = pd.to_datetime(df["FECHA_TITULO"], format="%d-%m-%Y", errors="coerce")
