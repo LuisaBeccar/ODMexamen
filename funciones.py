@@ -202,14 +202,33 @@ def asignar_origen(df, columna_dni='DNI'):
     return df
 
 
-## ODM sin 5 puntos de TIPO_UNI (COMPONENTE)
-def asignar_ODM_crudo(df):
+## ODM alternativos
+ 
+## ODM_CRUDO: sin los 5 puntos mas a TIPO_UNI == N (o sea con puntaje crudo)
+def ODM_crudo(df):
     df = df.sort_values(
         by=['ESPECIALIDAD', 'PUNTAJE_CRUDO', 'NOTA_EXAMEN', 'PROMEDIO_CARRERA', 'DNI'],
         ascending=[True, False, False, False, True]
     )
     df['ODM_CRUDO'] = df.groupby('ESPECIALIDAD').cumcount() + 1
     return df
+
+## ODM_GLOBAL_CRUDO sin agrupar especialidades, con puntaje crudo
+def ODM_global_crudo(df):
+    df = df.sort_values(
+        by=['PUNTAJE_CRUDO', 'NOTA_EXAMEN', 'PROMEDIO_CARRERA', 'DNI'],
+        ascending=[False, False, False, True]).reset_index(drop=True)
+    df['ODM_GLOBAL_CRUDO'] = df.index + 1
+    return df
+
+## ODM_GLOBAL con puntaje que se usi con 5 puntos nacionales, sin agrupar especialidades
+def ODM_global(df):
+    df = df.sort_values(
+        by=['PUNTAJE', 'NOTA_EXAMEN', 'PROMEDIO_CARRERA', 'DNI'],
+        ascending=[False, False, False, True]).reset_index(drop=True)
+    df['ODM_GLOBAL'] = df.index + 1
+    return df
+
 #-----------------
 
 ## Mapeo de UNIVERSIDADES

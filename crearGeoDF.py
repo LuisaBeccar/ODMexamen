@@ -4,7 +4,7 @@ import geopandas as gpd
 from shapely.geometry import Point
 
 # Carga CSV con pandas
-df = pd.read_csv("https://raw.githubusercontent.com/LuisaBeccar/ODMexamen/main/BaseODM2025g.csv")
+df = pd.read_csv("https://raw.githubusercontent.com/LuisaBeccar/ODMexamen/main/Base_ODM2025.csv")
 
 # Crear geometría con puntos a partir de columnas de longitud y latitud de forma vectorizada
 geometry = gpd.points_from_xy(df['long'], df['lat'])

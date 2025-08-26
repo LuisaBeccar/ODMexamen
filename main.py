@@ -1,4 +1,4 @@
-from funciones import obtener_odm_provisorio, obtener_ODM2025, mergeODFS, limpiar_df, mapear_sexo_por_primer_nombre, asignar_origen, asignar_ODM_crudo, mapear_universidades
+from funciones import obtener_odm_provisorio, obtener_ODM2025, mergeODFS, limpiar_df, mapear_sexo_por_primer_nombre, asignar_origen, ODM_crudo, ODM_global_crudo, ODM_global, mapear_universidades
 
 if __name__ == "__main__":
     # Lógica principal
@@ -18,7 +18,9 @@ if __name__ == "__main__":
 
     df = asignar_origen(df, columna_dni='DNI')
 
-    df = asignar_ODM_crudo(df)
+    df = ODM_crudo(df)
+    df = ODM_global_crudo(df)
+    df = ODM_global(df)
 
     urluni = "https://raw.githubusercontent.com/LuisaBeccar/ODMexamen/main/generar_data/universidades.csv"
     df = mapear_universidades(df, urluni, nombre_col_original='UNIVERSIDAD')
@@ -26,8 +28,9 @@ if __name__ == "__main__":
     nuevo_orden = ['DNI', 'NOMBRE', 'APELLIDO', 'SEXO', 'ORIGEN',
                'UNI','TIPO_UNI', 'PAIS_UNI','CIUDAD_UNI', 'lat','long', 'CLASE_UNI',
                'FECHA_TITULO', 'DIAS_DESDE_TITULO', 'PROMEDIO_CARRERA', 'ESPECIALIDAD',
-               'NOTA_EXAMEN', 'COMPONENTE', 'PUNTAJE', 'PUNTAJE_CRUDO', 'ODM', 'ODM_CRUDO']
+               'NOTA_EXAMEN', 'COMPONENTE', 'PUNTAJE', 'PUNTAJE_CRUDO', 'ODM', 'ODM_CRUDO',
+               'ODM_GLOBAL', 'ODM_GLOBAL_CRUDO']
 
  
     df = df[nuevo_orden]
-    df.to_csv('BaseODM2025g.csv', index=False)
+    df.to_csv('Base_ODM2025.csv', index=False)
