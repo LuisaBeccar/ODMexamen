@@ -2,7 +2,7 @@
 # EXAMEN UNICO DE RESIDENCIAS MEDICAS 2025
 En este trabajo me propongo analizar la informacion que se puede recabar a partir del orden de merito establecido a partir del examen de residencias médicas.
 
-## Base de datos
+## Base de datos: Base_ODM2025.csv
 
 - odm_provisorio.pdf
 - ODM2025.pdf
@@ -47,3 +47,6 @@ Luego
 
 - Hay relación entre la cantidad de días desde el titulo hasta el examen y la nota obtenida en el mismo? 
 - Hay alguna tendencia entre la eleccion de especialidad y la fecha de título ?
+
+  ## Geo
+  Con los archivos *CrearGeoDF.py* se genera *datos.gpkg* y a partir de este archivo con coordenadas geolocalizables, con *mapa.py* se genera el mapa interactivo: *mapa_registros.html* 
