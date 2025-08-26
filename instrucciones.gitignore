@@ -40,3 +40,10 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 pip install -r requirements.txt
 4) 
 python main.py
+
+
+"""
+CORRER: 
+1) main.py --> Base_ODF2025.csv, 
+2) crearGeoDF.py --> datos.gpkg
+3) mapa.py --> mapa_registros.html
