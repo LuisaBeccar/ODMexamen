@@ -3,3 +3,9 @@ relationship af16c147-c41c-4aea-b77a-c04beecf8200
 	fromColumn: BaseODM2025g.FECHA_TITULO
 	toColumn: LocalDateTable_c814711c-46f2-46be-8161-12337c8ce2e3.Date
 
+relationship b139d45f-ebe2-9e04-a802-17cfb6ee6e0b
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Hechos.ID
+	toColumn: BaseODM2025g.ID
+

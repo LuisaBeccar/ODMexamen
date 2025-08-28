@@ -1,6 +1,35 @@
 table Parámetro
 	lineageTag: ac3bac2e-cef8-4677-8891-958fb52e5c65
 
+	measure 'Total Residentes' = DISTINCTCOUNT(BaseODM2025g[ID])
+		formatString: 0
+		lineageTag: 02660bac-ebc8-4be8-9034-81148ba836c8
+
+	measure Prom_EX = AVERAGE(Hechos[NOTA_EXAMEN])
+		lineageTag: 4dfc71da-da19-4650-aed1-e07e65199ef5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Prom_Carrera = AVERAGE(Hechos[PROMEDIO_CARRERA])
+		lineageTag: 0825d1c1-e9bb-4803-966a-32418fe011f8
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Prom_EX_F = CALCULATE([Prom_EX], BaseODM2025g[SEXO] = "F")
+		lineageTag: ad7e4b52-33f3-46a8-8fd2-e1119b2c16b8
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Prom_EX_M = CALCULATE([Prom_EX], BaseODM2025g[SEXO] = "M")
+		lineageTag: 0af4bd0f-5471-4877-b350-b3cb890550aa
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Prom_Puntaje = AVERAGE(Hechos[PUNTAJE])
+		lineageTag: fd08d349-83e5-4bf5-8c70-75fb71beaa20
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column Parámetro
 		lineageTag: 2e20605f-1115-454e-89bf-4bdea8301a8f
 		summarizeBy: none

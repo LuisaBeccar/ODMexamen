@@ -1,0 +1,122 @@
+table Hechos
+	lineageTag: 5261863e-a835-4caa-bc41-ed764b31b2c7
+
+	column ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 5d642255-5a8b-456a-bfd9-4962742a1a18
+		summarizeBy: none
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column lat
+		dataType: double
+		lineageTag: cb603d3a-d427-4144-ba3d-a1cb86305df3
+		summarizeBy: sum
+		sourceColumn: lat
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column long
+		dataType: double
+		lineageTag: 6cf2c67e-1953-4789-b099-85e4b745a143
+		summarizeBy: sum
+		sourceColumn: long
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DIAS_DESDE_TITULO
+		dataType: int64
+		formatString: 0
+		lineageTag: ac6618ec-5dc2-42c0-8a97-4dd5918f17f3
+		summarizeBy: sum
+		sourceColumn: DIAS_DESDE_TITULO
+
+		annotation SummarizationSetBy = Automatic
+
+	column PROMEDIO_CARRERA
+		dataType: double
+		lineageTag: d8920270-d769-49dd-a42e-b4b42ac55944
+		summarizeBy: sum
+		sourceColumn: PROMEDIO_CARRERA
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NOTA_EXAMEN
+		dataType: double
+		formatString: 0
+		lineageTag: cba8000e-3da7-4936-ae9d-22a813ee9fed
+		summarizeBy: sum
+		sourceColumn: NOTA_EXAMEN
+
+		annotation SummarizationSetBy = Automatic
+
+	column PUNTAJE
+		dataType: double
+		lineageTag: 42795d90-b97d-4519-b84f-e91a3e92f647
+		summarizeBy: sum
+		sourceColumn: PUNTAJE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PUNTAJE_CRUDO
+		dataType: double
+		lineageTag: 38d3dbac-75f7-4006-af21-91cd48f74301
+		summarizeBy: sum
+		sourceColumn: PUNTAJE_CRUDO
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ODM
+		dataType: int64
+		formatString: 0
+		lineageTag: a7a267ac-a7ef-41bd-987f-da8d00b548a0
+		summarizeBy: sum
+		sourceColumn: ODM
+
+		annotation SummarizationSetBy = Automatic
+
+	column ODM_CRUDO
+		dataType: int64
+		formatString: 0
+		lineageTag: a6e4779f-f7f6-4838-a093-9af3623b2d11
+		summarizeBy: sum
+		sourceColumn: ODM_CRUDO
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Hechos = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents("C:\Users\PC\Desktop\github\ODMexamen\Base_ODM2025.csv"),[Delimiter=",", Columns=22, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    #"Valor reemplazado" = Table.ReplaceValue(#"Encabezados promovidos",".",",",Replacer.ReplaceText,{"PROMEDIO_CARRERA","PUNTAJE","PUNTAJE_CRUDO"}),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Valor reemplazado",{{"FECHA_TITULO", type date}, {"DIAS_DESDE_TITULO", Int64.Type}, {"PROMEDIO_CARRERA", type number}, {"NOTA_EXAMEN", Int64.Type}, {"COMPONENTE", Int64.Type}, {"PUNTAJE", type number}, {"PUNTAJE_CRUDO", type number}, {"ODM", Int64.Type}, {"ODM_CRUDO", Int64.Type}}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Tipo cambiado",{"COMPONENTE"}),
+				    #"Índice agregado" = Table.AddIndexColumn(#"Columnas quitadas", "Índice", 1, 1, Int64.Type),
+				    #"Columnas reordenadas" = Table.ReorderColumns(#"Índice agregado",{"Índice", "DNI", "NOMBRE", "APELLIDO", "SEXO", "ORIGEN", "UNI", "TIPO_UNI", "PAIS_UNI", "CIUDAD_UNI", "lat", "long", "CLASE_UNI", "FECHA_TITULO", "DIAS_DESDE_TITULO", "PROMEDIO_CARRERA", "ESPECIALIDAD", "NOTA_EXAMEN", "PUNTAJE", "PUNTAJE_CRUDO", "ODM", "ODM_CRUDO"}),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Columnas reordenadas",{{"Índice", "ID"}}),
+				    #"Columnas quitadas1" = Table.RemoveColumns(#"Columnas con nombre cambiado",{"DNI", "NOMBRE", "APELLIDO"}),
+				    #"Se eligen Columnas para Hechos" = Table.SelectColumns(#"Columnas quitadas1",{"ID", "lat", "long", "DIAS_DESDE_TITULO", "PROMEDIO_CARRERA", "NOTA_EXAMEN", "PUNTAJE", "PUNTAJE_CRUDO", "ODM", "ODM_CRUDO"}),
+				    #"cambio de ""."" a "","" en lat y long" = Table.ReplaceValue(#"Se eligen Columnas para Hechos",".",",",Replacer.ReplaceText,{"lat", "long"}),
+				    #"lat y long a decimal" = Table.TransformColumnTypes(#"cambio de ""."" a "","" en lat y long",{{"lat", type number}, {"long", type number}}),
+				    #"Columna dividida" = Table.TransformColumns(#"lat y long a decimal", {{"NOTA_EXAMEN", each _ / 10, type number}})
+				in
+				    #"Columna dividida"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

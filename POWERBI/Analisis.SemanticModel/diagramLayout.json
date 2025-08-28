@@ -10,33 +10,46 @@
       "nodes": [
         {
           "location": {
-            "x": 0,
+            "x": 86.836465080431367,
             "y": 0
           },
           "nodeIndex": "BaseODM2025g",
           "nodeLineageTag": "7593a8dd-dd3e-49e9-b14d-7deae8ba46cd",
           "size": {
-            "height": 300,
-            "width": 234
+            "height": 345.4822597396099,
+            "width": 236.62257469563207
           },
-          "zIndex": 0
+          "zIndex": 1
         },
         {
           "location": {
-            "x": 284,
-            "y": 74
+            "x": 744.71604740811222,
+            "y": 0
           },
           "nodeIndex": "Parámetro",
           "nodeLineageTag": "ac3bac2e-cef8-4677-8891-958fb52e5c65",
           "size": {
-            "height": 152,
+            "height": 175.89804720169528,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 428.09080064254749,
+            "y": 0
+          },
+          "nodeIndex": "Hechos",
+          "nodeLineageTag": "5261863e-a835-4caa-bc41-ed764b31b2c7",
+          "size": {
+            "height": 336.47722157592221,
             "width": 234
           },
           "zIndex": 0
         }
       ],
       "name": "Todas las tablas",
-      "zoomValue": 100,
+      "zoomValue": 82.7050321563202,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,
