@@ -1,0 +1,2571 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_746d854567e8caa72123b1bee785e4e7 {
+                    position: relative;
+                    width: 600.0px;
+                    height: 600.0px;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_746d854567e8caa72123b1bee785e4e7" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_746d854567e8caa72123b1bee785e4e7 = L.map(
+                "map_746d854567e8caa72123b1bee785e4e7",
+                {
+                    center: [-15.0, -60.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "maxBounds": [
+[
+-90,
+-180,
+],
+[
+90,
+180,
+],
+],
+  "zoom": 3,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e15192c4ff98f7a739960f8995ddbf40 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 3,
+  "maxZoom": 10,
+  "maxNativeZoom": 10,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_e15192c4ff98f7a739960f8995ddbf40.addTo(map_746d854567e8caa72123b1bee785e4e7);
+        
+    
+            map_746d854567e8caa72123b1bee785e4e7.fitBounds(
+                [[-55.05, -81.8], [43.79, 4.32]],
+                {}
+            );
+        
+    
+            var marker_cluster_e1922760c9226e7784dec3d3226920fd = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_49c2cd4ed895c52a9c13decd54342e1d = L.circleMarker(
+                [-45.8667, -67.5],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.196152422706632, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_dd77af020523a9c803774e07de44bb6d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_21d734a1833ea752d229b310f9117b2d = $(`<div id="html_21d734a1833ea752d229b310f9117b2d" style="width: 100.0%; height: 100.0%;">Médicos: 3</div>`)[0];
+                popup_dd77af020523a9c803774e07de44bb6d.setContent(html_21d734a1833ea752d229b310f9117b2d);
+            
+        
+
+        circle_marker_49c2cd4ed895c52a9c13decd54342e1d.bindPopup(popup_dd77af020523a9c803774e07de44bb6d)
+        ;
+
+        
+    
+    
+            circle_marker_49c2cd4ed895c52a9c13decd54342e1d.bindTooltip(
+                `<div>
+                     Médicos: 3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c215d64c4ba8ace3968c0ffb20510ba5 = L.circleMarker(
+                [-38.9517, -68.0597],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.224972160321824, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_f38a6f22c28eba7782d05a6040d29fb2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b47bb258905d6d5b2063f92e4b7079dd = $(`<div id="html_b47bb258905d6d5b2063f92e4b7079dd" style="width: 100.0%; height: 100.0%;">Médicos: 14</div>`)[0];
+                popup_f38a6f22c28eba7782d05a6040d29fb2.setContent(html_b47bb258905d6d5b2063f92e4b7079dd);
+            
+        
+
+        circle_marker_c215d64c4ba8ace3968c0ffb20510ba5.bindPopup(popup_f38a6f22c28eba7782d05a6040d29fb2)
+        ;
+
+        
+    
+    
+            circle_marker_c215d64c4ba8ace3968c0ffb20510ba5.bindTooltip(
+                `<div>
+                     Médicos: 14
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_262c0264636d073794b9726c8d825095 = L.circleMarker(
+                [-38.7196, -62.2659],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 23.043437243605823, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_f26a6f30104a813f173b124f0090d849 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_43bf9aaa34e59904ab4c20014a90cf35 = $(`<div id="html_43bf9aaa34e59904ab4c20014a90cf35" style="width: 100.0%; height: 100.0%;">Médicos: 59</div>`)[0];
+                popup_f26a6f30104a813f173b124f0090d849.setContent(html_43bf9aaa34e59904ab4c20014a90cf35);
+            
+        
+
+        circle_marker_262c0264636d073794b9726c8d825095.bindPopup(popup_f26a6f30104a813f173b124f0090d849)
+        ;
+
+        
+    
+    
+            circle_marker_262c0264636d073794b9726c8d825095.bindTooltip(
+                `<div>
+                     Médicos: 59
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0ece893224f3730638ab46dae7f7eea6 = L.circleMarker(
+                [-38.0055, -57.5426],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 37.107950630558946, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_957f290a7a509d8246d3094fb4e4a374 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ffb92c09f576951c305ffa381fa0cc44 = $(`<div id="html_ffb92c09f576951c305ffa381fa0cc44" style="width: 100.0%; height: 100.0%;">Médicos: 153</div>`)[0];
+                popup_957f290a7a509d8246d3094fb4e4a374.setContent(html_ffb92c09f576951c305ffa381fa0cc44);
+            
+        
+
+        circle_marker_0ece893224f3730638ab46dae7f7eea6.bindPopup(popup_957f290a7a509d8246d3094fb4e4a374)
+        ;
+
+        
+    
+    
+            circle_marker_0ece893224f3730638ab46dae7f7eea6.bindTooltip(
+                `<div>
+                     Médicos: 153
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_456ecbadc47b6cc474a1189a9fce18a4 = L.circleMarker(
+                [-37.3204, -59.1334],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 23.430749027719962, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_a2b1f24e2a393ec6c14713020f719219 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3be58defb17507062e1ca945004b1042 = $(`<div id="html_3be58defb17507062e1ca945004b1042" style="width: 100.0%; height: 100.0%;">Médicos: 61</div>`)[0];
+                popup_a2b1f24e2a393ec6c14713020f719219.setContent(html_3be58defb17507062e1ca945004b1042);
+            
+        
+
+        circle_marker_456ecbadc47b6cc474a1189a9fce18a4.bindPopup(popup_a2b1f24e2a393ec6c14713020f719219)
+        ;
+
+        
+    
+    
+            circle_marker_456ecbadc47b6cc474a1189a9fce18a4.bindTooltip(
+                `<div>
+                     Médicos: 61
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3b198ccfdcf82fdd7466e0745d290a24 = L.circleMarker(
+                [-34.9214, -57.9544],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 54.332310828824504, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_facf48b5a7e9938a31823de398c010d9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ed4371d6f9e5e35a2bfc76de4909b8dd = $(`<div id="html_ed4371d6f9e5e35a2bfc76de4909b8dd" style="width: 100.0%; height: 100.0%;">Médicos: 328</div>`)[0];
+                popup_facf48b5a7e9938a31823de398c010d9.setContent(html_ed4371d6f9e5e35a2bfc76de4909b8dd);
+            
+        
+
+        circle_marker_3b198ccfdcf82fdd7466e0745d290a24.bindPopup(popup_facf48b5a7e9938a31823de398c010d9)
+        ;
+
+        
+    
+    
+            circle_marker_3b198ccfdcf82fdd7466e0745d290a24.bindTooltip(
+                `<div>
+                     Médicos: 328
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_55b7f5384080c320ed8cd6a715844517 = L.circleMarker(
+                [-34.6037, -58.3816],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 158.1771159175688, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_39b8deda54dbe90e7842ffd3b7ba4096 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4597bb9c7d83340461bd3c0a147ef663 = $(`<div id="html_4597bb9c7d83340461bd3c0a147ef663" style="width: 100.0%; height: 100.0%;">Médicos: 2780</div>`)[0];
+                popup_39b8deda54dbe90e7842ffd3b7ba4096.setContent(html_4597bb9c7d83340461bd3c0a147ef663);
+            
+        
+
+        circle_marker_55b7f5384080c320ed8cd6a715844517.bindPopup(popup_39b8deda54dbe90e7842ffd3b7ba4096)
+        ;
+
+        
+    
+    
+            circle_marker_55b7f5384080c320ed8cd6a715844517.bindTooltip(
+                `<div>
+                     Médicos: 2780
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d47897af45af073ccbd4efbefd722ccb = L.circleMarker(
+                [-33.4489, -70.6693],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.672315572906, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_18524137c88407266a3f51b423770f96 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c7e51987b96f936fb85c916ed0427057 = $(`<div id="html_c7e51987b96f936fb85c916ed0427057" style="width: 100.0%; height: 100.0%;">Médicos: 43</div>`)[0];
+                popup_18524137c88407266a3f51b423770f96.setContent(html_c7e51987b96f936fb85c916ed0427057);
+            
+        
+
+        circle_marker_d47897af45af073ccbd4efbefd722ccb.bindPopup(popup_18524137c88407266a3f51b423770f96)
+        ;
+
+        
+    
+    
+            circle_marker_d47897af45af073ccbd4efbefd722ccb.bindTooltip(
+                `<div>
+                     Médicos: 43
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_614cd51b1a401d3800fba8147ea01997 = L.circleMarker(
+                [-32.9442, -60.6505],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 31.74901573277509, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_0e0164c9ee6b060d353b60113b172007 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6d44bb41ed251ef7b59fbc8b65c28862 = $(`<div id="html_6d44bb41ed251ef7b59fbc8b65c28862" style="width: 100.0%; height: 100.0%;">Médicos: 112</div>`)[0];
+                popup_0e0164c9ee6b060d353b60113b172007.setContent(html_6d44bb41ed251ef7b59fbc8b65c28862);
+            
+        
+
+        circle_marker_614cd51b1a401d3800fba8147ea01997.bindPopup(popup_0e0164c9ee6b060d353b60113b172007)
+        ;
+
+        
+    
+    
+            circle_marker_614cd51b1a401d3800fba8147ea01997.bindTooltip(
+                `<div>
+                     Médicos: 112
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_adcb24187c263292c702fab05e963d4b = L.circleMarker(
+                [-32.8895, -68.8458],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.492855684535904, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_82a3b5902c5dd40ebffbe97d6197f8d1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_92e95f5340036e5597bf741b362993f4 = $(`<div id="html_92e95f5340036e5597bf741b362993f4" style="width: 100.0%; height: 100.0%;">Médicos: 34</div>`)[0];
+                popup_82a3b5902c5dd40ebffbe97d6197f8d1.setContent(html_92e95f5340036e5597bf741b362993f4);
+            
+        
+
+        circle_marker_adcb24187c263292c702fab05e963d4b.bindPopup(popup_82a3b5902c5dd40ebffbe97d6197f8d1)
+        ;
+
+        
+    
+    
+            circle_marker_adcb24187c263292c702fab05e963d4b.bindTooltip(
+                `<div>
+                     Médicos: 34
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fa5b3a8456184bd752476d507e317261 = L.circleMarker(
+                [-31.7226, -60.5238],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.672315572906, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_d3de5dae8c7154e4cd293b7873fa2609 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1aaa1397dddc7f48c5cead729af1b952 = $(`<div id="html_1aaa1397dddc7f48c5cead729af1b952" style="width: 100.0%; height: 100.0%;">Médicos: 43</div>`)[0];
+                popup_d3de5dae8c7154e4cd293b7873fa2609.setContent(html_1aaa1397dddc7f48c5cead729af1b952);
+            
+        
+
+        circle_marker_fa5b3a8456184bd752476d507e317261.bindPopup(popup_d3de5dae8c7154e4cd293b7873fa2609)
+        ;
+
+        
+    
+    
+            circle_marker_fa5b3a8456184bd752476d507e317261.bindTooltip(
+                `<div>
+                     Médicos: 43
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_69af4dec0e6820a6cfe9ebdaf56db267 = L.circleMarker(
+                [-31.6333, -60.7],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 24.186773244895647, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_0e0482db74138adec4d877a77bc581f6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d5ce8a1d545c9cc111e99c7ea24641c6 = $(`<div id="html_d5ce8a1d545c9cc111e99c7ea24641c6" style="width: 100.0%; height: 100.0%;">Médicos: 65</div>`)[0];
+                popup_0e0482db74138adec4d877a77bc581f6.setContent(html_d5ce8a1d545c9cc111e99c7ea24641c6);
+            
+        
+
+        circle_marker_69af4dec0e6820a6cfe9ebdaf56db267.bindPopup(popup_0e0482db74138adec4d877a77bc581f6)
+        ;
+
+        
+    
+    
+            circle_marker_69af4dec0e6820a6cfe9ebdaf56db267.bindTooltip(
+                `<div>
+                     Médicos: 65
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2acc78fbebfc7eba2fdf8a31e3783b2e = L.circleMarker(
+                [-31.5375, -68.5364],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.588457268119896, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_c93ae7b60af690c03ff6fc13dda42878 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_63ef6bc52529d3d7c13b0dc4b24981ec = $(`<div id="html_63ef6bc52529d3d7c13b0dc4b24981ec" style="width: 100.0%; height: 100.0%;">Médicos: 27</div>`)[0];
+                popup_c93ae7b60af690c03ff6fc13dda42878.setContent(html_63ef6bc52529d3d7c13b0dc4b24981ec);
+            
+        
+
+        circle_marker_2acc78fbebfc7eba2fdf8a31e3783b2e.bindPopup(popup_c93ae7b60af690c03ff6fc13dda42878)
+        ;
+
+        
+    
+    
+            circle_marker_2acc78fbebfc7eba2fdf8a31e3783b2e.bindTooltip(
+                `<div>
+                     Médicos: 27
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d6016914c24a86478d8ee4129abaee37 = L.circleMarker(
+                [-31.4201, -64.1888],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 26.324893162176366, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_38297c67021b78a0f65f1df45a073883 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e2575ea10865975541035e3dab71ecc4 = $(`<div id="html_e2575ea10865975541035e3dab71ecc4" style="width: 100.0%; height: 100.0%;">Médicos: 77</div>`)[0];
+                popup_38297c67021b78a0f65f1df45a073883.setContent(html_e2575ea10865975541035e3dab71ecc4);
+            
+        
+
+        circle_marker_d6016914c24a86478d8ee4129abaee37.bindPopup(popup_38297c67021b78a0f65f1df45a073883)
+        ;
+
+        
+    
+    
+            circle_marker_d6016914c24a86478d8ee4129abaee37.bindTooltip(
+                `<div>
+                     Médicos: 77
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_23a7fa81bdfd1885e189c4c021e93e87 = L.circleMarker(
+                [-29.4112, -66.85],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.233687939614086, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_6532a9d13746519a3240eeaf637a3fcf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e8bf397f940fc636c0bc4014313d85e1 = $(`<div id="html_e8bf397f940fc636c0bc4014313d85e1" style="width: 100.0%; height: 100.0%;">Médicos: 33</div>`)[0];
+                popup_6532a9d13746519a3240eeaf637a3fcf.setContent(html_e8bf397f940fc636c0bc4014313d85e1);
+            
+        
+
+        circle_marker_23a7fa81bdfd1885e189c4c021e93e87.bindPopup(popup_6532a9d13746519a3240eeaf637a3fcf)
+        ;
+
+        
+    
+    
+            circle_marker_23a7fa81bdfd1885e189c4c021e93e87.bindTooltip(
+                `<div>
+                     Médicos: 33
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a2b8d609870fc77109f7441b797b61f8 = L.circleMarker(
+                [-27.7955, -64.2615],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_f992ed0ec5f56ef16da3e644851c054d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1a89265cba283652aad203844d2ad6e4 = $(`<div id="html_1a89265cba283652aad203844d2ad6e4" style="width: 100.0%; height: 100.0%;">Médicos: 4</div>`)[0];
+                popup_f992ed0ec5f56ef16da3e644851c054d.setContent(html_1a89265cba283652aad203844d2ad6e4);
+            
+        
+
+        circle_marker_a2b8d609870fc77109f7441b797b61f8.bindPopup(popup_f992ed0ec5f56ef16da3e644851c054d)
+        ;
+
+        
+    
+    
+            circle_marker_a2b8d609870fc77109f7441b797b61f8.bindTooltip(
+                `<div>
+                     Médicos: 4
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b823e255a86ae76b545a5ec17deb15de = L.circleMarker(
+                [-27.4806, -58.8196],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 35.24202037341219, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_0fbf75c3f5679456c0c6c783ac769241 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c7f076850c8723a6a82b957912006487 = $(`<div id="html_c7f076850c8723a6a82b957912006487" style="width: 100.0%; height: 100.0%;">Médicos: 138</div>`)[0];
+                popup_0fbf75c3f5679456c0c6c783ac769241.setContent(html_c7f076850c8723a6a82b957912006487);
+            
+        
+
+        circle_marker_b823e255a86ae76b545a5ec17deb15de.bindPopup(popup_0fbf75c3f5679456c0c6c783ac769241)
+        ;
+
+        
+    
+    
+            circle_marker_b823e255a86ae76b545a5ec17deb15de.bindTooltip(
+                `<div>
+                     Médicos: 138
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e8fdc16b2a8b261a81a6a295a8bdb903 = L.circleMarker(
+                [-27.4514, -58.9862],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.348469228349534, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_1e6fa2d2e9215720553074e1a55831cd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fea8a70b4952ed79e5e34d5b0953757a = $(`<div id="html_fea8a70b4952ed79e5e34d5b0953757a" style="width: 100.0%; height: 100.0%;">Médicos: 6</div>`)[0];
+                popup_1e6fa2d2e9215720553074e1a55831cd.setContent(html_fea8a70b4952ed79e5e34d5b0953757a);
+            
+        
+
+        circle_marker_e8fdc16b2a8b261a81a6a295a8bdb903.bindPopup(popup_1e6fa2d2e9215720553074e1a55831cd)
+        ;
+
+        
+    
+    
+            circle_marker_e8fdc16b2a8b261a81a6a295a8bdb903.bindTooltip(
+                `<div>
+                     Médicos: 6
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_15f7dd5e25e1ee2bb87488f2adefca7f = L.circleMarker(
+                [-27.3626, -55.9003],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.387494569938157, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_31d43f0d536afa79023aa3cb64615df7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_78c3c93ef52b2ae78a705cae28ea0837 = $(`<div id="html_78c3c93ef52b2ae78a705cae28ea0837" style="width: 100.0%; height: 100.0%;">Médicos: 23</div>`)[0];
+                popup_31d43f0d536afa79023aa3cb64615df7.setContent(html_78c3c93ef52b2ae78a705cae28ea0837);
+            
+        
+
+        circle_marker_15f7dd5e25e1ee2bb87488f2adefca7f.bindPopup(popup_31d43f0d536afa79023aa3cb64615df7)
+        ;
+
+        
+    
+    
+            circle_marker_15f7dd5e25e1ee2bb87488f2adefca7f.bindTooltip(
+                `<div>
+                     Médicos: 23
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2ba05e85d4629643ad214cb27e0014f4 = L.circleMarker(
+                [-26.8241, -65.2226],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 29.24038303442689, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_2f8aa1dc4b5d463f16d1dcb816e2fa26 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1d3862df6f3359992806bbca8c1623b9 = $(`<div id="html_1d3862df6f3359992806bbca8c1623b9" style="width: 100.0%; height: 100.0%;">Médicos: 95</div>`)[0];
+                popup_2f8aa1dc4b5d463f16d1dcb816e2fa26.setContent(html_1d3862df6f3359992806bbca8c1623b9);
+            
+        
+
+        circle_marker_2ba05e85d4629643ad214cb27e0014f4.bindPopup(popup_2f8aa1dc4b5d463f16d1dcb816e2fa26)
+        ;
+
+        
+    
+    
+            circle_marker_2ba05e85d4629643ad214cb27e0014f4.bindTooltip(
+                `<div>
+                     Médicos: 95
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0ae6c3f39ef174d06b74affb743ebd4c = L.circleMarker(
+                [-25.2637, -57.5759],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.36931687685298, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_be634313c3f7eca28b16d98d7f565b50 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_972e6d106b967e14d61d58e10a43014f = $(`<div id="html_972e6d106b967e14d61d58e10a43014f" style="width: 100.0%; height: 100.0%;">Médicos: 17</div>`)[0];
+                popup_be634313c3f7eca28b16d98d7f565b50.setContent(html_972e6d106b967e14d61d58e10a43014f);
+            
+        
+
+        circle_marker_0ae6c3f39ef174d06b74affb743ebd4c.bindPopup(popup_be634313c3f7eca28b16d98d7f565b50)
+        ;
+
+        
+    
+    
+            circle_marker_0ae6c3f39ef174d06b74affb743ebd4c.bindTooltip(
+                `<div>
+                     Médicos: 17
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6de4e20e0fb27d75b0abb4ab7362178d = L.circleMarker(
+                [-21.5356, -64.7296],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.348469228349534, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_a97960456d6e8b1556d92ff3c4fb569b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8d3afef0c1e8c8a24506d94aad48b8bd = $(`<div id="html_8d3afef0c1e8c8a24506d94aad48b8bd" style="width: 100.0%; height: 100.0%;">Médicos: 6</div>`)[0];
+                popup_a97960456d6e8b1556d92ff3c4fb569b.setContent(html_8d3afef0c1e8c8a24506d94aad48b8bd);
+            
+        
+
+        circle_marker_6de4e20e0fb27d75b0abb4ab7362178d.bindPopup(popup_a97960456d6e8b1556d92ff3c4fb569b)
+        ;
+
+        
+    
+    
+            circle_marker_6de4e20e0fb27d75b0abb4ab7362178d.bindTooltip(
+                `<div>
+                     Médicos: 6
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4fac8c4073832dd441cffb5223d5ca58 = L.circleMarker(
+                [-19.5833, -65.7531],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.937253933193772, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_16267e5da87e7a092134d7247caa40b0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e5a13ee510976cac88d80b84566d9dc8 = $(`<div id="html_e5a13ee510976cac88d80b84566d9dc8" style="width: 100.0%; height: 100.0%;">Médicos: 7</div>`)[0];
+                popup_16267e5da87e7a092134d7247caa40b0.setContent(html_e5a13ee510976cac88d80b84566d9dc8);
+            
+        
+
+        circle_marker_4fac8c4073832dd441cffb5223d5ca58.bindPopup(popup_16267e5da87e7a092134d7247caa40b0)
+        ;
+
+        
+    
+    
+            circle_marker_4fac8c4073832dd441cffb5223d5ca58.bindTooltip(
+                `<div>
+                     Médicos: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_05bd1d98df458ff99845896626218892 = L.circleMarker(
+                [-19.0333, -65.2627],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 39.344631145812, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_7301c286d40774bfbf502a234b4c5fb5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c2a2d62040fc3586a2f13726e301783b = $(`<div id="html_c2a2d62040fc3586a2f13726e301783b" style="width: 100.0%; height: 100.0%;">Médicos: 172</div>`)[0];
+                popup_7301c286d40774bfbf502a234b4c5fb5.setContent(html_c2a2d62040fc3586a2f13726e301783b);
+            
+        
+
+        circle_marker_05bd1d98df458ff99845896626218892.bindPopup(popup_7301c286d40774bfbf502a234b4c5fb5)
+        ;
+
+        
+    
+    
+            circle_marker_05bd1d98df458ff99845896626218892.bindTooltip(
+                `<div>
+                     Médicos: 172
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_39131d285f5938437e90dd4dd7f9b8db = L.circleMarker(
+                [-17.9833, -67.1167],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.9498743710662, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_3cbdd9f87e16ff241dd18f8a25a8ca64 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2723d2631ac41f7d30f5028ab8a054fd = $(`<div id="html_2723d2631ac41f7d30f5028ab8a054fd" style="width: 100.0%; height: 100.0%;">Médicos: 11</div>`)[0];
+                popup_3cbdd9f87e16ff241dd18f8a25a8ca64.setContent(html_2723d2631ac41f7d30f5028ab8a054fd);
+            
+        
+
+        circle_marker_39131d285f5938437e90dd4dd7f9b8db.bindPopup(popup_3cbdd9f87e16ff241dd18f8a25a8ca64)
+        ;
+
+        
+    
+    
+            circle_marker_39131d285f5938437e90dd4dd7f9b8db.bindTooltip(
+                `<div>
+                     Médicos: 11
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4f196c54c9d0b96c54c129dfd770505e = L.circleMarker(
+                [-17.7833, -63.1822],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.588457268119896, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_aa7f768908d8222fb0eb58e13164bf41 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e8dda91faa56ddc3a702bc432e2f4e01 = $(`<div id="html_e8dda91faa56ddc3a702bc432e2f4e01" style="width: 100.0%; height: 100.0%;">Médicos: 27</div>`)[0];
+                popup_aa7f768908d8222fb0eb58e13164bf41.setContent(html_e8dda91faa56ddc3a702bc432e2f4e01);
+            
+        
+
+        circle_marker_4f196c54c9d0b96c54c129dfd770505e.bindPopup(popup_aa7f768908d8222fb0eb58e13164bf41)
+        ;
+
+        
+    
+    
+            circle_marker_4f196c54c9d0b96c54c129dfd770505e.bindTooltip(
+                `<div>
+                     Médicos: 27
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_960db14b2fcc5efc9e3c7f7bc12037f6 = L.circleMarker(
+                [-17.3898, -66.1568],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 23.430749027719962, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_065577286759c0bd92b045a9df1f0a30 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_06ee5b423edaee615e05871955835a7c = $(`<div id="html_06ee5b423edaee615e05871955835a7c" style="width: 100.0%; height: 100.0%;">Médicos: 61</div>`)[0];
+                popup_065577286759c0bd92b045a9df1f0a30.setContent(html_06ee5b423edaee615e05871955835a7c);
+            
+        
+
+        circle_marker_960db14b2fcc5efc9e3c7f7bc12037f6.bindPopup(popup_065577286759c0bd92b045a9df1f0a30)
+        ;
+
+        
+    
+    
+            circle_marker_960db14b2fcc5efc9e3c7f7bc12037f6.bindTooltip(
+                `<div>
+                     Médicos: 61
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_275a39d9da3fcedbce9241e76e9c648e = L.circleMarker(
+                [-17.231, -67.1448],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.196152422706632, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_19d0b04ca1adbd595ac53f3561c37d1c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ef96e6f069c84d7847bde1a3aa23045f = $(`<div id="html_ef96e6f069c84d7847bde1a3aa23045f" style="width: 100.0%; height: 100.0%;">Médicos: 3</div>`)[0];
+                popup_19d0b04ca1adbd595ac53f3561c37d1c.setContent(html_ef96e6f069c84d7847bde1a3aa23045f);
+            
+        
+
+        circle_marker_275a39d9da3fcedbce9241e76e9c648e.bindPopup(popup_19d0b04ca1adbd595ac53f3561c37d1c)
+        ;
+
+        
+    
+    
+            circle_marker_275a39d9da3fcedbce9241e76e9c648e.bindTooltip(
+                `<div>
+                     Médicos: 3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a16f38c2b6a05a26be9dc3d10c919468 = L.circleMarker(
+                [-16.5, -68.15],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 24.919871588754226, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_b83d151fe137ba8ace4af8ecc9f36a13 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fe777c9f79217cb1a735aa1ea11a86b4 = $(`<div id="html_fe777c9f79217cb1a735aa1ea11a86b4" style="width: 100.0%; height: 100.0%;">Médicos: 69</div>`)[0];
+                popup_b83d151fe137ba8ace4af8ecc9f36a13.setContent(html_fe777c9f79217cb1a735aa1ea11a86b4);
+            
+        
+
+        circle_marker_a16f38c2b6a05a26be9dc3d10c919468.bindPopup(popup_b83d151fe137ba8ace4af8ecc9f36a13)
+        ;
+
+        
+    
+    
+            circle_marker_a16f38c2b6a05a26be9dc3d10c919468.bindTooltip(
+                `<div>
+                     Médicos: 69
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ec59b925a2845873c46554169f98f481 = L.circleMarker(
+                [-12.06513, -75.20486],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.242640687119286, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_24cf45103872f008e6792a31abfa434f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_42c59b5caeb976c1f780f4b5599ecf12 = $(`<div id="html_42c59b5caeb976c1f780f4b5599ecf12" style="width: 100.0%; height: 100.0%;">Médicos: 2</div>`)[0];
+                popup_24cf45103872f008e6792a31abfa434f.setContent(html_42c59b5caeb976c1f780f4b5599ecf12);
+            
+        
+
+        circle_marker_ec59b925a2845873c46554169f98f481.bindPopup(popup_24cf45103872f008e6792a31abfa434f)
+        ;
+
+        
+    
+    
+            circle_marker_ec59b925a2845873c46554169f98f481.bindTooltip(
+                `<div>
+                     Médicos: 2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ca4c7a185e76979f93a5120027687e56 = L.circleMarker(
+                [-12.0464, -77.0428],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.816653826391967, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_0b1f087311413e6ab9ef967229afb66e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0f1d0a328a7aa4f92a7aca3501519f3b = $(`<div id="html_0f1d0a328a7aa4f92a7aca3501519f3b" style="width: 100.0%; height: 100.0%;">Médicos: 13</div>`)[0];
+                popup_0b1f087311413e6ab9ef967229afb66e.setContent(html_0f1d0a328a7aa4f92a7aca3501519f3b);
+            
+        
+
+        circle_marker_ca4c7a185e76979f93a5120027687e56.bindPopup(popup_0b1f087311413e6ab9ef967229afb66e)
+        ;
+
+        
+    
+    
+            circle_marker_ca4c7a185e76979f93a5120027687e56.bindTooltip(
+                `<div>
+                     Médicos: 13
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3ad06cf78f6f2606c427384bafb2eeba = L.circleMarker(
+                [-4.0089, -79.2108],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.213203435596427, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_9dfd65c2fadc624ae3398398475809e1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3faa8a3dd0dee25c0dd7e403b1aa7fa2 = $(`<div id="html_3faa8a3dd0dee25c0dd7e403b1aa7fa2" style="width: 100.0%; height: 100.0%;">Médicos: 50</div>`)[0];
+                popup_9dfd65c2fadc624ae3398398475809e1.setContent(html_3faa8a3dd0dee25c0dd7e403b1aa7fa2);
+            
+        
+
+        circle_marker_3ad06cf78f6f2606c427384bafb2eeba.bindPopup(popup_9dfd65c2fadc624ae3398398475809e1)
+        ;
+
+        
+    
+    
+            circle_marker_3ad06cf78f6f2606c427384bafb2eeba.bindTooltip(
+                `<div>
+                     Médicos: 50
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_330addb8903a6a68f068c3ae36e80cbc = L.circleMarker(
+                [-3.2586, -79.961],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.703293088490064, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_96856658727da84bac6b28e7fa8ace85 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c8db409f6349fc3bece8876176f2d69f = $(`<div id="html_c8db409f6349fc3bece8876176f2d69f" style="width: 100.0%; height: 100.0%;">Médicos: 31</div>`)[0];
+                popup_96856658727da84bac6b28e7fa8ace85.setContent(html_c8db409f6349fc3bece8876176f2d69f);
+            
+        
+
+        circle_marker_330addb8903a6a68f068c3ae36e80cbc.bindPopup(popup_96856658727da84bac6b28e7fa8ace85)
+        ;
+
+        
+    
+    
+            circle_marker_330addb8903a6a68f068c3ae36e80cbc.bindTooltip(
+                `<div>
+                     Médicos: 31
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7144233954d587e3c5920d87d1d14948 = L.circleMarker(
+                [-2.9006, -79.0045],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 23.043437243605823, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_55af62da917025586d2f2f65c3a896a3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6247a3865fe66e830a8f365b618a5866 = $(`<div id="html_6247a3865fe66e830a8f365b618a5866" style="width: 100.0%; height: 100.0%;">Médicos: 59</div>`)[0];
+                popup_55af62da917025586d2f2f65c3a896a3.setContent(html_6247a3865fe66e830a8f365b618a5866);
+            
+        
+
+        circle_marker_7144233954d587e3c5920d87d1d14948.bindPopup(popup_55af62da917025586d2f2f65c3a896a3)
+        ;
+
+        
+    
+    
+            circle_marker_7144233954d587e3c5920d87d1d14948.bindTooltip(
+                `<div>
+                     Médicos: 59
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6475e038ef5479146eb8b39919415001 = L.circleMarker(
+                [-2.17, -79.9224],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 41.24318125460256, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_2e8f2f4dff22ac0e61b647558a130422 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a22f5eeba2986f65bc4105da7a518976 = $(`<div id="html_a22f5eeba2986f65bc4105da7a518976" style="width: 100.0%; height: 100.0%;">Médicos: 189</div>`)[0];
+                popup_2e8f2f4dff22ac0e61b647558a130422.setContent(html_a22f5eeba2986f65bc4105da7a518976);
+            
+        
+
+        circle_marker_6475e038ef5479146eb8b39919415001.bindPopup(popup_2e8f2f4dff22ac0e61b647558a130422)
+        ;
+
+        
+    
+    
+            circle_marker_6475e038ef5479146eb8b39919415001.bindTooltip(
+                `<div>
+                     Médicos: 189
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_37687b3984bbdaa9565caadc64340fa7 = L.circleMarker(
+                [-2.1699, -79.9224],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.224972160321824, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_25f9c16ff56b212721ae0572d846c099 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_269b58e203fefdd9e69643ed64eb91d4 = $(`<div id="html_269b58e203fefdd9e69643ed64eb91d4" style="width: 100.0%; height: 100.0%;">Médicos: 14</div>`)[0];
+                popup_25f9c16ff56b212721ae0572d846c099.setContent(html_269b58e203fefdd9e69643ed64eb91d4);
+            
+        
+
+        circle_marker_37687b3984bbdaa9565caadc64340fa7.bindPopup(popup_25f9c16ff56b212721ae0572d846c099)
+        ;
+
+        
+    
+    
+            circle_marker_37687b3984bbdaa9565caadc64340fa7.bindTooltip(
+                `<div>
+                     Médicos: 14
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6cfcd36ec23f1d1100c086e200056cb6 = L.circleMarker(
+                [-1.6644, -78.6546],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 28.460498941515414, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_665c93c38b2fe352f0cd2d62ab57c738 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fc03038d31e53d6bff15f07094c4b200 = $(`<div id="html_fc03038d31e53d6bff15f07094c4b200" style="width: 100.0%; height: 100.0%;">Médicos: 90</div>`)[0];
+                popup_665c93c38b2fe352f0cd2d62ab57c738.setContent(html_fc03038d31e53d6bff15f07094c4b200);
+            
+        
+
+        circle_marker_6cfcd36ec23f1d1100c086e200056cb6.bindPopup(popup_665c93c38b2fe352f0cd2d62ab57c738)
+        ;
+
+        
+    
+    
+            circle_marker_6cfcd36ec23f1d1100c086e200056cb6.bindTooltip(
+                `<div>
+                     Médicos: 90
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e7a8c0d692165a071a761769406bee2c = L.circleMarker(
+                [-1.247, -78.6197],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30.14962686336267, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_0b39713725ce9421468290ce39254a99 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_63e7d31e48a7f3fd27948f2037af7e56 = $(`<div id="html_63e7d31e48a7f3fd27948f2037af7e56" style="width: 100.0%; height: 100.0%;">Médicos: 101</div>`)[0];
+                popup_0b39713725ce9421468290ce39254a99.setContent(html_63e7d31e48a7f3fd27948f2037af7e56);
+            
+        
+
+        circle_marker_e7a8c0d692165a071a761769406bee2c.bindPopup(popup_0b39713725ce9421468290ce39254a99)
+        ;
+
+        
+    
+    
+            circle_marker_e7a8c0d692165a071a761769406bee2c.bindTooltip(
+                `<div>
+                     Médicos: 101
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e0222231cb5d5393b7a13d4ba3c41c2b = L.circleMarker(
+                [-1.0564, -80.4545],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 29.24038303442689, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_c95ee3b08cbc62f7cfb2d9496d0106b9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6a84fe50c8e381623b8a16a63612fc79 = $(`<div id="html_6a84fe50c8e381623b8a16a63612fc79" style="width: 100.0%; height: 100.0%;">Médicos: 95</div>`)[0];
+                popup_c95ee3b08cbc62f7cfb2d9496d0106b9.setContent(html_6a84fe50c8e381623b8a16a63612fc79);
+            
+        
+
+        circle_marker_e0222231cb5d5393b7a13d4ba3c41c2b.bindPopup(popup_c95ee3b08cbc62f7cfb2d9496d0106b9)
+        ;
+
+        
+    
+    
+            circle_marker_e0222231cb5d5393b7a13d4ba3c41c2b.bindTooltip(
+                `<div>
+                     Médicos: 95
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e23fec3bfb32c948c57fae3283e57284 = L.circleMarker(
+                [-0.95, -80.7336],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.74823934929885, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_4c91989e418068ad6e370cd424900e19 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d0069e028d3680ca8bea6df8771277b4 = $(`<div id="html_d0069e028d3680ca8bea6df8771277b4" style="width: 100.0%; height: 100.0%;">Médicos: 35</div>`)[0];
+                popup_4c91989e418068ad6e370cd424900e19.setContent(html_d0069e028d3680ca8bea6df8771277b4);
+            
+        
+
+        circle_marker_e23fec3bfb32c948c57fae3283e57284.bindPopup(popup_4c91989e418068ad6e370cd424900e19)
+        ;
+
+        
+    
+    
+            circle_marker_e23fec3bfb32c948c57fae3283e57284.bindTooltip(
+                `<div>
+                     Médicos: 35
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_303df2f6aedf25f9c113ce99c57ca931 = L.circleMarker(
+                [-0.1807, -78.4678],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50.645829048402405, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_d5705a5d447fe5c19553adfef78d3a58 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8d83bde5fd24f5f55c918cc21c6bc9ac = $(`<div id="html_8d83bde5fd24f5f55c918cc21c6bc9ac" style="width: 100.0%; height: 100.0%;">Médicos: 285</div>`)[0];
+                popup_d5705a5d447fe5c19553adfef78d3a58.setContent(html_8d83bde5fd24f5f55c918cc21c6bc9ac);
+            
+        
+
+        circle_marker_303df2f6aedf25f9c113ce99c57ca931.bindPopup(popup_d5705a5d447fe5c19553adfef78d3a58)
+        ;
+
+        
+    
+    
+            circle_marker_303df2f6aedf25f9c113ce99c57ca931.bindTooltip(
+                `<div>
+                     Médicos: 285
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_93ac0b5f486a17032f903d6866d509a3 = L.circleMarker(
+                [2.455, -76.6069],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.196152422706632, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_005c9e6b2495fd974644a89996f058b3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c6acd5b58d9ed01bbd60cf4178a9ca60 = $(`<div id="html_c6acd5b58d9ed01bbd60cf4178a9ca60" style="width: 100.0%; height: 100.0%;">Médicos: 3</div>`)[0];
+                popup_005c9e6b2495fd974644a89996f058b3.setContent(html_c6acd5b58d9ed01bbd60cf4178a9ca60);
+            
+        
+
+        circle_marker_93ac0b5f486a17032f903d6866d509a3.bindPopup(popup_005c9e6b2495fd974644a89996f058b3)
+        ;
+
+        
+    
+    
+            circle_marker_93ac0b5f486a17032f903d6866d509a3.bindTooltip(
+                `<div>
+                     Médicos: 3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_184bbe190815028febe0913bbe6cb5ae = L.circleMarker(
+                [2.927, -75.2803],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.816653826391967, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_227de52ba2214d5dec2e2d9cc88b90d5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6a7c7c428ff17a6b932a9804b3f1033e = $(`<div id="html_6a7c7c428ff17a6b932a9804b3f1033e" style="width: 100.0%; height: 100.0%;">Médicos: 13</div>`)[0];
+                popup_227de52ba2214d5dec2e2d9cc88b90d5.setContent(html_6a7c7c428ff17a6b932a9804b3f1033e);
+            
+        
+
+        circle_marker_184bbe190815028febe0913bbe6cb5ae.bindPopup(popup_227de52ba2214d5dec2e2d9cc88b90d5)
+        ;
+
+        
+    
+    
+            circle_marker_184bbe190815028febe0913bbe6cb5ae.bindTooltip(
+                `<div>
+                     Médicos: 13
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_79b57e3cf7717a44708c7a4b7979e295 = L.circleMarker(
+                [3.4516, -76.5319],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.618950038622252, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_769cc8b113dbb7e55b79dcd6fb3afa64 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0b9d523d528fa3a10bfe941b795abdcb = $(`<div id="html_0b9d523d528fa3a10bfe941b795abdcb" style="width: 100.0%; height: 100.0%;">Médicos: 15</div>`)[0];
+                popup_769cc8b113dbb7e55b79dcd6fb3afa64.setContent(html_0b9d523d528fa3a10bfe941b795abdcb);
+            
+        
+
+        circle_marker_79b57e3cf7717a44708c7a4b7979e295.bindPopup(popup_769cc8b113dbb7e55b79dcd6fb3afa64)
+        ;
+
+        
+    
+    
+            circle_marker_79b57e3cf7717a44708c7a4b7979e295.bindTooltip(
+                `<div>
+                     Médicos: 15
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_121542f3ab40dafa8de1000c2cbc3f03 = L.circleMarker(
+                [4.4422, -75.2322],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.486832980505138, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_3f8e215c31935df76399b67639004ec5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_82366b862800f752ceea5c03188950f9 = $(`<div id="html_82366b862800f752ceea5c03188950f9" style="width: 100.0%; height: 100.0%;">Médicos: 10</div>`)[0];
+                popup_3f8e215c31935df76399b67639004ec5.setContent(html_82366b862800f752ceea5c03188950f9);
+            
+        
+
+        circle_marker_121542f3ab40dafa8de1000c2cbc3f03.bindPopup(popup_3f8e215c31935df76399b67639004ec5)
+        ;
+
+        
+    
+    
+            circle_marker_121542f3ab40dafa8de1000c2cbc3f03.bindTooltip(
+                `<div>
+                     Médicos: 10
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5eb8093889ba02cebb7bc4069b1eac86 = L.circleMarker(
+                [4.5656, -75.6636],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_454cee4d4584f1b00e69af4cd58d80ed = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fa65c3f8b41923b1acf655f86b280225 = $(`<div id="html_fa65c3f8b41923b1acf655f86b280225" style="width: 100.0%; height: 100.0%;">Médicos: 1</div>`)[0];
+                popup_454cee4d4584f1b00e69af4cd58d80ed.setContent(html_fa65c3f8b41923b1acf655f86b280225);
+            
+        
+
+        circle_marker_5eb8093889ba02cebb7bc4069b1eac86.bindPopup(popup_454cee4d4584f1b00e69af4cd58d80ed)
+        ;
+
+        
+    
+    
+            circle_marker_5eb8093889ba02cebb7bc4069b1eac86.bindTooltip(
+                `<div>
+                     Médicos: 1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d1082761720f93fef47a9f88a39726f3 = L.circleMarker(
+                [4.711, -74.0721],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 48.46648326421053, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_355fc8e227d0b863e95c77d76e53757d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7b5440c1b1c6e17cccc91a99079408d3 = $(`<div id="html_7b5440c1b1c6e17cccc91a99079408d3" style="width: 100.0%; height: 100.0%;">Médicos: 261</div>`)[0];
+                popup_355fc8e227d0b863e95c77d76e53757d.setContent(html_7b5440c1b1c6e17cccc91a99079408d3);
+            
+        
+
+        circle_marker_d1082761720f93fef47a9f88a39726f3.bindPopup(popup_355fc8e227d0b863e95c77d76e53757d)
+        ;
+
+        
+    
+    
+            circle_marker_d1082761720f93fef47a9f88a39726f3.bindTooltip(
+                `<div>
+                     Médicos: 261
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d2adcb7a57737ac4b38605f4c78a0578 = L.circleMarker(
+                [4.8126, -74.1442],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.242640687119286, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_0b9a81688ef39f2f5ab957c9c61daa53 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_62aaa350389951c4e44ba4eb54f55496 = $(`<div id="html_62aaa350389951c4e44ba4eb54f55496" style="width: 100.0%; height: 100.0%;">Médicos: 2</div>`)[0];
+                popup_0b9a81688ef39f2f5ab957c9c61daa53.setContent(html_62aaa350389951c4e44ba4eb54f55496);
+            
+        
+
+        circle_marker_d2adcb7a57737ac4b38605f4c78a0578.bindPopup(popup_0b9a81688ef39f2f5ab957c9c61daa53)
+        ;
+
+        
+    
+    
+            circle_marker_d2adcb7a57737ac4b38605f4c78a0578.bindTooltip(
+                `<div>
+                     Médicos: 2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1baf25b98586d813b2de3b7aacf1511f = L.circleMarker(
+                [4.814, -75.6947],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.242640687119286, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_6f8ca937d60887d7decc0a365a45563e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bc03b68922ba4f3504b4e0134d6fe57a = $(`<div id="html_bc03b68922ba4f3504b4e0134d6fe57a" style="width: 100.0%; height: 100.0%;">Médicos: 2</div>`)[0];
+                popup_6f8ca937d60887d7decc0a365a45563e.setContent(html_bc03b68922ba4f3504b4e0134d6fe57a);
+            
+        
+
+        circle_marker_1baf25b98586d813b2de3b7aacf1511f.bindPopup(popup_6f8ca937d60887d7decc0a365a45563e)
+        ;
+
+        
+    
+    
+            circle_marker_1baf25b98586d813b2de3b7aacf1511f.bindTooltip(
+                `<div>
+                     Médicos: 2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8314b8ad53aef4745c8207f8c8f95696 = L.circleMarker(
+                [5.0667, -75.5167],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_0eedc0033e809ef0f5f90a487fcdd710 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3e84cc7d1efba5f6953c4fa104f4e269 = $(`<div id="html_3e84cc7d1efba5f6953c4fa104f4e269" style="width: 100.0%; height: 100.0%;">Médicos: 4</div>`)[0];
+                popup_0eedc0033e809ef0f5f90a487fcdd710.setContent(html_3e84cc7d1efba5f6953c4fa104f4e269);
+            
+        
+
+        circle_marker_8314b8ad53aef4745c8207f8c8f95696.bindPopup(popup_0eedc0033e809ef0f5f90a487fcdd710)
+        ;
+
+        
+    
+    
+            circle_marker_8314b8ad53aef4745c8207f8c8f95696.bindTooltip(
+                `<div>
+                     Médicos: 4
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5de460730b0692b87c30ce34b62c3ba0 = L.circleMarker(
+                [5.0689, -75.5174],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_eeeedc91e85fdea9458967a550fc260a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_57f6e1944d121948abe31694bba2612d = $(`<div id="html_57f6e1944d121948abe31694bba2612d" style="width: 100.0%; height: 100.0%;">Médicos: 1</div>`)[0];
+                popup_eeeedc91e85fdea9458967a550fc260a.setContent(html_57f6e1944d121948abe31694bba2612d);
+            
+        
+
+        circle_marker_5de460730b0692b87c30ce34b62c3ba0.bindPopup(popup_eeeedc91e85fdea9458967a550fc260a)
+        ;
+
+        
+    
+    
+            circle_marker_5de460730b0692b87c30ce34b62c3ba0.bindTooltip(
+                `<div>
+                     Médicos: 1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5e111792c11429638fafdb91e6bab4ff = L.circleMarker(
+                [5.5353, -73.3676],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_434ea603af9515a9717cc9debbb12450 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c52d8b57d01226a53fc22e4884674d7e = $(`<div id="html_c52d8b57d01226a53fc22e4884674d7e" style="width: 100.0%; height: 100.0%;">Médicos: 1</div>`)[0];
+                popup_434ea603af9515a9717cc9debbb12450.setContent(html_c52d8b57d01226a53fc22e4884674d7e);
+            
+        
+
+        circle_marker_5e111792c11429638fafdb91e6bab4ff.bindPopup(popup_434ea603af9515a9717cc9debbb12450)
+        ;
+
+        
+    
+    
+            circle_marker_5e111792c11429638fafdb91e6bab4ff.bindTooltip(
+                `<div>
+                     Médicos: 1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5db9d8345fa2a9be424c28ef4e396853 = L.circleMarker(
+                [5.6583, -73.0367],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.348469228349534, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_81b329a807ab2b88edb4026f634c895f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_73492a1b155afe8fa13bc6a9bd47241b = $(`<div id="html_73492a1b155afe8fa13bc6a9bd47241b" style="width: 100.0%; height: 100.0%;">Médicos: 6</div>`)[0];
+                popup_81b329a807ab2b88edb4026f634c895f.setContent(html_73492a1b155afe8fa13bc6a9bd47241b);
+            
+        
+
+        circle_marker_5db9d8345fa2a9be424c28ef4e396853.bindPopup(popup_81b329a807ab2b88edb4026f634c895f)
+        ;
+
+        
+    
+    
+            circle_marker_5db9d8345fa2a9be424c28ef4e396853.bindTooltip(
+                `<div>
+                     Médicos: 6
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f77b54306c05e10f0687df5c0803d03f = L.circleMarker(
+                [6.2442, -75.5812],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.816653826391967, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_42678680380f019262e2e8dc8ed50591 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6e0d4c075511a79f9739a45c295d3563 = $(`<div id="html_6e0d4c075511a79f9739a45c295d3563" style="width: 100.0%; height: 100.0%;">Médicos: 13</div>`)[0];
+                popup_42678680380f019262e2e8dc8ed50591.setContent(html_6e0d4c075511a79f9739a45c295d3563);
+            
+        
+
+        circle_marker_f77b54306c05e10f0687df5c0803d03f.bindPopup(popup_42678680380f019262e2e8dc8ed50591)
+        ;
+
+        
+    
+    
+            circle_marker_f77b54306c05e10f0687df5c0803d03f.bindTooltip(
+                `<div>
+                     Médicos: 13
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d9e11a93355619eb1984e0051c2f7415 = L.circleMarker(
+                [7.1254, -73.1198],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.74823934929885, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_9a218dd35100fcb7b73baacc62cf3b6e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5ddad0766e1746480c48b8245369372c = $(`<div id="html_5ddad0766e1746480c48b8245369372c" style="width: 100.0%; height: 100.0%;">Médicos: 35</div>`)[0];
+                popup_9a218dd35100fcb7b73baacc62cf3b6e.setContent(html_5ddad0766e1746480c48b8245369372c);
+            
+        
+
+        circle_marker_d9e11a93355619eb1984e0051c2f7415.bindPopup(popup_9a218dd35100fcb7b73baacc62cf3b6e)
+        ;
+
+        
+    
+    
+            circle_marker_d9e11a93355619eb1984e0051c2f7415.bindTooltip(
+                `<div>
+                     Médicos: 35
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f1bf9855081a7eaa0b6e2a4b2dec04e7 = L.circleMarker(
+                [7.3733, -72.6456],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.708203932499369, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_1964b35d87296a5efecc34fc2abbae96 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cb73d3d9c2b814115c7321dfa675f369 = $(`<div id="html_cb73d3d9c2b814115c7321dfa675f369" style="width: 100.0%; height: 100.0%;">Médicos: 5</div>`)[0];
+                popup_1964b35d87296a5efecc34fc2abbae96.setContent(html_cb73d3d9c2b814115c7321dfa675f369);
+            
+        
+
+        circle_marker_f1bf9855081a7eaa0b6e2a4b2dec04e7.bindPopup(popup_1964b35d87296a5efecc34fc2abbae96)
+        ;
+
+        
+    
+    
+            circle_marker_f1bf9855081a7eaa0b6e2a4b2dec04e7.bindTooltip(
+                `<div>
+                     Médicos: 5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cff4cfdd4032acc4d9ed685f50f6a23e = L.circleMarker(
+                [8.5981, -71.146],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.708203932499369, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_ff3c6fcb56a4649711c7641ea860c998 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_850735ede83b36f03333ff646cea7f74 = $(`<div id="html_850735ede83b36f03333ff646cea7f74" style="width: 100.0%; height: 100.0%;">Médicos: 5</div>`)[0];
+                popup_ff3c6fcb56a4649711c7641ea860c998.setContent(html_850735ede83b36f03333ff646cea7f74);
+            
+        
+
+        circle_marker_cff4cfdd4032acc4d9ed685f50f6a23e.bindPopup(popup_ff3c6fcb56a4649711c7641ea860c998)
+        ;
+
+        
+    
+    
+            circle_marker_cff4cfdd4032acc4d9ed685f50f6a23e.bindTooltip(
+                `<div>
+                     Médicos: 5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_85239641812d4e6cf01ea08eb88b5fc3 = L.circleMarker(
+                [8.75, -75.8833],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 31.176914536239792, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_03389205258e12c6102c627c98aaba15 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b0b5d5b7a3d37019f6134c6b9756c23d = $(`<div id="html_b0b5d5b7a3d37019f6134c6b9756c23d" style="width: 100.0%; height: 100.0%;">Médicos: 108</div>`)[0];
+                popup_03389205258e12c6102c627c98aaba15.setContent(html_b0b5d5b7a3d37019f6134c6b9756c23d);
+            
+        
+
+        circle_marker_85239641812d4e6cf01ea08eb88b5fc3.bindPopup(popup_03389205258e12c6102c627c98aaba15)
+        ;
+
+        
+    
+    
+            circle_marker_85239641812d4e6cf01ea08eb88b5fc3.bindTooltip(
+                `<div>
+                     Médicos: 108
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_54b5eae6bcfe1eb64dee0d6161c45245 = L.circleMarker(
+                [9.3016, -75.4003],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.242640687119286, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_243103e934f609006b2461ef2bf2fcba = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c6b863d12db7df3915ed6aa735784544 = $(`<div id="html_c6b863d12db7df3915ed6aa735784544" style="width: 100.0%; height: 100.0%;">Médicos: 2</div>`)[0];
+                popup_243103e934f609006b2461ef2bf2fcba.setContent(html_c6b863d12db7df3915ed6aa735784544);
+            
+        
+
+        circle_marker_54b5eae6bcfe1eb64dee0d6161c45245.bindPopup(popup_243103e934f609006b2461ef2bf2fcba)
+        ;
+
+        
+    
+    
+            circle_marker_54b5eae6bcfe1eb64dee0d6161c45245.bindTooltip(
+                `<div>
+                     Médicos: 2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0aed6be1686b3f50b06db011a1ae4976 = L.circleMarker(
+                [9.9281, -84.0907],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_0dedf79098a96c41954682902ba06dad = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_58f5d233478845ecfe1853b4bab6d67e = $(`<div id="html_58f5d233478845ecfe1853b4bab6d67e" style="width: 100.0%; height: 100.0%;">Médicos: 1</div>`)[0];
+                popup_0dedf79098a96c41954682902ba06dad.setContent(html_58f5d233478845ecfe1853b4bab6d67e);
+            
+        
+
+        circle_marker_0aed6be1686b3f50b06db011a1ae4976.bindPopup(popup_0dedf79098a96c41954682902ba06dad)
+        ;
+
+        
+    
+    
+            circle_marker_0aed6be1686b3f50b06db011a1ae4976.bindTooltip(
+                `<div>
+                     Médicos: 1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ca9c94799458bdeb4765fd412d784c77 = L.circleMarker(
+                [9.9604, -69.4011],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.816653826391967, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_8b4f342f4caf2eeaab6de831b5059569 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_99a47af3efb09c8ac0ab5d8df389f794 = $(`<div id="html_99a47af3efb09c8ac0ab5d8df389f794" style="width: 100.0%; height: 100.0%;">Médicos: 13</div>`)[0];
+                popup_8b4f342f4caf2eeaab6de831b5059569.setContent(html_99a47af3efb09c8ac0ab5d8df389f794);
+            
+        
+
+        circle_marker_ca9c94799458bdeb4765fd412d784c77.bindPopup(popup_8b4f342f4caf2eeaab6de831b5059569)
+        ;
+
+        
+    
+    
+            circle_marker_ca9c94799458bdeb4765fd412d784c77.bindTooltip(
+                `<div>
+                     Médicos: 13
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5037e9139e474ac33c0472ff84dc0b7a = L.circleMarker(
+                [10.0667, -69.35],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.242640687119286, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_bcc21865085ce5372ab2c895b67d61c2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_80d74933acb9f73fbf7777f03d9a2192 = $(`<div id="html_80d74933acb9f73fbf7777f03d9a2192" style="width: 100.0%; height: 100.0%;">Médicos: 2</div>`)[0];
+                popup_bcc21865085ce5372ab2c895b67d61c2.setContent(html_80d74933acb9f73fbf7777f03d9a2192);
+            
+        
+
+        circle_marker_5037e9139e474ac33c0472ff84dc0b7a.bindPopup(popup_bcc21865085ce5372ab2c895b67d61c2)
+        ;
+
+        
+    
+    
+            circle_marker_5037e9139e474ac33c0472ff84dc0b7a.bindTooltip(
+                `<div>
+                     Médicos: 2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cc46754605a330af561c484083f5ac54 = L.circleMarker(
+                [10.162, -68.0077],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_474370cc82fd1aa8287903e2569a098c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a085308648b34f0018e4b4a98de4e380 = $(`<div id="html_a085308648b34f0018e4b4a98de4e380" style="width: 100.0%; height: 100.0%;">Médicos: 4</div>`)[0];
+                popup_474370cc82fd1aa8287903e2569a098c.setContent(html_a085308648b34f0018e4b4a98de4e380);
+            
+        
+
+        circle_marker_cc46754605a330af561c484083f5ac54.bindPopup(popup_474370cc82fd1aa8287903e2569a098c)
+        ;
+
+        
+    
+    
+            circle_marker_cc46754605a330af561c484083f5ac54.bindTooltip(
+                `<div>
+                     Médicos: 4
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2ccd805431992dd6840db40e0b0d6337 = L.circleMarker(
+                [10.3997, -75.5144],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_09ff32ac8c0a26bb1529c8fd03d96cce = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_21070b9ca16363e66436e64be7aaf55f = $(`<div id="html_21070b9ca16363e66436e64be7aaf55f" style="width: 100.0%; height: 100.0%;">Médicos: 16</div>`)[0];
+                popup_09ff32ac8c0a26bb1529c8fd03d96cce.setContent(html_21070b9ca16363e66436e64be7aaf55f);
+            
+        
+
+        circle_marker_2ccd805431992dd6840db40e0b0d6337.bindPopup(popup_09ff32ac8c0a26bb1529c8fd03d96cce)
+        ;
+
+        
+    
+    
+            circle_marker_2ccd805431992dd6840db40e0b0d6337.bindTooltip(
+                `<div>
+                     Médicos: 16
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a3db4de47bd81a2b3b2a24e8b4cde44d = L.circleMarker(
+                [10.4806, -66.9036],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.242640687119286, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_299a8b2d6362ddd94e54a29942befdd0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_454a028d2264fe885edeef530f76b05a = $(`<div id="html_454a028d2264fe885edeef530f76b05a" style="width: 100.0%; height: 100.0%;">Médicos: 2</div>`)[0];
+                popup_299a8b2d6362ddd94e54a29942befdd0.setContent(html_454a028d2264fe885edeef530f76b05a);
+            
+        
+
+        circle_marker_a3db4de47bd81a2b3b2a24e8b4cde44d.bindPopup(popup_299a8b2d6362ddd94e54a29942befdd0)
+        ;
+
+        
+    
+    
+            circle_marker_a3db4de47bd81a2b3b2a24e8b4cde44d.bindTooltip(
+                `<div>
+                     Médicos: 2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_99219639dfe474968bef885d251a8f64 = L.circleMarker(
+                [10.6545, -71.65],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.937253933193772, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_bffcd4695cf8be1ec56759b383a64996 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4797131e379d5a6703d24fea11fb3a41 = $(`<div id="html_4797131e379d5a6703d24fea11fb3a41" style="width: 100.0%; height: 100.0%;">Médicos: 7</div>`)[0];
+                popup_bffcd4695cf8be1ec56759b383a64996.setContent(html_4797131e379d5a6703d24fea11fb3a41);
+            
+        
+
+        circle_marker_99219639dfe474968bef885d251a8f64.bindPopup(popup_bffcd4695cf8be1ec56759b383a64996)
+        ;
+
+        
+    
+    
+            circle_marker_99219639dfe474968bef885d251a8f64.bindTooltip(
+                `<div>
+                     Médicos: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e139de5d4353aac1091076420443bafb = L.circleMarker(
+                [10.7477, -75.0202],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.36931687685298, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_bfdff9d007081601da1368a8ea8939c9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_087bef6254e4d8816a49c5430b66f609 = $(`<div id="html_087bef6254e4d8816a49c5430b66f609" style="width: 100.0%; height: 100.0%;">Médicos: 17</div>`)[0];
+                popup_bfdff9d007081601da1368a8ea8939c9.setContent(html_087bef6254e4d8816a49c5430b66f609);
+            
+        
+
+        circle_marker_e139de5d4353aac1091076420443bafb.bindPopup(popup_bfdff9d007081601da1368a8ea8939c9)
+        ;
+
+        
+    
+    
+            circle_marker_e139de5d4353aac1091076420443bafb.bindTooltip(
+                `<div>
+                     Médicos: 17
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_43d22c0dd9c38449b61c5a287a7ed6f1 = L.circleMarker(
+                [10.9685, -74.7813],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 31.176914536239792, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_34653d4ad5dd25315d38a28cac801953 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_284c41c081da4ca3b8a84850806815f0 = $(`<div id="html_284c41c081da4ca3b8a84850806815f0" style="width: 100.0%; height: 100.0%;">Médicos: 108</div>`)[0];
+                popup_34653d4ad5dd25315d38a28cac801953.setContent(html_284c41c081da4ca3b8a84850806815f0);
+            
+        
+
+        circle_marker_43d22c0dd9c38449b61c5a287a7ed6f1.bindPopup(popup_34653d4ad5dd25315d38a28cac801953)
+        ;
+
+        
+    
+    
+            circle_marker_43d22c0dd9c38449b61c5a287a7ed6f1.bindTooltip(
+                `<div>
+                     Médicos: 108
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3d351f9fdb1e1412d9ebd375c8c90840 = L.circleMarker(
+                [11.0333, -63.85],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.9498743710662, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_141d961ca65b75bd98ea9992ed9ddd85 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3f2848186a2c597eb06b17ada96272e8 = $(`<div id="html_3f2848186a2c597eb06b17ada96272e8" style="width: 100.0%; height: 100.0%;">Médicos: 11</div>`)[0];
+                popup_141d961ca65b75bd98ea9992ed9ddd85.setContent(html_3f2848186a2c597eb06b17ada96272e8);
+            
+        
+
+        circle_marker_3d351f9fdb1e1412d9ebd375c8c90840.bindPopup(popup_141d961ca65b75bd98ea9992ed9ddd85)
+        ;
+
+        
+    
+    
+            circle_marker_3d351f9fdb1e1412d9ebd375c8c90840.bindTooltip(
+                `<div>
+                     Médicos: 11
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d0be589b6e118958682e99d4e28912ae = L.circleMarker(
+                [11.4, -69.6667],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.196152422706632, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_397308480c144b3fb76443ffab8b953c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cb7da811c34db6c0ca6968f2befb8a89 = $(`<div id="html_cb7da811c34db6c0ca6968f2befb8a89" style="width: 100.0%; height: 100.0%;">Médicos: 3</div>`)[0];
+                popup_397308480c144b3fb76443ffab8b953c.setContent(html_cb7da811c34db6c0ca6968f2befb8a89);
+            
+        
+
+        circle_marker_d0be589b6e118958682e99d4e28912ae.bindPopup(popup_397308480c144b3fb76443ffab8b953c)
+        ;
+
+        
+    
+    
+            circle_marker_d0be589b6e118958682e99d4e28912ae.bindTooltip(
+                `<div>
+                     Médicos: 3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fa1dcf5e64f4d677c00743b9b2659519 = L.circleMarker(
+                [12.4376, -86.8786],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_d66afbdcfb0f8a6d32075c2fcec46b7e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ce5e60ae06b45ef63d1c8782cd9f8657 = $(`<div id="html_ce5e60ae06b45ef63d1c8782cd9f8657" style="width: 100.0%; height: 100.0%;">Médicos: 1</div>`)[0];
+                popup_d66afbdcfb0f8a6d32075c2fcec46b7e.setContent(html_ce5e60ae06b45ef63d1c8782cd9f8657);
+            
+        
+
+        circle_marker_fa1dcf5e64f4d677c00743b9b2659519.bindPopup(popup_d66afbdcfb0f8a6d32075c2fcec46b7e)
+        ;
+
+        
+    
+    
+            circle_marker_fa1dcf5e64f4d677c00743b9b2659519.bindTooltip(
+                `<div>
+                     Médicos: 1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c01b98221be19ddece7e7809570599c8 = L.circleMarker(
+                [14.6349, -90.5069],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_10ffad9ac0038ea48ba4c812f60ed7fe = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d690777d572e14e4d97641f53ed9e0ea = $(`<div id="html_d690777d572e14e4d97641f53ed9e0ea" style="width: 100.0%; height: 100.0%;">Médicos: 1</div>`)[0];
+                popup_10ffad9ac0038ea48ba4c812f60ed7fe.setContent(html_d690777d572e14e4d97641f53ed9e0ea);
+            
+        
+
+        circle_marker_c01b98221be19ddece7e7809570599c8.bindPopup(popup_10ffad9ac0038ea48ba4c812f60ed7fe)
+        ;
+
+        
+    
+    
+            circle_marker_c01b98221be19ddece7e7809570599c8.bindTooltip(
+                `<div>
+                     Médicos: 1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_80f122269c476cbdbc74664c3af1decb = L.circleMarker(
+                [23.1136, -82.3666],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.486832980505138, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_7171e57d6ac124b05c64f9fdd4e219c3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_95fb8baafe26d38eb041966dfc9166c3 = $(`<div id="html_95fb8baafe26d38eb041966dfc9166c3" style="width: 100.0%; height: 100.0%;">Médicos: 10</div>`)[0];
+                popup_7171e57d6ac124b05c64f9fdd4e219c3.setContent(html_95fb8baafe26d38eb041966dfc9166c3);
+            
+        
+
+        circle_marker_80f122269c476cbdbc74664c3af1decb.bindPopup(popup_7171e57d6ac124b05c64f9fdd4e219c3)
+        ;
+
+        
+    
+    
+            circle_marker_80f122269c476cbdbc74664c3af1decb.bindTooltip(
+                `<div>
+                     Médicos: 10
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f356a96daa081123fd1b761ee136ec59 = L.circleMarker(
+                [42.8125, -1.6458],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e1922760c9226e7784dec3d3226920fd);
+        
+    
+        var popup_7958bcd61f8a9fd4ffd13b32483807da = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_92cffabe8f56379e51479a61d27bf394 = $(`<div id="html_92cffabe8f56379e51479a61d27bf394" style="width: 100.0%; height: 100.0%;">Médicos: 1</div>`)[0];
+                popup_7958bcd61f8a9fd4ffd13b32483807da.setContent(html_92cffabe8f56379e51479a61d27bf394);
+            
+        
+
+        circle_marker_f356a96daa081123fd1b761ee136ec59.bindPopup(popup_7958bcd61f8a9fd4ffd13b32483807da)
+        ;
+
+        
+    
+    
+            circle_marker_f356a96daa081123fd1b761ee136ec59.bindTooltip(
+                `<div>
+                     Médicos: 1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            marker_cluster_e1922760c9226e7784dec3d3226920fd.addTo(map_746d854567e8caa72123b1bee785e4e7);
+        
+</script>
+</html>
