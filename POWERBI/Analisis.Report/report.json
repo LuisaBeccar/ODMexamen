@@ -1,5 +1,5 @@
 {
-  "config": "{\"version\":\"5.66\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"type\":2,\"version\":{\"visual\":\"1.8.95\",\"report\":\"2.0.95\",\"page\":\"1.3.95\"}}},\"activeSectionIndex\":2,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "config": "{\"version\":\"5.66\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"type\":2,\"version\":{\"visual\":\"1.8.95\",\"report\":\"2.0.95\",\"page\":\"1.3.95\"}}},\"activeSectionIndex\":1,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
   "layoutOptimization": 0,
   "resourcePackages": [
     {
@@ -28,12 +28,21 @@
       "ordinal": 1,
       "visualContainers": [
         {
-          "config": "{\"name\":\"6a754457030771676152\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1256.7900778174155,\"height\":708.6478992994583,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"decompositionTreeVisual\",\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"tree\":[{\"properties\":{\"effectiveBarsPerLevel\":{\"expr\":{\"Literal\":{\"Value\":\"9L\"}}}}}]}}}",
+          "config": "{\"name\":\"5d899b007e40208d5b08\",\"layouts\":[{\"id\":0,\"position\":{\"x\":69.65342599951941,\"y\":25.741483521561523,\"z\":1,\"width\":1134.13947986174,\"height\":75.71024565165153,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"LA VERDADERA RAMA\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontFamily\":\"Corbel\",\"fontSize\":\"28pt\",\"color\":\"#70bbff\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":3,\"Percent\":-0.25}}}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.4}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"20D\"}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
           "filters": "[]",
-          "height": 708.65,
+          "height": 75.71,
+          "width": 1134.14,
+          "x": 69.65,
+          "y": 25.74,
+          "z": 1.00
+        },
+        {
+          "config": "{\"name\":\"6a754457030771676152\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":177.1619748248646,\"z\":0,\"width\":1256.7900778174155,\"height\":531.4859244745937,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"decompositionTreeVisual\",\"projections\":{\"Analyze\":[{\"queryRef\":\"CountNonNull(Base_ODM2025.DNI)\"}],\"ExplainBy\":[{\"queryRef\":\"Base_ODM2025.TIPO_UNI\",\"active\":true},{\"queryRef\":\"Base_ODM2025.CLASE_UNI\",\"active\":true},{\"queryRef\":\"Base_ODM2025.ESPECIALIDAD\",\"active\":true},{\"queryRef\":\"Base_ODM2025.SEXO\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Base_ODM2025\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"DNI\"}},\"Function\":5},\"Name\":\"CountNonNull(Base_ODM2025.DNI)\",\"NativeReferenceName\":\"Recuento de DNI\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"CLASE_UNI\"},\"Name\":\"Base_ODM2025.CLASE_UNI\",\"NativeReferenceName\":\"CLASE_UNI\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"TIPO_UNI\"},\"Name\":\"Base_ODM2025.TIPO_UNI\",\"NativeReferenceName\":\"TIPO_UNI\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"SEXO\"},\"Name\":\"Base_ODM2025.SEXO\",\"NativeReferenceName\":\"SEXO\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"ESPECIALIDAD\"},\"Name\":\"Base_ODM2025.ESPECIALIDAD\",\"NativeReferenceName\":\"ESPECIALIDAD\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"DNI\"}},\"Function\":5}}}]},\"expansionStates\":[{\"roles\":[\"ExplainBy\"],\"levels\":[{\"queryRefs\":[\"Base_ODM2025.TIPO_UNI\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Base_ODM2025\"}},\"Property\":\"TIPO_UNI\"}}],\"isPinned\":true},{\"queryRefs\":[\"Base_ODM2025.CLASE_UNI\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Base_ODM2025\"}},\"Property\":\"CLASE_UNI\"}}],\"isPinned\":true},{\"queryRefs\":[\"Base_ODM2025.ESPECIALIDAD\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Base_ODM2025\"}},\"Property\":\"ESPECIALIDAD\"}}],\"isPinned\":true},{\"queryRefs\":[\"Base_ODM2025.SEXO\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'N'\"}}],\"isToggled\":true,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'Pública'\"}}],\"isToggled\":true,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'ANESTESIOLOGIA'\"}}],\"isToggled\":true}]}]}]}}],\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"tree\":[{\"properties\":{\"effectiveBarsPerLevel\":{\"expr\":{\"Literal\":{\"Value\":\"6L\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 531.49,
           "width": 1256.79,
           "x": 0.00,
-          "y": 0.00,
+          "y": 177.16,
           "z": 0.00
         }
       ],
@@ -48,38 +57,47 @@
       "name": "38c878d9dd30d8b10bbc",
       "visualContainers": [
         {
-          "config": "{\"name\":\"20784803903318252b87\",\"layouts\":[{\"id\":0,\"position\":{\"x\":37.142857142857146,\"y\":46.80133277800916,\"z\":1000,\"width\":1152.857142857143,\"height\":630.2838103171298,\"tabOrder\":1000}}],\"singleVisualGroup\":{\"displayName\":\"Grupo 1\",\"groupMode\":0}}",
-          "height": 630.28,
-          "width": 1152.86,
-          "x": 37.14,
-          "y": 46.80,
+          "config": "{\"name\":\"20784803903318252b87\",\"layouts\":[{\"id\":0,\"position\":{\"x\":37.85512282582577,\"y\":180.19038465093067,\"z\":1000,\"width\":1203.7929058612594,\"height\":496.6592114748341}}],\"singleVisualGroup\":{\"displayName\":\"Grupo 1\",\"groupMode\":0}}",
+          "height": 496.66,
+          "width": 1203.79,
+          "x": 37.86,
+          "y": 180.19,
           "z": 1000.00
         },
         {
-          "config": "{\"name\":\"207f3f8078eebedc376e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":37.142857142857146,\"y\":40,\"z\":0,\"width\":238.57142857142858,\"height\":141.42857142857144,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Min(Base_ODM2025.DNI)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Base_ODM2025\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"DNI\"}},\"Function\":2},\"Name\":\"Min(Base_ODM2025.DNI)\",\"NativeReferenceName\":\"Recuento de DNI\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"DNI\"}},\"Function\":2}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"label\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'POSTULANTES'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"25D\"}}}}}]}}}",
+          "config": "{\"name\":\"207f3f8078eebedc376e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":69.65342599951941,\"y\":143.84946673813792,\"z\":0,\"width\":237.7301713461858,\"height\":142.33526182510488,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Min(Base_ODM2025.DNI)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Base_ODM2025\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"DNI\"}},\"Function\":2},\"Name\":\"Min(Base_ODM2025.DNI)\",\"NativeReferenceName\":\"Recuento de DNI\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"DNI\"}},\"Function\":2}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"label\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'POSTULANTES'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"25D\"}}}}}]}}}",
           "filters": "[]",
-          "height": 141.43,
-          "width": 238.57,
-          "x": 37.14,
-          "y": 40.00,
+          "height": 142.34,
+          "width": 237.73,
+          "x": 69.65,
+          "y": 143.85,
           "z": 0.00
         },
         {
-          "config": "{\"name\":\"97d503c9902387d92653\",\"layouts\":[{\"id\":0,\"position\":{\"x\":365.7142857142857,\"y\":0,\"z\":1000,\"width\":787.1428571428572,\"height\":134.2857142857143,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Base_ODM2025.ESPECIALIDAD\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Base_ODM2025\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"ESPECIALIDAD\"},\"Name\":\"Base_ODM2025.ESPECIALIDAD\",\"NativeReferenceName\":\"ESPECIALIDAD\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"selection\":[{\"properties\":{\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Base_ODM2025\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"ESPECIALIDAD\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'CIRUGIA INFANTIL (CIRUGIA PEDIATRICA)'\"}}]]}}}]}}}}],\"header\":[{\"properties\":{\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"25D\"}}}}}],\"items\":[{\"properties\":{\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"20D\"}}}}}]}},\"parentGroupName\":\"20784803903318252b87\"}",
+          "config": "{\"name\":\"43c7d8b4696122082b34\",\"layouts\":[{\"id\":0,\"position\":{\"x\":69.65342599951941,\"y\":25.741483521561523,\"z\":1001,\"width\":1134.13947986174,\"height\":75.71024565165153,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"LUISA'S BRANCH\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontFamily\":\"Corbel\",\"fontSize\":\"28pt\",\"color\":\"#70bbff\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":3,\"Percent\":-0.25}}}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.4}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"20D\"}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
           "filters": "[]",
-          "height": 134.29,
-          "width": 787.14,
-          "x": 365.71,
+          "height": 75.71,
+          "width": 1134.14,
+          "x": 69.65,
+          "y": 25.74,
+          "z": 1001.00
+        },
+        {
+          "config": "{\"name\":\"97d503c9902387d92653\",\"layouts\":[{\"id\":0,\"position\":{\"height\":105.81619879450855,\"width\":821.9205590205131,\"x\":381.8723468407465,\"y\":0,\"z\":1000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Base_ODM2025.ESPECIALIDAD\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Base_ODM2025\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"ESPECIALIDAD\"},\"Name\":\"Base_ODM2025.ESPECIALIDAD\",\"NativeReferenceName\":\"ESPECIALIDAD\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"selection\":[{\"properties\":{\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Base_ODM2025\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"ESPECIALIDAD\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'CIRUGIA INFANTIL (CIRUGIA PEDIATRICA)'\"}}]]}}}]}}}}],\"header\":[{\"properties\":{\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"25D\"}}}}}],\"items\":[{\"properties\":{\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"20D\"}}}}}]}},\"parentGroupName\":\"20784803903318252b87\"}",
+          "filters": "[]",
+          "height": 105.82,
+          "width": 821.92,
+          "x": 381.87,
           "y": 0.00,
           "z": 1000.00
         },
         {
-          "config": "{\"name\":\"f045d245403bac2ce492\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":165.99809603141549,\"z\":0,\"width\":971.4285714285714,\"height\":464.28571428571433,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"scatterChart\",\"projections\":{\"X\":[{\"queryRef\":\"Sum(Base_ODM2025.PROMEDIO_CARRERA)\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Base_ODM2025.NOTA_EXAMEN)\"}],\"Series\":[{\"queryRef\":\"Base_ODM2025.ESPECIALIDAD\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Base_ODM2025\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"PROMEDIO_CARRERA\"},\"Name\":\"Sum(Base_ODM2025.PROMEDIO_CARRERA)\",\"NativeReferenceName\":\"promedio de la carrera\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"NOTA_EXAMEN\"},\"Name\":\"Sum(Base_ODM2025.NOTA_EXAMEN)\",\"NativeReferenceName\":\"nota del examen\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"ESPECIALIDAD\"},\"Name\":\"Base_ODM2025.ESPECIALIDAD\",\"NativeReferenceName\":\"ESPECIALIDAD\"}]},\"columnProperties\":{\"Sum(Base_ODM2025.NOTA_EXAMEN)\":{\"displayName\":\"nota del examen\"},\"Sum(Base_ODM2025.PROMEDIO_CARRERA)\":{\"displayName\":\"promedio de la carrera\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"legend\":[{\"properties\":{\"showGradientLegend\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"categoryAxis\":[{\"properties\":{\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Scatter Plot: Promedio de carrera vs Nota en el examen '\"}}},\"heading\":{\"expr\":{\"Literal\":{\"Value\":\"'Normal'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"19D\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}},\"parentGroupName\":\"20784803903318252b87\"}",
+          "config": "{\"name\":\"f045d245403bac2ce492\",\"layouts\":[{\"id\":0,\"position\":{\"height\":365.85387881080084,\"width\":1014.3484212957329,\"x\":0,\"y\":130.80533266403324,\"z\":0}}],\"singleVisual\":{\"visualType\":\"scatterChart\",\"projections\":{\"X\":[{\"queryRef\":\"Sum(Base_ODM2025.PROMEDIO_CARRERA)\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Base_ODM2025.NOTA_EXAMEN)\"}],\"Series\":[{\"queryRef\":\"Base_ODM2025.ESPECIALIDAD\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Base_ODM2025\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"PROMEDIO_CARRERA\"},\"Name\":\"Sum(Base_ODM2025.PROMEDIO_CARRERA)\",\"NativeReferenceName\":\"promedio de la carrera\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"NOTA_EXAMEN\"},\"Name\":\"Sum(Base_ODM2025.NOTA_EXAMEN)\",\"NativeReferenceName\":\"nota del examen\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"ESPECIALIDAD\"},\"Name\":\"Base_ODM2025.ESPECIALIDAD\",\"NativeReferenceName\":\"ESPECIALIDAD\"}]},\"columnProperties\":{\"Sum(Base_ODM2025.NOTA_EXAMEN)\":{\"displayName\":\"nota del examen\"},\"Sum(Base_ODM2025.PROMEDIO_CARRERA)\":{\"displayName\":\"promedio de la carrera\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"legend\":[{\"properties\":{\"showGradientLegend\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"categoryAxis\":[{\"properties\":{\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Scatter Plot: Promedio de carrera vs Nota en el examen '\"}}},\"heading\":{\"expr\":{\"Literal\":{\"Value\":\"'Normal'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"19D\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}},\"parentGroupName\":\"20784803903318252b87\"}",
           "filters": "[]",
-          "height": 464.29,
-          "width": 971.43,
+          "height": 365.85,
+          "width": 1014.35,
           "x": 0.00,
-          "y": 166.00,
+          "y": 130.81,
           "z": 0.00
         }
       ],
