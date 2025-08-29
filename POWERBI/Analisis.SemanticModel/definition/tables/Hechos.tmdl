@@ -5,7 +5,7 @@ table Hechos
 		dataType: int64
 		formatString: 0
 		lineageTag: 5d642255-5a8b-456a-bfd9-4962742a1a18
-		summarizeBy: none
+		summarizeBy: count
 		sourceColumn: ID
 
 		annotation SummarizationSetBy = Automatic
@@ -100,7 +100,7 @@ table Hechos
 		mode: import
 		source =
 				let
-				    Origen = Csv.Document(File.Contents("C:\Users\PC\Desktop\github\ODMexamen\Base_ODM2025.csv"),[Delimiter=",", Columns=22, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    Origen = Csv.Document(Web.Contents("https://raw.githubusercontent.com/LuisaBeccar/ODMexamen/refs/heads/main/Base_ODM2025.csv"),[Delimiter=",", Columns=24, Encoding=65001, QuoteStyle=QuoteStyle.None]),
 				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
 				    #"Valor reemplazado" = Table.ReplaceValue(#"Encabezados promovidos",".",",",Replacer.ReplaceText,{"PROMEDIO_CARRERA","PUNTAJE","PUNTAJE_CRUDO"}),
 				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Valor reemplazado",{{"FECHA_TITULO", type date}, {"DIAS_DESDE_TITULO", Int64.Type}, {"PROMEDIO_CARRERA", type number}, {"NOTA_EXAMEN", Int64.Type}, {"COMPONENTE", Int64.Type}, {"PUNTAJE", type number}, {"PUNTAJE_CRUDO", type number}, {"ODM", Int64.Type}, {"ODM_CRUDO", Int64.Type}}),

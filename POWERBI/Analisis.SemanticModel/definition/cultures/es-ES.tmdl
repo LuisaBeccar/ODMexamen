@@ -5,478 +5,10 @@ cultureInfo es-ES
 			  "Version": "4.1.0",
 			  "Language": "en-US",
 			  "Entities": {
-			    "base_ODM202_5g.clase_uni": {
+			    "medida.total_residentes": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "BaseODM2025g",
-			          "ConceptualProperty": "CLASE_UNI"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "clase uni": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "CLASE_UNI": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "base_ODM202_5g": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "BaseODM2025g"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "base ODM202 5g": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "BaseODM2025g": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "base_ODM202_5g.sexo": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "BaseODM2025g",
-			          "ConceptualProperty": "SEXO"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "sexo": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "base_ODM202_5g.origen": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "BaseODM2025g",
-			          "ConceptualProperty": "ORIGEN"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "origen": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "base_ODM202_5g.universidad": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "BaseODM2025g",
-			          "ConceptualProperty": "UNIVERSIDAD"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "universidad": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "base_ODM202_5g.tipo_uni": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "BaseODM2025g",
-			          "ConceptualProperty": "TIPO_UNI"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "tipo uni": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "TIPO_UNI": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "base_ODM202_5g.pais_uni": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "BaseODM2025g",
-			          "ConceptualProperty": "PAIS_UNI"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "pais uni": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "PAIS_UNI": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "country": {
-			            "State": "Generated",
-			            "Weight": 0.7
-			          }
-			        },
-			        {
-			          "PAIS": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        }
-			      ],
-			      "SemanticType": "Location"
-			    },
-			    "base_ODM202_5g.ciudad_uni": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "BaseODM2025g",
-			          "ConceptualProperty": "CIUDAD_UNI"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "ciudad uni": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "CIUDAD_UNI": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "city": {
-			            "State": "Generated",
-			            "Weight": 0.7
-			          }
-			        }
-			      ],
-			      "SemanticType": "Location"
-			    },
-			    "base_ODM202_5g.fecha_titulo": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "BaseODM2025g",
-			          "ConceptualProperty": "FECHA_TITULO"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "fecha titulo": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "FECHA_TITULO": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "date": {
-			            "State": "Generated",
-			            "Weight": 0.7
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
-			    },
-			    "base_ODM202_5g.fecha_titulo.jerarquía_de_fecha": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "BaseODM2025g",
-			          "VariationSource": "FECHA_TITULO",
-			          "VariationSet": "Variación",
-			          "Hierarchy": "Jerarquía de fechas"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "jerarquía de fecha": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "base_ODM202_5g.fecha_titulo.año": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "BaseODM2025g",
-			          "VariationSource": "FECHA_TITULO",
-			          "VariationSet": "Variación",
-			          "Hierarchy": "Jerarquía de fechas",
-			          "HierarchyLevel": "Año"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "año": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "fecha titulo año": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "base_ODM202_5g.fecha_titulo.trimestre": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "BaseODM2025g",
-			          "VariationSource": "FECHA_TITULO",
-			          "VariationSet": "Variación",
-			          "Hierarchy": "Jerarquía de fechas",
-			          "HierarchyLevel": "Trimestre"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "trimestre": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "fecha titulo trimestre": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "base_ODM202_5g.fecha_titulo.me": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "BaseODM2025g",
-			          "VariationSource": "FECHA_TITULO",
-			          "VariationSet": "Variación",
-			          "Hierarchy": "Jerarquía de fechas",
-			          "HierarchyLevel": "Mes"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "me": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "fecha titulo me": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "base_ODM202_5g.fecha_titulo.día": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "BaseODM2025g",
-			          "VariationSource": "FECHA_TITULO",
-			          "VariationSet": "Variación",
-			          "Hierarchy": "Jerarquía de fechas",
-			          "HierarchyLevel": "Día"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "día": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "fecha titulo día": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "base_ODM202_5g.especialidad": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "BaseODM2025g",
-			          "ConceptualProperty": "ESPECIALIDAD"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "especialidad": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "base_ODM202_5g.ID": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "BaseODM2025g",
-			          "ConceptualProperty": "ID"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "ID": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "identification": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
-			          "identity": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
-			          "credential": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.714
-			          }
-			        }
-			      ],
-			      "NameType": "Identifier"
-			    },
-			    "parámetro": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Parámetro"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "parámetro": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "parámetro.parámetro": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Parámetro",
-			          "ConceptualProperty": "Parámetro"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "parámetro": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "parámetro name": {
-			            "State": "Generated"
-			          }
-			        }
-			      ],
-			      "NameType": "Name"
-			    },
-			    "parámetro.parámetro_campos": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Parámetro",
-			          "ConceptualProperty": "Parámetro Campos"
-			        }
-			      },
-			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
-			      "Terms": [
-			        {
-			          "parámetro campos": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "parámetro.parámetro_orden": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Parámetro",
-			          "ConceptualProperty": "Parámetro Orden"
-			        }
-			      },
-			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
-			      "Terms": [
-			        {
-			          "parámetro orden": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "parámetro.total_residentes": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Parámetro",
+			          "ConceptualEntity": "Medidas",
 			          "ConceptualProperty": "Total Residentes"
 			        }
 			      },
@@ -777,10 +309,10 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "parámetro.prom_EX": {
+			    "medida.prom_EX": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Parámetro",
+			          "ConceptualEntity": "Medidas",
 			          "ConceptualProperty": "Prom_EX"
 			        }
 			      },
@@ -906,10 +438,10 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "parámetro.prom_carrera": {
+			    "medida.prom_carrera": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Parámetro",
+			          "ConceptualEntity": "Medidas",
 			          "ConceptualProperty": "Prom_Carrera"
 			        }
 			      },
@@ -935,10 +467,10 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "parámetro.prom_EX_F": {
+			    "medida.prom_EX_F": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Parámetro",
+			          "ConceptualEntity": "Medidas",
 			          "ConceptualProperty": "Prom_EX_F"
 			        }
 			      },
@@ -1076,10 +608,10 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "parámetro.prom_EX_M": {
+			    "medida.prom_EX_M": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Parámetro",
+			          "ConceptualEntity": "Medidas",
 			          "ConceptualProperty": "Prom_EX_M"
 			        }
 			      },
@@ -1217,10 +749,10 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "parámetro.prom_puntaje": {
+			    "medida.prom_puntaje": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Parámetro",
+			          "ConceptualEntity": "Medidas",
 			          "ConceptualProperty": "Prom_Puntaje"
 			        }
 			      },
@@ -1239,10 +771,1905 @@ cultureInfo es-ES
 			          }
 			        }
 			      ]
+			    },
+			    "base_ODM2025": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Base_ODM2025"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "base ODM2025": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Base_ODM2025": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "base_ODM2025.dni": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Base_ODM2025",
+			          "ConceptualProperty": "DNI"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dni": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "base_ODM2025.nombre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Base_ODM2025",
+			          "ConceptualProperty": "NOMBRE"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nombre": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "base_ODM2025.apellido": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Base_ODM2025",
+			          "ConceptualProperty": "APELLIDO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "apellido": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "base_ODM2025.sexo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Base_ODM2025",
+			          "ConceptualProperty": "SEXO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sexo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "base_ODM2025.origen": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Base_ODM2025",
+			          "ConceptualProperty": "ORIGEN"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "origen": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "base_ODM2025.uni": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Base_ODM2025",
+			          "ConceptualProperty": "UNI"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "uni": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "base_ODM2025.tipo_uni": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Base_ODM2025",
+			          "ConceptualProperty": "TIPO_UNI"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tipo uni": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TIPO_UNI": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "base_ODM2025.pais_uni": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Base_ODM2025",
+			          "ConceptualProperty": "PAIS_UNI"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "pais uni": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PAIS_UNI": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "country": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Location"
+			    },
+			    "base_ODM2025.ciudad_uni": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Base_ODM2025",
+			          "ConceptualProperty": "CIUDAD_UNI"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ciudad uni": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CIUDAD_UNI": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "city": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Location"
+			    },
+			    "base_ODM2025.lat": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Base_ODM2025",
+			          "ConceptualProperty": "lat"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "lat": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "base_ODM2025.long": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Base_ODM2025",
+			          "ConceptualProperty": "long"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "long": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "time-consuming": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "lingering": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "base_ODM2025.clase_uni": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Base_ODM2025",
+			          "ConceptualProperty": "CLASE_UNI"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "clase uni": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CLASE_UNI": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "base_ODM2025.fecha_titulo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Base_ODM2025",
+			          "ConceptualProperty": "FECHA_TITULO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha titulo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "FECHA_TITULO": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "base_ODM2025.fecha_titulo.jerarquía_de_fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Base_ODM2025",
+			          "VariationSource": "FECHA_TITULO",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "jerarquía de fecha": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "base_ODM2025.fecha_titulo.año": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Base_ODM2025",
+			          "VariationSource": "FECHA_TITULO",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Año"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "año": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha titulo año": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "base_ODM2025.fecha_titulo.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Base_ODM2025",
+			          "VariationSource": "FECHA_TITULO",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha titulo trimestre": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "base_ODM2025.fecha_titulo.me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Base_ODM2025",
+			          "VariationSource": "FECHA_TITULO",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha titulo me": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "base_ODM2025.fecha_titulo.día": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Base_ODM2025",
+			          "VariationSource": "FECHA_TITULO",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Día"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "día": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha titulo día": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "base_ODM2025.dias_desde_titulo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Base_ODM2025",
+			          "ConceptualProperty": "DIAS_DESDE_TITULO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dias desde titulo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DIAS_DESDE_TITULO": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "base_ODM2025.promedio_carrera": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Base_ODM2025",
+			          "ConceptualProperty": "PROMEDIO_CARRERA"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "promedio carrera": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PROMEDIO_CARRERA": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "promedio de la carrera": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "base_ODM2025.especialidad": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Base_ODM2025",
+			          "ConceptualProperty": "ESPECIALIDAD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "especialidad": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "base_ODM2025.nota_examen": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Base_ODM2025",
+			          "ConceptualProperty": "NOTA_EXAMEN"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nota examen": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "notum examen": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "NOTA_EXAMEN": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "nota del examen": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "base_ODM2025.componente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Base_ODM2025",
+			          "ConceptualProperty": "COMPONENTE"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "componente": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "base_ODM2025.puntaje": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Base_ODM2025",
+			          "ConceptualProperty": "PUNTAJE"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "puntaje": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "base_ODM2025.puntaje_crudo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Base_ODM2025",
+			          "ConceptualProperty": "PUNTAJE_CRUDO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "puntaje crudo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PUNTAJE_CRUDO": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "base_ODM2025.odm": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Base_ODM2025",
+			          "ConceptualProperty": "ODM"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "odm": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "base_ODM2025.odm_crudo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Base_ODM2025",
+			          "ConceptualProperty": "ODM_CRUDO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "odm crudo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ODM_CRUDO": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "base_ODM2025.odm_global": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Base_ODM2025",
+			          "ConceptualProperty": "ODM_GLOBAL"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "odm global": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ODM_GLOBAL": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "base_ODM2025.odm_global_crudo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Base_ODM2025",
+			          "ConceptualProperty": "ODM_GLOBAL_CRUDO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "odm global crudo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ODM_GLOBAL_CRUDO": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "medida": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "medida": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.column": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Column"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "column": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "pilaster": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "pier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "pillar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "post": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "support": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "stake": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "pole": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "buttress": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "underpinning": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "contribution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "hecho_has_base_ODM202_5g": {
+			    "base_ODM2025_fecha_titulo_trimestre_has_base_ODM2025_fecha_titulo_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Base_ODM2025"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_ODM2025.fecha_titulo.trimestre": {
+			          "Target": {
+			            "Entity": "base_ODM2025.fecha_titulo.trimestre"
+			          }
+			        },
+			        "base_ODM2025.fecha_titulo.me": {
+			          "Target": {
+			            "Entity": "base_ODM2025.fecha_titulo.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_ODM2025.fecha_titulo.trimestre"
+			            },
+			            "Object": {
+			              "Role": "base_ODM2025.fecha_titulo.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_me"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_ODM2025.fecha_titulo.me"
+			            },
+			            "Object": {
+			              "Role": "base_ODM2025.fecha_titulo.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_trimestres"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "base_ODM2025.fecha_titulo.me"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "base_ODM2025.fecha_titulo.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_are_in_trimestres"
+			        }
+			      ]
+			    },
+			    "base_ODM2025_fecha_titulo_año_has_base_ODM2025_fecha_titulo_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "Base_ODM2025"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_ODM2025.fecha_titulo.año": {
+			          "Target": {
+			            "Entity": "base_ODM2025.fecha_titulo.año"
+			          }
+			        },
+			        "base_ODM2025.fecha_titulo.trimestre": {
+			          "Target": {
+			            "Entity": "base_ODM2025.fecha_titulo.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_ODM2025.fecha_titulo.año"
+			            },
+			            "Object": {
+			              "Role": "base_ODM2025.fecha_titulo.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "años_have_trimestres"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_ODM2025.fecha_titulo.trimestre"
+			            },
+			            "Object": {
+			              "Role": "base_ODM2025.fecha_titulo.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_años"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "base_ODM2025.fecha_titulo.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "base_ODM2025.fecha_titulo.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_años"
+			        }
+			      ]
+			    },
+			    "base_ODM2025_fecha_titulo_jerarquía_de_fecha_has_base_ODM2025_fecha_titulo_día": {
+			      "Binding": {
+			        "ConceptualEntity": "Base_ODM2025"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_ODM2025.fecha_titulo.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "base_ODM2025.fecha_titulo.jerarquía_de_fecha"
+			          }
+			        },
+			        "base_ODM2025.fecha_titulo.día": {
+			          "Target": {
+			            "Entity": "base_ODM2025.fecha_titulo.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_ODM2025.fecha_titulo.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "base_ODM2025.fecha_titulo.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_días"
+			        }
+			      ]
+			    },
+			    "base_ODM2025_fecha_titulo_jerarquía_de_fecha_has_base_ODM2025_fecha_titulo_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Base_ODM2025"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_ODM2025.fecha_titulo.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "base_ODM2025.fecha_titulo.jerarquía_de_fecha"
+			          }
+			        },
+			        "base_ODM2025.fecha_titulo.me": {
+			          "Target": {
+			            "Entity": "base_ODM2025.fecha_titulo.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_ODM2025.fecha_titulo.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "base_ODM2025.fecha_titulo.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_me"
+			        }
+			      ]
+			    },
+			    "base_ODM2025_fecha_titulo_jerarquía_de_fecha_has_base_ODM2025_fecha_titulo_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "Base_ODM2025"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_ODM2025.fecha_titulo.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "base_ODM2025.fecha_titulo.jerarquía_de_fecha"
+			          }
+			        },
+			        "base_ODM2025.fecha_titulo.trimestre": {
+			          "Target": {
+			            "Entity": "base_ODM2025.fecha_titulo.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_ODM2025.fecha_titulo.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "base_ODM2025.fecha_titulo.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_trimestres"
+			        }
+			      ]
+			    },
+			    "base_ODM2025_fecha_titulo_jerarquía_de_fecha_has_base_ODM2025_fecha_titulo_año": {
+			      "Binding": {
+			        "ConceptualEntity": "Base_ODM2025"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_ODM2025.fecha_titulo.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "base_ODM2025.fecha_titulo.jerarquía_de_fecha"
+			          }
+			        },
+			        "base_ODM2025.fecha_titulo.año": {
+			          "Target": {
+			            "Entity": "base_ODM2025.fecha_titulo.año"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_ODM2025.fecha_titulo.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "base_ODM2025.fecha_titulo.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_años"
+			        }
+			      ]
+			    },
+			    "base_ODM2025_fecha_titulo_has_jerarquía_de_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "Base_ODM2025"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_ODM2025.fecha_titulo": {
+			          "Target": {
+			            "Entity": "base_ODM2025.fecha_titulo"
+			          }
+			        },
+			        "base_ODM2025.fecha_titulo.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "base_ODM2025.fecha_titulo.jerarquía_de_fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_ODM2025.fecha_titulo"
+			            },
+			            "Object": {
+			              "Role": "base_ODM2025.fecha_titulo.jerarquía_de_fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_titulos_have_jerarquía_de_fechas"
+			        }
+			      ]
+			    },
+			    "base_ODM2025_has_odm_global_crudo": {
+			      "Binding": {
+			        "ConceptualEntity": "Base_ODM2025"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_ODM2025": {
+			          "Target": {
+			            "Entity": "base_ODM2025"
+			          }
+			        },
+			        "base_ODM2025.odm_global_crudo": {
+			          "Target": {
+			            "Entity": "base_ODM2025.odm_global_crudo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_ODM2025"
+			            },
+			            "Object": {
+			              "Role": "base_ODM2025.odm_global_crudo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_ODM2025_have_odm_global_crudos"
+			        }
+			      ]
+			    },
+			    "base_ODM2025_has_odm_global": {
+			      "Binding": {
+			        "ConceptualEntity": "Base_ODM2025"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_ODM2025": {
+			          "Target": {
+			            "Entity": "base_ODM2025"
+			          }
+			        },
+			        "base_ODM2025.odm_global": {
+			          "Target": {
+			            "Entity": "base_ODM2025.odm_global"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_ODM2025"
+			            },
+			            "Object": {
+			              "Role": "base_ODM2025.odm_global"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_ODM2025_have_odm_global"
+			        }
+			      ]
+			    },
+			    "base_ODM2025_has_odm_crudo": {
+			      "Binding": {
+			        "ConceptualEntity": "Base_ODM2025"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_ODM2025": {
+			          "Target": {
+			            "Entity": "base_ODM2025"
+			          }
+			        },
+			        "base_ODM2025.odm_crudo": {
+			          "Target": {
+			            "Entity": "base_ODM2025.odm_crudo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_ODM2025"
+			            },
+			            "Object": {
+			              "Role": "base_ODM2025.odm_crudo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_ODM2025_have_odm_crudos"
+			        }
+			      ]
+			    },
+			    "base_ODM2025_has_odm": {
+			      "Binding": {
+			        "ConceptualEntity": "Base_ODM2025"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_ODM2025": {
+			          "Target": {
+			            "Entity": "base_ODM2025"
+			          }
+			        },
+			        "base_ODM2025.odm": {
+			          "Target": {
+			            "Entity": "base_ODM2025.odm"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_ODM2025"
+			            },
+			            "Object": {
+			              "Role": "base_ODM2025.odm"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_ODM2025_have_odms"
+			        }
+			      ]
+			    },
+			    "base_ODM2025_has_puntaje_crudo": {
+			      "Binding": {
+			        "ConceptualEntity": "Base_ODM2025"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_ODM2025": {
+			          "Target": {
+			            "Entity": "base_ODM2025"
+			          }
+			        },
+			        "base_ODM2025.puntaje_crudo": {
+			          "Target": {
+			            "Entity": "base_ODM2025.puntaje_crudo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_ODM2025"
+			            },
+			            "Object": {
+			              "Role": "base_ODM2025.puntaje_crudo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_ODM2025_have_puntaje_crudos"
+			        }
+			      ]
+			    },
+			    "base_ODM2025_has_puntaje": {
+			      "Binding": {
+			        "ConceptualEntity": "Base_ODM2025"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_ODM2025": {
+			          "Target": {
+			            "Entity": "base_ODM2025"
+			          }
+			        },
+			        "base_ODM2025.puntaje": {
+			          "Target": {
+			            "Entity": "base_ODM2025.puntaje"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_ODM2025"
+			            },
+			            "Object": {
+			              "Role": "base_ODM2025.puntaje"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_ODM2025_have_puntajes"
+			        }
+			      ]
+			    },
+			    "base_ODM2025_has_componente": {
+			      "Binding": {
+			        "ConceptualEntity": "Base_ODM2025"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_ODM2025": {
+			          "Target": {
+			            "Entity": "base_ODM2025"
+			          }
+			        },
+			        "base_ODM2025.componente": {
+			          "Target": {
+			            "Entity": "base_ODM2025.componente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_ODM2025"
+			            },
+			            "Object": {
+			              "Role": "base_ODM2025.componente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_ODM2025_have_componentes"
+			        }
+			      ]
+			    },
+			    "base_ODM2025_has_nota_examen": {
+			      "Binding": {
+			        "ConceptualEntity": "Base_ODM2025"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_ODM2025": {
+			          "Target": {
+			            "Entity": "base_ODM2025"
+			          }
+			        },
+			        "base_ODM2025.nota_examen": {
+			          "Target": {
+			            "Entity": "base_ODM2025.nota_examen"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_ODM2025"
+			            },
+			            "Object": {
+			              "Role": "base_ODM2025.nota_examen"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_ODM2025_have_nota_examens"
+			        }
+			      ]
+			    },
+			    "base_ODM2025_has_especialidad": {
+			      "Binding": {
+			        "ConceptualEntity": "Base_ODM2025"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_ODM2025": {
+			          "Target": {
+			            "Entity": "base_ODM2025"
+			          }
+			        },
+			        "base_ODM2025.especialidad": {
+			          "Target": {
+			            "Entity": "base_ODM2025.especialidad"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_ODM2025"
+			            },
+			            "Object": {
+			              "Role": "base_ODM2025.especialidad"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_ODM2025_have_especialidads"
+			        }
+			      ]
+			    },
+			    "base_ODM2025_has_promedio_carrera": {
+			      "Binding": {
+			        "ConceptualEntity": "Base_ODM2025"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_ODM2025": {
+			          "Target": {
+			            "Entity": "base_ODM2025"
+			          }
+			        },
+			        "base_ODM2025.promedio_carrera": {
+			          "Target": {
+			            "Entity": "base_ODM2025.promedio_carrera"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_ODM2025"
+			            },
+			            "Object": {
+			              "Role": "base_ODM2025.promedio_carrera"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_ODM2025_have_promedio_carrera"
+			        }
+			      ]
+			    },
+			    "base_ODM2025_has_dias_desde_titulo": {
+			      "Binding": {
+			        "ConceptualEntity": "Base_ODM2025"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_ODM2025": {
+			          "Target": {
+			            "Entity": "base_ODM2025"
+			          }
+			        },
+			        "base_ODM2025.dias_desde_titulo": {
+			          "Target": {
+			            "Entity": "base_ODM2025.dias_desde_titulo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_ODM2025"
+			            },
+			            "Object": {
+			              "Role": "base_ODM2025.dias_desde_titulo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_ODM2025_have_dias_desde_titulos"
+			        }
+			      ]
+			    },
+			    "base_ODM2025_has_fecha_titulo": {
+			      "Binding": {
+			        "ConceptualEntity": "Base_ODM2025"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_ODM2025": {
+			          "Target": {
+			            "Entity": "base_ODM2025"
+			          }
+			        },
+			        "base_ODM2025.fecha_titulo": {
+			          "Target": {
+			            "Entity": "base_ODM2025.fecha_titulo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_ODM2025"
+			            },
+			            "Object": {
+			              "Role": "base_ODM2025.fecha_titulo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_ODM2025_have_fecha_titulos"
+			        }
+			      ]
+			    },
+			    "base_ODM2025_has_clase_uni": {
+			      "Binding": {
+			        "ConceptualEntity": "Base_ODM2025"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_ODM2025": {
+			          "Target": {
+			            "Entity": "base_ODM2025"
+			          }
+			        },
+			        "base_ODM2025.clase_uni": {
+			          "Target": {
+			            "Entity": "base_ODM2025.clase_uni"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_ODM2025"
+			            },
+			            "Object": {
+			              "Role": "base_ODM2025.clase_uni"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_ODM2025_have_clase_unis"
+			        }
+			      ]
+			    },
+			    "base_ODM2025_has_long": {
+			      "Binding": {
+			        "ConceptualEntity": "Base_ODM2025"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_ODM2025": {
+			          "Target": {
+			            "Entity": "base_ODM2025"
+			          }
+			        },
+			        "base_ODM2025.long": {
+			          "Target": {
+			            "Entity": "base_ODM2025.long"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_ODM2025"
+			            },
+			            "Object": {
+			              "Role": "base_ODM2025.long"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_ODM2025_have_longs"
+			        }
+			      ]
+			    },
+			    "base_ODM2025_has_lat": {
+			      "Binding": {
+			        "ConceptualEntity": "Base_ODM2025"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_ODM2025": {
+			          "Target": {
+			            "Entity": "base_ODM2025"
+			          }
+			        },
+			        "base_ODM2025.lat": {
+			          "Target": {
+			            "Entity": "base_ODM2025.lat"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_ODM2025"
+			            },
+			            "Object": {
+			              "Role": "base_ODM2025.lat"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_ODM2025_have_lats"
+			        }
+			      ]
+			    },
+			    "base_ODM2025_has_ciudad_uni": {
+			      "Binding": {
+			        "ConceptualEntity": "Base_ODM2025"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_ODM2025": {
+			          "Target": {
+			            "Entity": "base_ODM2025"
+			          }
+			        },
+			        "base_ODM2025.ciudad_uni": {
+			          "Target": {
+			            "Entity": "base_ODM2025.ciudad_uni"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_ODM2025"
+			            },
+			            "Object": {
+			              "Role": "base_ODM2025.ciudad_uni"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_ODM2025_have_ciudad_unis"
+			        }
+			      ]
+			    },
+			    "base_ODM2025_has_pais_uni": {
+			      "Binding": {
+			        "ConceptualEntity": "Base_ODM2025"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_ODM2025": {
+			          "Target": {
+			            "Entity": "base_ODM2025"
+			          }
+			        },
+			        "base_ODM2025.pais_uni": {
+			          "Target": {
+			            "Entity": "base_ODM2025.pais_uni"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_ODM2025"
+			            },
+			            "Object": {
+			              "Role": "base_ODM2025.pais_uni"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_ODM2025_have_pais_unis"
+			        }
+			      ]
+			    },
+			    "base_ODM2025_has_tipo_uni": {
+			      "Binding": {
+			        "ConceptualEntity": "Base_ODM2025"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_ODM2025": {
+			          "Target": {
+			            "Entity": "base_ODM2025"
+			          }
+			        },
+			        "base_ODM2025.tipo_uni": {
+			          "Target": {
+			            "Entity": "base_ODM2025.tipo_uni"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_ODM2025"
+			            },
+			            "Object": {
+			              "Role": "base_ODM2025.tipo_uni"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_ODM2025_have_tipo_unis"
+			        }
+			      ]
+			    },
+			    "base_ODM2025_has_uni": {
+			      "Binding": {
+			        "ConceptualEntity": "Base_ODM2025"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_ODM2025": {
+			          "Target": {
+			            "Entity": "base_ODM2025"
+			          }
+			        },
+			        "base_ODM2025.uni": {
+			          "Target": {
+			            "Entity": "base_ODM2025.uni"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_ODM2025"
+			            },
+			            "Object": {
+			              "Role": "base_ODM2025.uni"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_ODM2025_have_unis"
+			        }
+			      ]
+			    },
+			    "base_ODM2025_has_origen": {
+			      "Binding": {
+			        "ConceptualEntity": "Base_ODM2025"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_ODM2025": {
+			          "Target": {
+			            "Entity": "base_ODM2025"
+			          }
+			        },
+			        "base_ODM2025.origen": {
+			          "Target": {
+			            "Entity": "base_ODM2025.origen"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_ODM2025"
+			            },
+			            "Object": {
+			              "Role": "base_ODM2025.origen"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_ODM2025_have_origen"
+			        }
+			      ]
+			    },
+			    "base_ODM2025_has_sexo": {
+			      "Binding": {
+			        "ConceptualEntity": "Base_ODM2025"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_ODM2025": {
+			          "Target": {
+			            "Entity": "base_ODM2025"
+			          }
+			        },
+			        "base_ODM2025.sexo": {
+			          "Target": {
+			            "Entity": "base_ODM2025.sexo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_ODM2025"
+			            },
+			            "Object": {
+			              "Role": "base_ODM2025.sexo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_ODM2025_have_sexos"
+			        }
+			      ]
+			    },
+			    "base_ODM2025_has_apellido": {
+			      "Binding": {
+			        "ConceptualEntity": "Base_ODM2025"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_ODM2025": {
+			          "Target": {
+			            "Entity": "base_ODM2025"
+			          }
+			        },
+			        "base_ODM2025.apellido": {
+			          "Target": {
+			            "Entity": "base_ODM2025.apellido"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_ODM2025"
+			            },
+			            "Object": {
+			              "Role": "base_ODM2025.apellido"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_ODM2025_have_apellidos"
+			        }
+			      ]
+			    },
+			    "base_ODM2025_has_nombre": {
+			      "Binding": {
+			        "ConceptualEntity": "Base_ODM2025"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_ODM2025": {
+			          "Target": {
+			            "Entity": "base_ODM2025"
+			          }
+			        },
+			        "base_ODM2025.nombre": {
+			          "Target": {
+			            "Entity": "base_ODM2025.nombre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_ODM2025"
+			            },
+			            "Object": {
+			              "Role": "base_ODM2025.nombre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_ODM2025_have_nombres"
+			        }
+			      ]
+			    },
+			    "base_ODM2025_has_dni": {
+			      "Binding": {
+			        "ConceptualEntity": "Base_ODM2025"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_ODM2025": {
+			          "Target": {
+			            "Entity": "base_ODM2025"
+			          }
+			        },
+			        "base_ODM2025.dni": {
+			          "Target": {
+			            "Entity": "base_ODM2025.dni"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_ODM2025"
+			            },
+			            "Object": {
+			              "Role": "base_ODM2025.dni"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_ODM2025_have_dnis"
+			        }
+			      ]
+			    },
+			    "hecho_has_medida_prom_puntaje": {
 			      "Binding": {
 			        "ConceptualEntity": "Hechos"
 			      },
@@ -1253,9 +2680,9 @@ cultureInfo es-ES
 			            "Entity": "hecho"
 			          }
 			        },
-			        "base_ODM202_5g": {
+			        "medida.prom_puntaje": {
 			          "Target": {
-			            "Entity": "base_ODM202_5g"
+			            "Entity": "medida.prom_puntaje"
 			          }
 			        }
 			      },
@@ -1266,73 +2693,7 @@ cultureInfo es-ES
 			              "Role": "hecho"
 			            },
 			            "Object": {
-			              "Role": "base_ODM202_5g"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hechos_have_base_ODM202_5gs"
-			        }
-			      ]
-			    },
-			    "base_ODM202_5g_has_hecho": {
-			      "Binding": {
-			        "ConceptualEntity": "BaseODM2025g"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_ODM202_5g": {
-			          "Target": {
-			            "Entity": "base_ODM202_5g"
-			          }
-			        },
-			        "hecho": {
-			          "Target": {
-			            "Entity": "hecho"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_ODM202_5g"
-			            },
-			            "Object": {
-			              "Role": "hecho"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "base_ODM202_5gs_have_hechos"
-			        }
-			      ]
-			    },
-			    "hecho_has_parámetro_prom_puntaje": {
-			      "Binding": {
-			        "ConceptualEntity": "Hechos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "hecho": {
-			          "Target": {
-			            "Entity": "hecho"
-			          }
-			        },
-			        "parámetro.prom_puntaje": {
-			          "Target": {
-			            "Entity": "parámetro.prom_puntaje"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "hecho"
-			            },
-			            "Object": {
-			              "Role": "parámetro.prom_puntaje"
+			              "Role": "medida.prom_puntaje"
 			            }
 			          },
 			          "State": "Generated",
@@ -1341,7 +2702,7 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "hecho_has_parámetro_prom_EX_M": {
+			    "hecho_has_medida_prom_EX_M": {
 			      "Binding": {
 			        "ConceptualEntity": "Hechos"
 			      },
@@ -1352,9 +2713,9 @@ cultureInfo es-ES
 			            "Entity": "hecho"
 			          }
 			        },
-			        "parámetro.prom_EX_M": {
+			        "medida.prom_EX_M": {
 			          "Target": {
-			            "Entity": "parámetro.prom_EX_M"
+			            "Entity": "medida.prom_EX_M"
 			          }
 			        }
 			      },
@@ -1365,7 +2726,7 @@ cultureInfo es-ES
 			              "Role": "hecho"
 			            },
 			            "Object": {
-			              "Role": "parámetro.prom_EX_M"
+			              "Role": "medida.prom_EX_M"
 			            }
 			          },
 			          "State": "Generated",
@@ -1374,7 +2735,7 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "hecho_has_parámetro_prom_EX_F": {
+			    "hecho_has_medida_prom_EX_F": {
 			      "Binding": {
 			        "ConceptualEntity": "Hechos"
 			      },
@@ -1385,9 +2746,9 @@ cultureInfo es-ES
 			            "Entity": "hecho"
 			          }
 			        },
-			        "parámetro.prom_EX_F": {
+			        "medida.prom_EX_F": {
 			          "Target": {
-			            "Entity": "parámetro.prom_EX_F"
+			            "Entity": "medida.prom_EX_F"
 			          }
 			        }
 			      },
@@ -1398,7 +2759,7 @@ cultureInfo es-ES
 			              "Role": "hecho"
 			            },
 			            "Object": {
-			              "Role": "parámetro.prom_EX_F"
+			              "Role": "medida.prom_EX_F"
 			            }
 			          },
 			          "State": "Generated",
@@ -1407,7 +2768,7 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "hecho_has_parámetro_prom_carrera": {
+			    "hecho_has_medida_prom_carrera": {
 			      "Binding": {
 			        "ConceptualEntity": "Hechos"
 			      },
@@ -1418,9 +2779,9 @@ cultureInfo es-ES
 			            "Entity": "hecho"
 			          }
 			        },
-			        "parámetro.prom_carrera": {
+			        "medida.prom_carrera": {
 			          "Target": {
-			            "Entity": "parámetro.prom_carrera"
+			            "Entity": "medida.prom_carrera"
 			          }
 			        }
 			      },
@@ -1431,7 +2792,7 @@ cultureInfo es-ES
 			              "Role": "hecho"
 			            },
 			            "Object": {
-			              "Role": "parámetro.prom_carrera"
+			              "Role": "medida.prom_carrera"
 			            }
 			          },
 			          "State": "Generated",
@@ -1440,7 +2801,7 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "hecho_has_parámetro_prom_EX": {
+			    "hecho_has_medida_prom_EX": {
 			      "Binding": {
 			        "ConceptualEntity": "Hechos"
 			      },
@@ -1451,9 +2812,9 @@ cultureInfo es-ES
 			            "Entity": "hecho"
 			          }
 			        },
-			        "parámetro.prom_EX": {
+			        "medida.prom_EX": {
 			          "Target": {
-			            "Entity": "parámetro.prom_EX"
+			            "Entity": "medida.prom_EX"
 			          }
 			        }
 			      },
@@ -1464,7 +2825,7 @@ cultureInfo es-ES
 			              "Role": "hecho"
 			            },
 			            "Object": {
-			              "Role": "parámetro.prom_EX"
+			              "Role": "medida.prom_EX"
 			            }
 			          },
 			          "State": "Generated",
@@ -1816,20 +3177,20 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "base_ODM202_5g_has_parámetro_total_residentes": {
+			    "hecho_has_medida_total_residentes": {
 			      "Binding": {
-			        "ConceptualEntity": "BaseODM2025g"
+			        "ConceptualEntity": "Hechos"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "base_ODM202_5g": {
+			        "hecho": {
 			          "Target": {
-			            "Entity": "base_ODM202_5g"
+			            "Entity": "hecho"
 			          }
 			        },
-			        "parámetro.total_residentes": {
+			        "medida.total_residentes": {
 			          "Target": {
-			            "Entity": "parámetro.total_residentes"
+			            "Entity": "medida.total_residentes"
 			          }
 			        }
 			      },
@@ -1837,434 +3198,45 @@ cultureInfo es-ES
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "base_ODM202_5g"
+			              "Role": "hecho"
 			            },
 			            "Object": {
-			              "Role": "parámetro.total_residentes"
+			              "Role": "medida.total_residentes"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "base_ODM202_5gs_have_total_residentes"
+			          "ID": "hechos_have_total_residentes"
 			        }
 			      ]
 			    },
-			    "parámetro_has_parámetro": {
+			    "base_ODM2025_in_ciudad_uni": {
 			      "Binding": {
-			        "ConceptualEntity": "Parámetro"
+			        "ConceptualEntity": "Base_ODM2025"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "parámetro": {
+			        "base_ODM2025": {
 			          "Target": {
-			            "Entity": "parámetro"
+			            "Entity": "base_ODM2025"
 			          }
 			        },
-			        "parámetro.parámetro": {
+			        "base_ODM2025.ciudad_uni": {
 			          "Target": {
-			            "Entity": "parámetro.parámetro"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "parámetro"
-			            },
-			            "Object": {
-			              "Role": "parámetro.parámetro"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "parámetros_have_parámetros"
-			        },
-			        {
-			          "Name": {
-			            "Subject": {
-			              "Role": "parámetro"
-			            },
-			            "Name": {
-			              "Role": "parámetro.parámetro"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "parámetros_are_names_IDs_of_parámetros"
-			        }
-			      ]
-			    },
-			    "base_ODM202_5g_has_ID": {
-			      "Binding": {
-			        "ConceptualEntity": "BaseODM2025g"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_ODM202_5g": {
-			          "Target": {
-			            "Entity": "base_ODM202_5g"
-			          }
-			        },
-			        "base_ODM202_5g.ID": {
-			          "Target": {
-			            "Entity": "base_ODM202_5g.ID"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_ODM202_5g"
-			            },
-			            "Object": {
-			              "Role": "base_ODM202_5g.ID"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "base_ODM202_5gs_have_ID"
-			        },
-			        {
-			          "Name": {
-			            "Subject": {
-			              "Role": "base_ODM202_5g"
-			            },
-			            "Name": {
-			              "Role": "base_ODM202_5g.ID"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "ID_are_names_IDs_of_base_ODM202_5gs"
-			        }
-			      ]
-			    },
-			    "base_ODM202_5g_has_especialidad": {
-			      "Binding": {
-			        "ConceptualEntity": "BaseODM2025g"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_ODM202_5g": {
-			          "Target": {
-			            "Entity": "base_ODM202_5g"
-			          }
-			        },
-			        "base_ODM202_5g.especialidad": {
-			          "Target": {
-			            "Entity": "base_ODM202_5g.especialidad"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_ODM202_5g"
-			            },
-			            "Object": {
-			              "Role": "base_ODM202_5g.especialidad"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "base_ODM202_5gs_have_especialidads"
-			        }
-			      ]
-			    },
-			    "base_ODM202_5g_has_fecha_titulo": {
-			      "Binding": {
-			        "ConceptualEntity": "BaseODM2025g"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_ODM202_5g": {
-			          "Target": {
-			            "Entity": "base_ODM202_5g"
-			          }
-			        },
-			        "base_ODM202_5g.fecha_titulo": {
-			          "Target": {
-			            "Entity": "base_ODM202_5g.fecha_titulo"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_ODM202_5g"
-			            },
-			            "Object": {
-			              "Role": "base_ODM202_5g.fecha_titulo"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "base_ODM202_5gs_have_fecha_titulos"
-			        }
-			      ]
-			    },
-			    "base_ODM202_5g_has_ciudad_uni": {
-			      "Binding": {
-			        "ConceptualEntity": "BaseODM2025g"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_ODM202_5g": {
-			          "Target": {
-			            "Entity": "base_ODM202_5g"
-			          }
-			        },
-			        "base_ODM202_5g.ciudad_uni": {
-			          "Target": {
-			            "Entity": "base_ODM202_5g.ciudad_uni"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_ODM202_5g"
-			            },
-			            "Object": {
-			              "Role": "base_ODM202_5g.ciudad_uni"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "base_ODM202_5gs_have_ciudad_unis"
-			        }
-			      ]
-			    },
-			    "base_ODM202_5g_has_pais_uni": {
-			      "Binding": {
-			        "ConceptualEntity": "BaseODM2025g"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_ODM202_5g": {
-			          "Target": {
-			            "Entity": "base_ODM202_5g"
-			          }
-			        },
-			        "base_ODM202_5g.pais_uni": {
-			          "Target": {
-			            "Entity": "base_ODM202_5g.pais_uni"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_ODM202_5g"
-			            },
-			            "Object": {
-			              "Role": "base_ODM202_5g.pais_uni"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "base_ODM202_5gs_have_pais_unis"
-			        }
-			      ]
-			    },
-			    "base_ODM202_5g_has_tipo_uni": {
-			      "Binding": {
-			        "ConceptualEntity": "BaseODM2025g"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_ODM202_5g": {
-			          "Target": {
-			            "Entity": "base_ODM202_5g"
-			          }
-			        },
-			        "base_ODM202_5g.tipo_uni": {
-			          "Target": {
-			            "Entity": "base_ODM202_5g.tipo_uni"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_ODM202_5g"
-			            },
-			            "Object": {
-			              "Role": "base_ODM202_5g.tipo_uni"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "base_ODM202_5gs_have_tipo_unis"
-			        }
-			      ]
-			    },
-			    "base_ODM202_5g_has_universidad": {
-			      "Binding": {
-			        "ConceptualEntity": "BaseODM2025g"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_ODM202_5g": {
-			          "Target": {
-			            "Entity": "base_ODM202_5g"
-			          }
-			        },
-			        "base_ODM202_5g.universidad": {
-			          "Target": {
-			            "Entity": "base_ODM202_5g.universidad"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_ODM202_5g"
-			            },
-			            "Object": {
-			              "Role": "base_ODM202_5g.universidad"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "base_ODM202_5gs_have_universidad"
-			        }
-			      ]
-			    },
-			    "base_ODM202_5g_has_origen": {
-			      "Binding": {
-			        "ConceptualEntity": "BaseODM2025g"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_ODM202_5g": {
-			          "Target": {
-			            "Entity": "base_ODM202_5g"
-			          }
-			        },
-			        "base_ODM202_5g.origen": {
-			          "Target": {
-			            "Entity": "base_ODM202_5g.origen"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_ODM202_5g"
-			            },
-			            "Object": {
-			              "Role": "base_ODM202_5g.origen"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "base_ODM202_5gs_have_origen"
-			        }
-			      ]
-			    },
-			    "base_ODM202_5g_has_sexo": {
-			      "Binding": {
-			        "ConceptualEntity": "BaseODM2025g"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_ODM202_5g": {
-			          "Target": {
-			            "Entity": "base_ODM202_5g"
-			          }
-			        },
-			        "base_ODM202_5g.sexo": {
-			          "Target": {
-			            "Entity": "base_ODM202_5g.sexo"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_ODM202_5g"
-			            },
-			            "Object": {
-			              "Role": "base_ODM202_5g.sexo"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "base_ODM202_5gs_have_sexos"
-			        }
-			      ]
-			    },
-			    "base_ODM202_5g_has_clase_uni": {
-			      "Binding": {
-			        "ConceptualEntity": "BaseODM2025g"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_ODM202_5g": {
-			          "Target": {
-			            "Entity": "base_ODM202_5g"
-			          }
-			        },
-			        "base_ODM202_5g.clase_uni": {
-			          "Target": {
-			            "Entity": "base_ODM202_5g.clase_uni"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_ODM202_5g"
-			            },
-			            "Object": {
-			              "Role": "base_ODM202_5g.clase_uni"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "base_ODM202_5gs_have_clase_unis"
-			        }
-			      ]
-			    },
-			    "base_ODM202_5g_in_ciudad_uni": {
-			      "Binding": {
-			        "ConceptualEntity": "BaseODM2025g"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_ODM202_5g": {
-			          "Target": {
-			            "Entity": "base_ODM202_5g"
-			          }
-			        },
-			        "base_ODM202_5g.ciudad_uni": {
-			          "Target": {
-			            "Entity": "base_ODM202_5g.ciudad_uni"
+			            "Entity": "base_ODM2025.ciudad_uni"
 			          }
 			        }
 			      },
 			      "SemanticSlots": {
 			        "Where": {
-			          "Role": "base_ODM202_5g.ciudad_uni"
+			          "Role": "base_ODM2025.ciudad_uni"
 			        }
 			      },
 			      "Phrasings": [
 			        {
 			          "Preposition": {
 			            "Subject": {
-			              "Role": "base_ODM202_5g"
+			              "Role": "base_ODM2025"
 			            },
 			            "Prepositions": [
 			              {
@@ -2274,42 +3246,42 @@ cultureInfo es-ES
 			              }
 			            ],
 			            "Object": {
-			              "Role": "base_ODM202_5g.ciudad_uni"
+			              "Role": "base_ODM2025.ciudad_uni"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "base_ODM202_5gs_are_in_ciudad_unis"
+			          "ID": "base_ODM2025_are_in_ciudad_unis"
 			        }
 			      ]
 			    },
-			    "base_ODM202_5g_in_pais_uni": {
+			    "base_ODM2025_in_pais_uni": {
 			      "Binding": {
-			        "ConceptualEntity": "BaseODM2025g"
+			        "ConceptualEntity": "Base_ODM2025"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "base_ODM202_5g": {
+			        "base_ODM2025": {
 			          "Target": {
-			            "Entity": "base_ODM202_5g"
+			            "Entity": "base_ODM2025"
 			          }
 			        },
-			        "base_ODM202_5g.pais_uni": {
+			        "base_ODM2025.pais_uni": {
 			          "Target": {
-			            "Entity": "base_ODM202_5g.pais_uni"
+			            "Entity": "base_ODM2025.pais_uni"
 			          }
 			        }
 			      },
 			      "SemanticSlots": {
 			        "Where": {
-			          "Role": "base_ODM202_5g.pais_uni"
+			          "Role": "base_ODM2025.pais_uni"
 			        }
 			      },
 			      "Phrasings": [
 			        {
 			          "Preposition": {
 			            "Subject": {
-			              "Role": "base_ODM202_5g"
+			              "Role": "base_ODM2025"
 			            },
 			            "Prepositions": [
 			              {
@@ -2319,29 +3291,29 @@ cultureInfo es-ES
 			              }
 			            ],
 			            "Object": {
-			              "Role": "base_ODM202_5g.pais_uni"
+			              "Role": "base_ODM2025.pais_uni"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "base_ODM202_5gs_are_in_pais_unis"
+			          "ID": "base_ODM2025_are_in_pais_unis"
 			        }
 			      ]
 			    },
-			    "base_ODM202_5g_fecha_titulo_has_jerarquía_de_fecha": {
+			    "base_ODM2025_fecha_titulo_me_has_base_ODM2025_fecha_titulo_día": {
 			      "Binding": {
-			        "ConceptualEntity": "BaseODM2025g"
+			        "ConceptualEntity": "Base_ODM2025"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "base_ODM202_5g.fecha_titulo": {
+			        "base_ODM2025.fecha_titulo.me": {
 			          "Target": {
-			            "Entity": "base_ODM202_5g.fecha_titulo"
+			            "Entity": "base_ODM2025.fecha_titulo.me"
 			          }
 			        },
-			        "base_ODM202_5g.fecha_titulo.jerarquía_de_fecha": {
+			        "base_ODM2025.fecha_titulo.día": {
 			          "Target": {
-			            "Entity": "base_ODM202_5g.fecha_titulo.jerarquía_de_fecha"
+			            "Entity": "base_ODM2025.fecha_titulo.día"
 			          }
 			        }
 			      },
@@ -2349,307 +3321,10 @@ cultureInfo es-ES
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "base_ODM202_5g.fecha_titulo"
+			              "Role": "base_ODM2025.fecha_titulo.me"
 			            },
 			            "Object": {
-			              "Role": "base_ODM202_5g.fecha_titulo.jerarquía_de_fecha"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fecha_titulos_have_jerarquía_de_fechas"
-			        }
-			      ]
-			    },
-			    "base_ODM202_5g_fecha_titulo_jerarquía_de_fecha_has_base_ODM202_5g_fecha_titulo_año": {
-			      "Binding": {
-			        "ConceptualEntity": "BaseODM2025g"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_ODM202_5g.fecha_titulo.jerarquía_de_fecha": {
-			          "Target": {
-			            "Entity": "base_ODM202_5g.fecha_titulo.jerarquía_de_fecha"
-			          }
-			        },
-			        "base_ODM202_5g.fecha_titulo.año": {
-			          "Target": {
-			            "Entity": "base_ODM202_5g.fecha_titulo.año"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_ODM202_5g.fecha_titulo.jerarquía_de_fecha"
-			            },
-			            "Object": {
-			              "Role": "base_ODM202_5g.fecha_titulo.año"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_años"
-			        }
-			      ]
-			    },
-			    "base_ODM202_5g_fecha_titulo_jerarquía_de_fecha_has_base_ODM202_5g_fecha_titulo_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "BaseODM2025g"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_ODM202_5g.fecha_titulo.jerarquía_de_fecha": {
-			          "Target": {
-			            "Entity": "base_ODM202_5g.fecha_titulo.jerarquía_de_fecha"
-			          }
-			        },
-			        "base_ODM202_5g.fecha_titulo.trimestre": {
-			          "Target": {
-			            "Entity": "base_ODM202_5g.fecha_titulo.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_ODM202_5g.fecha_titulo.jerarquía_de_fecha"
-			            },
-			            "Object": {
-			              "Role": "base_ODM202_5g.fecha_titulo.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_trimestres"
-			        }
-			      ]
-			    },
-			    "base_ODM202_5g_fecha_titulo_jerarquía_de_fecha_has_base_ODM202_5g_fecha_titulo_me": {
-			      "Binding": {
-			        "ConceptualEntity": "BaseODM2025g"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_ODM202_5g.fecha_titulo.jerarquía_de_fecha": {
-			          "Target": {
-			            "Entity": "base_ODM202_5g.fecha_titulo.jerarquía_de_fecha"
-			          }
-			        },
-			        "base_ODM202_5g.fecha_titulo.me": {
-			          "Target": {
-			            "Entity": "base_ODM202_5g.fecha_titulo.me"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_ODM202_5g.fecha_titulo.jerarquía_de_fecha"
-			            },
-			            "Object": {
-			              "Role": "base_ODM202_5g.fecha_titulo.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_me"
-			        }
-			      ]
-			    },
-			    "base_ODM202_5g_fecha_titulo_jerarquía_de_fecha_has_base_ODM202_5g_fecha_titulo_día": {
-			      "Binding": {
-			        "ConceptualEntity": "BaseODM2025g"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_ODM202_5g.fecha_titulo.jerarquía_de_fecha": {
-			          "Target": {
-			            "Entity": "base_ODM202_5g.fecha_titulo.jerarquía_de_fecha"
-			          }
-			        },
-			        "base_ODM202_5g.fecha_titulo.día": {
-			          "Target": {
-			            "Entity": "base_ODM202_5g.fecha_titulo.día"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_ODM202_5g.fecha_titulo.jerarquía_de_fecha"
-			            },
-			            "Object": {
-			              "Role": "base_ODM202_5g.fecha_titulo.día"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_días"
-			        }
-			      ]
-			    },
-			    "base_ODM202_5g_fecha_titulo_año_has_base_ODM202_5g_fecha_titulo_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "BaseODM2025g"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_ODM202_5g.fecha_titulo.año": {
-			          "Target": {
-			            "Entity": "base_ODM202_5g.fecha_titulo.año"
-			          }
-			        },
-			        "base_ODM202_5g.fecha_titulo.trimestre": {
-			          "Target": {
-			            "Entity": "base_ODM202_5g.fecha_titulo.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_ODM202_5g.fecha_titulo.año"
-			            },
-			            "Object": {
-			              "Role": "base_ODM202_5g.fecha_titulo.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "años_have_trimestres"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_ODM202_5g.fecha_titulo.trimestre"
-			            },
-			            "Object": {
-			              "Role": "base_ODM202_5g.fecha_titulo.año"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_años"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "base_ODM202_5g.fecha_titulo.trimestre"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "base_ODM202_5g.fecha_titulo.año"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_are_in_años"
-			        }
-			      ]
-			    },
-			    "base_ODM202_5g_fecha_titulo_trimestre_has_base_ODM202_5g_fecha_titulo_me": {
-			      "Binding": {
-			        "ConceptualEntity": "BaseODM2025g"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_ODM202_5g.fecha_titulo.trimestre": {
-			          "Target": {
-			            "Entity": "base_ODM202_5g.fecha_titulo.trimestre"
-			          }
-			        },
-			        "base_ODM202_5g.fecha_titulo.me": {
-			          "Target": {
-			            "Entity": "base_ODM202_5g.fecha_titulo.me"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_ODM202_5g.fecha_titulo.trimestre"
-			            },
-			            "Object": {
-			              "Role": "base_ODM202_5g.fecha_titulo.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_me"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_ODM202_5g.fecha_titulo.me"
-			            },
-			            "Object": {
-			              "Role": "base_ODM202_5g.fecha_titulo.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "me_have_trimestres"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "base_ODM202_5g.fecha_titulo.me"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "base_ODM202_5g.fecha_titulo.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "me_are_in_trimestres"
-			        }
-			      ]
-			    },
-			    "base_ODM202_5g_fecha_titulo_me_has_base_ODM202_5g_fecha_titulo_día": {
-			      "Binding": {
-			        "ConceptualEntity": "BaseODM2025g"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "base_ODM202_5g.fecha_titulo.me": {
-			          "Target": {
-			            "Entity": "base_ODM202_5g.fecha_titulo.me"
-			          }
-			        },
-			        "base_ODM202_5g.fecha_titulo.día": {
-			          "Target": {
-			            "Entity": "base_ODM202_5g.fecha_titulo.día"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "base_ODM202_5g.fecha_titulo.me"
-			            },
-			            "Object": {
-			              "Role": "base_ODM202_5g.fecha_titulo.día"
+			              "Role": "base_ODM2025.fecha_titulo.día"
 			            }
 			          },
 			          "State": "Generated",
@@ -2659,10 +3334,10 @@ cultureInfo es-ES
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "base_ODM202_5g.fecha_titulo.día"
+			              "Role": "base_ODM2025.fecha_titulo.día"
 			            },
 			            "Object": {
-			              "Role": "base_ODM202_5g.fecha_titulo.me"
+			              "Role": "base_ODM2025.fecha_titulo.me"
 			            }
 			          },
 			          "State": "Generated",
@@ -2672,7 +3347,7 @@ cultureInfo es-ES
 			        {
 			          "Preposition": {
 			            "Subject": {
-			              "Role": "base_ODM202_5g.fecha_titulo.día"
+			              "Role": "base_ODM2025.fecha_titulo.día"
 			            },
 			            "Prepositions": [
 			              {
@@ -2682,7 +3357,7 @@ cultureInfo es-ES
 			              }
 			            ],
 			            "Object": {
-			              "Role": "base_ODM202_5g.fecha_titulo.me"
+			              "Role": "base_ODM2025.fecha_titulo.me"
 			            }
 			          },
 			          "State": "Generated",

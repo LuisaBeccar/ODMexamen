@@ -6,19 +6,19 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
-annotation PBI_QueryOrder = ["BaseODM2025g","Hechos"]
+annotation PBI_QueryOrder = ["Hechos","Base_ODM2025"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBIDesktopVersion = 2.144.1155.0 (25.06)+46435b07013d2a234d7fd007083a9e70b8e79f1c
+annotation PBIDesktopVersion = 2.146.1133.0 (25.08)+c8010d55d1db76eda03c968b03481610e96a1ef7
 
 annotation PBI_ProTooling = ["DevMode"]
 
-ref table BaseODM2025g
-ref table DateTableTemplate_9c35351a-7f2c-4922-9a99-f7d57c576fa7
-ref table LocalDateTable_c814711c-46f2-46be-8161-12337c8ce2e3
-ref table Parámetro
 ref table Hechos
+ref table Base_ODM2025
+ref table DateTableTemplate_0c4d04f7-5dd8-4da6-99ac-fcbe10237122
+ref table LocalDateTable_376d8a4c-ef96-4cc8-aaf6-b7087c983ac5
+ref table Medidas
 
 ref cultureInfo es-ES
 

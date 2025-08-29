@@ -1,0 +1,245 @@
+table Base_ODM2025
+	lineageTag: af478c95-b92b-4fbd-8f0f-5f79fdd7187e
+
+	column DNI
+		dataType: string
+		lineageTag: d15d0813-5047-4f36-bf81-76466ba70203
+		summarizeBy: none
+		sourceColumn: DNI
+
+		annotation SummarizationSetBy = Automatic
+
+	column NOMBRE
+		dataType: string
+		lineageTag: 05e0bb1b-eba5-453c-9bef-9749ad4716f6
+		summarizeBy: none
+		sourceColumn: NOMBRE
+
+		annotation SummarizationSetBy = Automatic
+
+	column APELLIDO
+		dataType: string
+		lineageTag: 7137390e-6b6b-4d24-aaf1-c139db46168f
+		summarizeBy: none
+		sourceColumn: APELLIDO
+
+		annotation SummarizationSetBy = Automatic
+
+	column SEXO
+		dataType: string
+		lineageTag: 5c639031-5de6-4189-940d-8bccf86d1045
+		summarizeBy: none
+		sourceColumn: SEXO
+
+		annotation SummarizationSetBy = Automatic
+
+	column ORIGEN
+		dataType: string
+		lineageTag: 98873137-7d83-4a5b-9383-bd321c51bdfe
+		summarizeBy: none
+		sourceColumn: ORIGEN
+
+		annotation SummarizationSetBy = Automatic
+
+	column UNI
+		dataType: string
+		lineageTag: 9971b2a7-4a2a-4267-98ee-2d48ef5184d3
+		summarizeBy: none
+		sourceColumn: UNI
+
+		annotation SummarizationSetBy = Automatic
+
+	column TIPO_UNI
+		dataType: string
+		lineageTag: 1648227b-f183-47b8-b087-85209ac35771
+		summarizeBy: none
+		sourceColumn: TIPO_UNI
+
+		annotation SummarizationSetBy = Automatic
+
+	column PAIS_UNI
+		dataType: string
+		lineageTag: 03386aaa-00b0-4341-9fee-f7b293a57c4f
+		dataCategory: Country
+		summarizeBy: none
+		sourceColumn: PAIS_UNI
+
+		annotation SummarizationSetBy = Automatic
+
+	column CIUDAD_UNI
+		dataType: string
+		lineageTag: 128dc1db-b78e-432e-b2e8-fa1b30882b20
+		dataCategory: City
+		summarizeBy: none
+		sourceColumn: CIUDAD_UNI
+
+		annotation SummarizationSetBy = Automatic
+
+	column lat
+		dataType: string
+		lineageTag: a9ad774e-20af-498f-a89d-d7dafb345f9e
+		dataCategory: Latitude
+		summarizeBy: none
+		sourceColumn: lat
+
+		annotation SummarizationSetBy = Automatic
+
+	column long
+		dataType: string
+		lineageTag: 76d4eb43-4489-493c-bfba-1e1e29152fb8
+		dataCategory: Longitude
+		summarizeBy: none
+		sourceColumn: long
+
+		annotation SummarizationSetBy = Automatic
+
+	column CLASE_UNI
+		dataType: string
+		lineageTag: ad4e9db8-b70f-4951-923a-e5e0d453c09b
+		summarizeBy: none
+		sourceColumn: CLASE_UNI
+
+		annotation SummarizationSetBy = Automatic
+
+	column FECHA_TITULO
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 74b663a1-7fdb-4a45-abad-a512bfd13ac0
+		summarizeBy: none
+		sourceColumn: FECHA_TITULO
+
+		variation Variación
+			isDefault
+			relationship: 48e3143a-1368-442b-b0f1-ffeddaadd02c
+			defaultHierarchy: LocalDateTable_376d8a4c-ef96-4cc8-aaf6-b7087c983ac5.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DIAS_DESDE_TITULO
+		dataType: int64
+		formatString: 0
+		lineageTag: 82ad4dbc-5861-4a84-a911-f6e763a1a1ae
+		summarizeBy: none
+		sourceColumn: DIAS_DESDE_TITULO
+
+		annotation SummarizationSetBy = User
+
+	column PROMEDIO_CARRERA
+		dataType: double
+		formatString: #,0
+		lineageTag: 4fab4a45-10a0-427f-b5ee-04b4f1c288ed
+		summarizeBy: none
+		sourceColumn: PROMEDIO_CARRERA
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column ESPECIALIDAD
+		dataType: string
+		lineageTag: 7cc8c20a-e4c2-4537-a5c2-d8fe1f2e66b2
+		summarizeBy: none
+		sourceColumn: ESPECIALIDAD
+
+		annotation SummarizationSetBy = Automatic
+
+	column NOTA_EXAMEN
+		dataType: int64
+		formatString: 0
+		lineageTag: e6d56be0-a986-49b1-8086-7f41fa42b7e9
+		summarizeBy: none
+		sourceColumn: NOTA_EXAMEN
+
+		annotation SummarizationSetBy = User
+
+	column COMPONENTE
+		dataType: int64
+		formatString: 0
+		lineageTag: 04a6aeba-1604-4741-8690-b6d6d2f9165a
+		summarizeBy: none
+		sourceColumn: COMPONENTE
+
+		annotation SummarizationSetBy = User
+
+	column PUNTAJE
+		dataType: int64
+		formatString: 0
+		lineageTag: e59252cd-1c18-4ca8-b2ff-970401eb4a77
+		summarizeBy: sum
+		sourceColumn: PUNTAJE
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column PUNTAJE_CRUDO
+		dataType: string
+		lineageTag: d65403f7-74ac-4844-a703-f563462a4950
+		summarizeBy: none
+		sourceColumn: PUNTAJE_CRUDO
+
+		annotation SummarizationSetBy = Automatic
+
+	column ODM
+		dataType: int64
+		formatString: 0
+		lineageTag: 017727f3-b17e-43d4-a6d0-c5505e5eea07
+		summarizeBy: none
+		sourceColumn: ODM
+
+		annotation SummarizationSetBy = User
+
+	column ODM_CRUDO
+		dataType: int64
+		formatString: 0
+		lineageTag: 24fa64e5-770c-4ae6-bb42-b409af4088fe
+		summarizeBy: none
+		sourceColumn: ODM_CRUDO
+
+		annotation SummarizationSetBy = User
+
+	column ODM_GLOBAL
+		dataType: int64
+		formatString: 0
+		lineageTag: 1cc5378c-68d2-4d1e-9932-921a6af2e09e
+		summarizeBy: none
+		sourceColumn: ODM_GLOBAL
+
+		annotation SummarizationSetBy = User
+
+	column ODM_GLOBAL_CRUDO
+		dataType: int64
+		formatString: 0
+		lineageTag: 319a83c6-61d9-4dc9-8aa9-c06450a7a970
+		summarizeBy: none
+		sourceColumn: ODM_GLOBAL_CRUDO
+
+		annotation SummarizationSetBy = User
+
+	partition Base_ODM2025 = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(Web.Contents("https://raw.githubusercontent.com/LuisaBeccar/ODMexamen/refs/heads/main/Base_ODM2025.csv"),[Delimiter=",", Columns=24, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    #"Valor reemplazado" = Table.ReplaceValue(#"Encabezados promovidos",".",",",Replacer.ReplaceText,{"PROMEDIO_CARRERA", "PUNTAJE", "PUNTAJE_CRUDO"}),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Valor reemplazado",{{"ODM_GLOBAL_CRUDO", Int64.Type}, {"ODM_GLOBAL", Int64.Type}, {"ODM_CRUDO", Int64.Type}, {"ODM", Int64.Type}, {"COMPONENTE", Int64.Type}, {"NOTA_EXAMEN", Int64.Type}}),
+				    #"Texto en mayúsculas" = Table.TransformColumns(#"Tipo cambiado",{{"ESPECIALIDAD", Text.Upper, type text}}),
+				    #"Texto limpio" = Table.TransformColumns(#"Texto en mayúsculas",{{"ESPECIALIDAD", Text.Clean, type text}}),
+				    #"Valor reemplazado1" = Table.ReplaceValue(#"Texto limpio","Í","I",Replacer.ReplaceText,{"ESPECIALIDAD"}),
+				    #"Valor reemplazado2" = Table.ReplaceValue(#"Valor reemplazado1","Á","A",Replacer.ReplaceText,{"ESPECIALIDAD"}),
+				    #"Valor reemplazado3" = Table.ReplaceValue(#"Valor reemplazado2","É","E",Replacer.ReplaceText,{"ESPECIALIDAD"}),
+				    #"Valor reemplazado4" = Table.ReplaceValue(#"Valor reemplazado3","Ó","O",Replacer.ReplaceText,{"ESPECIALIDAD"}),
+				    #"Valor reemplazado5" = Table.ReplaceValue(#"Valor reemplazado4","Ú","U",Replacer.ReplaceText,{"ESPECIALIDAD"}),
+				    #"Tipo cambiado1" = Table.TransformColumnTypes(#"Valor reemplazado5",{{"PROMEDIO_CARRERA", Currency.Type}, {"DIAS_DESDE_TITULO", Int64.Type}, {"FECHA_TITULO", type date}})
+				in
+				    #"Tipo cambiado1"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+
