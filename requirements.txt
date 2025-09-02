@@ -6,5 +6,4 @@ pandas
 geopandas
 shapely
 folium
-# ver webbroser
-#webbrowser
+plotly
