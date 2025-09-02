@@ -1,20 +1,24 @@
 table Hechos
-	lineageTag: 5261863e-a835-4caa-bc41-ed764b31b2c7
+	lineageTag: 702f924c-8361-45ae-b83d-eb04e6e4f53d
 
-	column ID
+	column Índice
 		dataType: int64
 		formatString: 0
-		lineageTag: 5d642255-5a8b-456a-bfd9-4962742a1a18
-		summarizeBy: count
-		sourceColumn: ID
+		lineageTag: ebba610c-e328-47df-a6a0-7443d4c96e72
+		summarizeBy: none
+		sourceColumn: Índice
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column lat
 		dataType: double
-		lineageTag: cb603d3a-d427-4144-ba3d-a1cb86305df3
+		lineageTag: 553c0617-e2e8-48b1-af92-432dc190d1cc
 		summarizeBy: sum
 		sourceColumn: lat
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -22,9 +26,11 @@ table Hechos
 
 	column long
 		dataType: double
-		lineageTag: 6cf2c67e-1953-4789-b099-85e4b745a143
+		lineageTag: 0150a619-6273-4125-ac2f-21ba386f70cd
 		summarizeBy: sum
 		sourceColumn: long
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -33,36 +39,56 @@ table Hechos
 	column DIAS_DESDE_TITULO
 		dataType: int64
 		formatString: 0
-		lineageTag: ac6618ec-5dc2-42c0-8a97-4dd5918f17f3
+		lineageTag: 8f67b737-6bc3-40a3-98e0-dfd54e65edf4
 		summarizeBy: sum
 		sourceColumn: DIAS_DESDE_TITULO
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column PROMEDIO_CARRERA
-		dataType: double
-		lineageTag: d8920270-d769-49dd-a42e-b4b42ac55944
+		dataType: decimal
+		formatString: \$#,0.###############;-\$#,0.###############;\$#,0.###############
+		lineageTag: 66600df9-47a8-46fe-b61c-10a17101d7e7
 		summarizeBy: sum
 		sourceColumn: PROMEDIO_CARRERA
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
 
 	column NOTA_EXAMEN
 		dataType: double
 		formatString: 0
-		lineageTag: cba8000e-3da7-4936-ae9d-22a813ee9fed
+		lineageTag: 4bb22048-b843-4509-b32d-2922ea7f1aa0
 		summarizeBy: sum
 		sourceColumn: NOTA_EXAMEN
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
-	column PUNTAJE
-		dataType: double
-		lineageTag: 42795d90-b97d-4519-b84f-e91a3e92f647
+	column COMPONENTE
+		dataType: int64
+		formatString: 0
+		lineageTag: fe130ea8-56ed-4ef5-be83-a7f0cc28daf6
 		summarizeBy: sum
-		sourceColumn: PUNTAJE
+		sourceColumn: COMPONENTE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PUNTAJE_FINAL
+		dataType: double
+		lineageTag: 7dcf4671-0dc0-464d-a3d9-9f7b4361e1f4
+		summarizeBy: sum
+		sourceColumn: PUNTAJE_FINAL
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -70,9 +96,11 @@ table Hechos
 
 	column PUNTAJE_CRUDO
 		dataType: double
-		lineageTag: 38d3dbac-75f7-4006-af21-91cd48f74301
+		lineageTag: b2ab229b-21e3-4338-84ce-e940fabd199f
 		summarizeBy: sum
 		sourceColumn: PUNTAJE_CRUDO
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -81,18 +109,44 @@ table Hechos
 	column ODM
 		dataType: int64
 		formatString: 0
-		lineageTag: a7a267ac-a7ef-41bd-987f-da8d00b548a0
+		lineageTag: 92bb319e-7215-41ab-b245-137c5a9fde9c
 		summarizeBy: sum
 		sourceColumn: ODM
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column ODM_CRUDO
 		dataType: int64
 		formatString: 0
-		lineageTag: a6e4779f-f7f6-4838-a093-9af3623b2d11
+		lineageTag: 9076f605-9235-4990-a570-43266955301a
 		summarizeBy: sum
 		sourceColumn: ODM_CRUDO
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ODM_GLOBAL
+		dataType: int64
+		formatString: 0
+		lineageTag: b041c662-f37f-44a9-89b7-0b26b1d4b008
+		summarizeBy: sum
+		sourceColumn: ODM_GLOBAL
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ODM_GLOBAL_CRUDO
+		dataType: int64
+		formatString: 0
+		lineageTag: 48a9b9ed-96cf-4061-a351-259b157419cb
+		summarizeBy: sum
+		sourceColumn: ODM_GLOBAL_CRUDO
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -102,19 +156,28 @@ table Hechos
 				let
 				    Origen = Csv.Document(Web.Contents("https://raw.githubusercontent.com/LuisaBeccar/ODMexamen/refs/heads/main/Base_ODM2025.csv"),[Delimiter=",", Columns=24, Encoding=65001, QuoteStyle=QuoteStyle.None]),
 				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
-				    #"Valor reemplazado" = Table.ReplaceValue(#"Encabezados promovidos",".",",",Replacer.ReplaceText,{"PROMEDIO_CARRERA","PUNTAJE","PUNTAJE_CRUDO"}),
-				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Valor reemplazado",{{"FECHA_TITULO", type date}, {"DIAS_DESDE_TITULO", Int64.Type}, {"PROMEDIO_CARRERA", type number}, {"NOTA_EXAMEN", Int64.Type}, {"COMPONENTE", Int64.Type}, {"PUNTAJE", type number}, {"PUNTAJE_CRUDO", type number}, {"ODM", Int64.Type}, {"ODM_CRUDO", Int64.Type}}),
-				    #"Columnas quitadas" = Table.RemoveColumns(#"Tipo cambiado",{"COMPONENTE"}),
-				    #"Índice agregado" = Table.AddIndexColumn(#"Columnas quitadas", "Índice", 1, 1, Int64.Type),
-				    #"Columnas reordenadas" = Table.ReorderColumns(#"Índice agregado",{"Índice", "DNI", "NOMBRE", "APELLIDO", "SEXO", "ORIGEN", "UNI", "TIPO_UNI", "PAIS_UNI", "CIUDAD_UNI", "lat", "long", "CLASE_UNI", "FECHA_TITULO", "DIAS_DESDE_TITULO", "PROMEDIO_CARRERA", "ESPECIALIDAD", "NOTA_EXAMEN", "PUNTAJE", "PUNTAJE_CRUDO", "ODM", "ODM_CRUDO"}),
-				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Columnas reordenadas",{{"Índice", "ID"}}),
-				    #"Columnas quitadas1" = Table.RemoveColumns(#"Columnas con nombre cambiado",{"DNI", "NOMBRE", "APELLIDO"}),
-				    #"Se eligen Columnas para Hechos" = Table.SelectColumns(#"Columnas quitadas1",{"ID", "lat", "long", "DIAS_DESDE_TITULO", "PROMEDIO_CARRERA", "NOTA_EXAMEN", "PUNTAJE", "PUNTAJE_CRUDO", "ODM", "ODM_CRUDO"}),
-				    #"cambio de ""."" a "","" en lat y long" = Table.ReplaceValue(#"Se eligen Columnas para Hechos",".",",",Replacer.ReplaceText,{"lat", "long"}),
-				    #"lat y long a decimal" = Table.TransformColumnTypes(#"cambio de ""."" a "","" en lat y long",{{"lat", type number}, {"long", type number}}),
-				    #"Columna dividida" = Table.TransformColumns(#"lat y long a decimal", {{"NOTA_EXAMEN", each _ / 10, type number}})
+				    #"Valor reemplazado" = Table.ReplaceValue(#"Encabezados promovidos",".",",",Replacer.ReplaceText,{"PROMEDIO_CARRERA", "PUNTAJE", "PUNTAJE_CRUDO"}),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Valor reemplazado",{{"ODM_GLOBAL_CRUDO", Int64.Type}, {"ODM_GLOBAL", Int64.Type}, {"ODM_CRUDO", Int64.Type}, {"ODM", Int64.Type}, {"COMPONENTE", Int64.Type}, {"NOTA_EXAMEN", Int64.Type}}),
+				    #"Texto en mayúsculas" = Table.TransformColumns(#"Tipo cambiado",{{"ESPECIALIDAD", Text.Upper, type text}}),
+				    #"Texto limpio" = Table.TransformColumns(#"Texto en mayúsculas",{{"ESPECIALIDAD", Text.Clean, type text}}),
+				    #"Valor reemplazado1" = Table.ReplaceValue(#"Texto limpio","Í","I",Replacer.ReplaceText,{"ESPECIALIDAD"}),
+				    #"Valor reemplazado2" = Table.ReplaceValue(#"Valor reemplazado1","Á","A",Replacer.ReplaceText,{"ESPECIALIDAD"}),
+				    #"Valor reemplazado3" = Table.ReplaceValue(#"Valor reemplazado2","É","E",Replacer.ReplaceText,{"ESPECIALIDAD"}),
+				    #"Valor reemplazado4" = Table.ReplaceValue(#"Valor reemplazado3","Ó","O",Replacer.ReplaceText,{"ESPECIALIDAD"}),
+				    #"Valor reemplazado5" = Table.ReplaceValue(#"Valor reemplazado4","Ú","U",Replacer.ReplaceText,{"ESPECIALIDAD"}),
+				    #"Tipo cambiado1" = Table.TransformColumnTypes(#"Valor reemplazado5",{{"PROMEDIO_CARRERA", Currency.Type}, {"DIAS_DESDE_TITULO", Int64.Type}, {"FECHA_TITULO", type date}}),
+				    #"Índice agregado" = Table.AddIndexColumn(#"Tipo cambiado1", "Índice", 1, 1, Int64.Type),
+				    #"Columnas reordenadas" = Table.ReorderColumns(#"Índice agregado",{"Índice", "DNI", "NOMBRE", "APELLIDO", "SEXO", "ORIGEN", "UNI", "TIPO_UNI", "PAIS_UNI", "CIUDAD_UNI", "lat", "long", "CLASE_UNI", "FECHA_TITULO", "DIAS_DESDE_TITULO", "PROMEDIO_CARRERA", "ESPECIALIDAD", "NOTA_EXAMEN", "COMPONENTE", "PUNTAJE", "PUNTAJE_CRUDO", "ODM", "ODM_CRUDO", "ODM_GLOBAL", "ODM_GLOBAL_CRUDO"}),
+				    #"Otras columnas quitadas" = Table.SelectColumns(#"Columnas reordenadas",{"Índice", "lat", "long", "DIAS_DESDE_TITULO", "PROMEDIO_CARRERA", "NOTA_EXAMEN", "COMPONENTE", "PUNTAJE", "PUNTAJE_CRUDO", "ODM", "ODM_CRUDO", "ODM_GLOBAL", "ODM_GLOBAL_CRUDO"}),
+				    #"Lat y Long cambio ""."" por "",""" = Table.ReplaceValue(#"Otras columnas quitadas",".",",",Replacer.ReplaceText,{"lat", "long"}),
+				    #"Tipo cambiado lat y long" = Table.TransformColumnTypes(#"Lat y Long cambio ""."" por "",""",{{"lat", type number}, {"long", type number}}),
+				    #"Nota_Examen % 10" = Table.TransformColumns(#"Tipo cambiado lat y long", {{"NOTA_EXAMEN", each _ / 10, type number}}),
+				    #"Tipo numero a Puntaje" = Table.TransformColumnTypes(#"Nota_Examen % 10",{{"PUNTAJE", type number}, {"PUNTAJE_CRUDO", type number}}),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Tipo numero a Puntaje",{{"PUNTAJE", "PUNTAJE_FINAL"}})
 				in
-				    #"Columna dividida"
+				    #"Columnas con nombre cambiado"
+
+	changedProperty = IsHidden
 
 	annotation PBI_NavigationStepName = Navegación
 

@@ -1,5 +1,10 @@
-relationship 48e3143a-1368-442b-b0f1-ffeddaadd02c
-	joinOnDateBehavior: datePartOnly
-	fromColumn: Base_ODM2025.FECHA_TITULO
-	toColumn: LocalDateTable_376d8a4c-ef96-4cc8-aaf6-b7087c983ac5.Date
+relationship AutoDetected_8aab1673-6f88-4cda-bf51-84a44ab743ff
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Hechos.Índice
+	toColumn: Base_ODM2025.Índice
+
+relationship 60ae873b-48cf-2786-6655-1c002f3743f0
+	fromColumn: Base_ODM2025.ESPECIALIDAD
+	toColumn: Oferta_por_Especialidad.Especialidad
 

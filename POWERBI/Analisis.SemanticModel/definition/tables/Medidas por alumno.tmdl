@@ -1,0 +1,41 @@
+table 'Medidas por alumno'
+	lineageTag: c2edf489-a715-4388-8c20-1808407c64c6
+
+	measure Cant_Resid_UNI_EXTR = CALCULATE([Total Residentes],Base_ODM2025[TIPO_UNI]= "E")
+		formatString: 0
+		lineageTag: c14d7c45-2819-487f-b695-af52dc4b4501
+
+	measure Cant_Resid_UNI_NACIONAL = CALCULATE([Total Residentes],Base_ODM2025[TIPO_UNI]= "N")
+		formatString: 0
+		lineageTag: 8fd2a8be-8438-4087-adbd-133b7b2b8a73
+
+	measure 'Total Residentes' = DISTINCTCOUNT(Base_ODM2025[DNI])
+		formatString: 0
+		lineageTag: 02660bac-ebc8-4be8-9034-81148ba836c8
+
+	measure Cant_Resid_ORIG_ARG = CALCULATE([Total Residentes],Base_ODM2025[ORIGEN ARG / EXTR]= "ARG")
+		formatString: 0
+		isHidden
+		lineageTag: 8f991996-6ed3-456d-b370-550315f33749
+
+		changedProperty = IsHidden
+
+	measure Cant_Resid_ORIG_EXTR = CALCULATE([Total Residentes],Base_ODM2025[ORIGEN ARG / EXTR]= "EXTR")
+		formatString: 0
+		isHidden
+		lineageTag: adff5fff-485b-4fda-a805-c4343c9ded81
+
+		changedProperty = IsHidden
+
+	partition 'Medidas por alumno' = m
+		mode: import
+		source =
+				let
+				    Origen = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Columna1 = _t]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Columna1", type text}}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Tipo cambiado",{"Columna1"})
+				in
+				    #"Columnas quitadas"
+
+	annotation PBI_ResultType = Table
+

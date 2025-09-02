@@ -4,52 +4,78 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 0,
+        "x": 226.38922799472275,
         "y": 0
       },
       "nodes": [
         {
           "location": {
-            "x": 191.10401170140818,
-            "y": 0
+            "x": 270.73710572205545,
+            "y": 18.257308702199886
           },
           "nodeIndex": "Hechos",
-          "nodeLineageTag": "5261863e-a835-4caa-bc41-ed764b31b2c7",
+          "nodeLineageTag": "702f924c-8361-45ae-b83d-eb04e6e4f53d",
           "size": {
-            "height": 347.52299110585693,
+            "height": 497.99153010653589,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 4
         },
         {
           "location": {
-            "x": 631.90006835329632,
-            "y": 0
+            "x": 590.67377026074814,
+            "y": 14.148738994063422
           },
           "nodeIndex": "Base_ODM2025",
           "nodeLineageTag": "af478c95-b92b-4fbd-8f0f-5f79fdd7187e",
           "size": {
-            "height": 613.8266580010303,
-            "width": 234
+            "height": 494.16932307306951,
+            "width": 297.83513775786378
           },
-          "zIndex": 0
+          "zIndex": 3
         },
         {
           "location": {
-            "x": 375.23084290915472,
-            "y": 385.82350435482209
+            "x": 946.2963260771927,
+            "y": 10.819890911193582
           },
-          "nodeIndex": "Medidas",
-          "nodeLineageTag": "f7856d6d-12b2-4df9-b71c-3dfb729af408",
+          "nodeIndex": "Oferta_por_Especialidad",
+          "nodeLineageTag": "51768963-55cd-4517-bad0-6e5682d42a4f",
           "size": {
-            "height": 420.05916115962941,
+            "height": 128,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 1219.077912446015,
+            "y": 274.14289687212323
+          },
+          "nodeIndex": "Medidas por puntaje",
+          "nodeLineageTag": "e777c51f-3b62-48bb-a9a9-f16cb3c6f68e",
+          "size": {
+            "height": 295.18176039784913,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 1211.0906755772626,
+            "y": 6.0091609579834824
+          },
+          "nodeIndex": "Medidas por alumno",
+          "nodeLineageTag": "c2edf489-a715-4388-8c20-1808407c64c6",
+          "size": {
+            "height": 240.91803609261675,
+            "width": 234
+          },
+          "zIndex": 2
         }
       ],
       "name": "Todas las tablas",
-      "zoomValue": 92.726348313929648,
+      "zoomValue": 73.76676067109203,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,

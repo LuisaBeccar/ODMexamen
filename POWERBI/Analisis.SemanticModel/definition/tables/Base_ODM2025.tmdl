@@ -33,19 +33,19 @@ table Base_ODM2025
 
 		annotation SummarizationSetBy = Automatic
 
-	column ORIGEN
+	column 'ORIGEN ARG / EXTR'
 		dataType: string
 		lineageTag: 98873137-7d83-4a5b-9383-bd321c51bdfe
 		summarizeBy: none
-		sourceColumn: ORIGEN
+		sourceColumn: ORIGEN ARG / EXTR
 
 		annotation SummarizationSetBy = Automatic
 
-	column UNI
+	column UNIVERSIDAD
 		dataType: string
 		lineageTag: 9971b2a7-4a2a-4267-98ee-2d48ef5184d3
 		summarizeBy: none
-		sourceColumn: UNI
+		sourceColumn: UNIVERSIDAD
 
 		annotation SummarizationSetBy = Automatic
 
@@ -75,24 +75,6 @@ table Base_ODM2025
 
 		annotation SummarizationSetBy = Automatic
 
-	column lat
-		dataType: string
-		lineageTag: a9ad774e-20af-498f-a89d-d7dafb345f9e
-		dataCategory: Latitude
-		summarizeBy: none
-		sourceColumn: lat
-
-		annotation SummarizationSetBy = Automatic
-
-	column long
-		dataType: string
-		lineageTag: 76d4eb43-4489-493c-bfba-1e1e29152fb8
-		dataCategory: Longitude
-		summarizeBy: none
-		sourceColumn: long
-
-		annotation SummarizationSetBy = Automatic
-
 	column CLASE_UNI
 		dataType: string
 		lineageTag: ad4e9db8-b70f-4951-923a-e5e0d453c09b
@@ -100,44 +82,6 @@ table Base_ODM2025
 		sourceColumn: CLASE_UNI
 
 		annotation SummarizationSetBy = Automatic
-
-	column FECHA_TITULO
-		dataType: dateTime
-		formatString: Long Date
-		lineageTag: 74b663a1-7fdb-4a45-abad-a512bfd13ac0
-		summarizeBy: none
-		sourceColumn: FECHA_TITULO
-
-		variation Variación
-			isDefault
-			relationship: 48e3143a-1368-442b-b0f1-ffeddaadd02c
-			defaultHierarchy: LocalDateTable_376d8a4c-ef96-4cc8-aaf6-b7087c983ac5.'Jerarquía de fechas'
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation UnderlyingDateTimeDataType = Date
-
-	column DIAS_DESDE_TITULO
-		dataType: int64
-		formatString: 0
-		lineageTag: 82ad4dbc-5861-4a84-a911-f6e763a1a1ae
-		summarizeBy: none
-		sourceColumn: DIAS_DESDE_TITULO
-
-		annotation SummarizationSetBy = User
-
-	column PROMEDIO_CARRERA
-		dataType: double
-		formatString: #,0
-		lineageTag: 4fab4a45-10a0-427f-b5ee-04b4f1c288ed
-		summarizeBy: none
-		sourceColumn: PROMEDIO_CARRERA
-
-		changedProperty = DataType
-
-		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isDecimal":true}
 
 	column ESPECIALIDAD
 		dataType: string
@@ -147,78 +91,23 @@ table Base_ODM2025
 
 		annotation SummarizationSetBy = Automatic
 
-	column NOTA_EXAMEN
+	column Índice
 		dataType: int64
 		formatString: 0
-		lineageTag: e6d56be0-a986-49b1-8086-7f41fa42b7e9
+		lineageTag: e7e32121-98f4-47bf-bdbf-22b0dedfd362
 		summarizeBy: none
-		sourceColumn: NOTA_EXAMEN
+		sourceColumn: Índice
 
-		annotation SummarizationSetBy = User
+		annotation SummarizationSetBy = Automatic
 
 	column COMPONENTE
 		dataType: int64
 		formatString: 0
-		lineageTag: 04a6aeba-1604-4741-8690-b6d6d2f9165a
-		summarizeBy: none
+		lineageTag: 4a0bd1b7-f176-4706-b008-3e232e6e0360
+		summarizeBy: sum
 		sourceColumn: COMPONENTE
 
-		annotation SummarizationSetBy = User
-
-	column PUNTAJE
-		dataType: int64
-		formatString: 0
-		lineageTag: e59252cd-1c18-4ca8-b2ff-970401eb4a77
-		summarizeBy: sum
-		sourceColumn: PUNTAJE
-
-		changedProperty = DataType
-
 		annotation SummarizationSetBy = Automatic
-
-	column PUNTAJE_CRUDO
-		dataType: string
-		lineageTag: d65403f7-74ac-4844-a703-f563462a4950
-		summarizeBy: none
-		sourceColumn: PUNTAJE_CRUDO
-
-		annotation SummarizationSetBy = Automatic
-
-	column ODM
-		dataType: int64
-		formatString: 0
-		lineageTag: 017727f3-b17e-43d4-a6d0-c5505e5eea07
-		summarizeBy: none
-		sourceColumn: ODM
-
-		annotation SummarizationSetBy = User
-
-	column ODM_CRUDO
-		dataType: int64
-		formatString: 0
-		lineageTag: 24fa64e5-770c-4ae6-bb42-b409af4088fe
-		summarizeBy: none
-		sourceColumn: ODM_CRUDO
-
-		annotation SummarizationSetBy = User
-
-	column ODM_GLOBAL
-		dataType: int64
-		formatString: 0
-		lineageTag: 1cc5378c-68d2-4d1e-9932-921a6af2e09e
-		summarizeBy: none
-		sourceColumn: ODM_GLOBAL
-
-		annotation SummarizationSetBy = User
-
-	column ODM_GLOBAL_CRUDO
-		dataType: int64
-		formatString: 0
-		lineageTag: 319a83c6-61d9-4dc9-8aa9-c06450a7a970
-		summarizeBy: none
-		sourceColumn: ODM_GLOBAL_CRUDO
-
-		annotation SummarizationSetBy = User
 
 	partition Base_ODM2025 = m
 		mode: import
@@ -235,9 +124,15 @@ table Base_ODM2025
 				    #"Valor reemplazado3" = Table.ReplaceValue(#"Valor reemplazado2","É","E",Replacer.ReplaceText,{"ESPECIALIDAD"}),
 				    #"Valor reemplazado4" = Table.ReplaceValue(#"Valor reemplazado3","Ó","O",Replacer.ReplaceText,{"ESPECIALIDAD"}),
 				    #"Valor reemplazado5" = Table.ReplaceValue(#"Valor reemplazado4","Ú","U",Replacer.ReplaceText,{"ESPECIALIDAD"}),
-				    #"Tipo cambiado1" = Table.TransformColumnTypes(#"Valor reemplazado5",{{"PROMEDIO_CARRERA", Currency.Type}, {"DIAS_DESDE_TITULO", Int64.Type}, {"FECHA_TITULO", type date}})
+				    #"Tipo cambiado1" = Table.TransformColumnTypes(#"Valor reemplazado5",{{"PROMEDIO_CARRERA", Currency.Type}, {"DIAS_DESDE_TITULO", Int64.Type}, {"FECHA_TITULO", type date}}),
+				    #"Índice agregado" = Table.AddIndexColumn(#"Tipo cambiado1", "Índice", 1, 1, Int64.Type),
+				    #"Columnas reordenadas" = Table.ReorderColumns(#"Índice agregado",{"Índice", "DNI", "NOMBRE", "APELLIDO", "SEXO", "ORIGEN", "UNI", "TIPO_UNI", "PAIS_UNI", "CIUDAD_UNI", "lat", "long", "CLASE_UNI", "FECHA_TITULO", "DIAS_DESDE_TITULO", "PROMEDIO_CARRERA", "ESPECIALIDAD", "NOTA_EXAMEN", "COMPONENTE", "PUNTAJE", "PUNTAJE_CRUDO", "ODM", "ODM_CRUDO", "ODM_GLOBAL", "ODM_GLOBAL_CRUDO"}),
+				    #"Otras columnas quitadas" = Table.SelectColumns(#"Columnas reordenadas",{"Índice", "DNI", "NOMBRE", "APELLIDO", "SEXO", "ORIGEN", "UNI", "TIPO_UNI", "PAIS_UNI", "CIUDAD_UNI", "CLASE_UNI", "ESPECIALIDAD", "COMPONENTE"}),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Otras columnas quitadas",{{"ORIGEN", "ORIGEN ARG / EXTR"}}),
+				    #"Valor reemplazado6" = Table.ReplaceValue(#"Columnas con nombre cambiado","UNIVERSIDAD ","",Replacer.ReplaceText,{"UNI"}),
+				    #"Columnas con nombre cambiado1" = Table.RenameColumns(#"Valor reemplazado6",{{"UNI", "UNIVERSIDAD"}})
 				in
-				    #"Tipo cambiado1"
+				    #"Columnas con nombre cambiado1"
 
 	annotation PBI_NavigationStepName = Navegación
 

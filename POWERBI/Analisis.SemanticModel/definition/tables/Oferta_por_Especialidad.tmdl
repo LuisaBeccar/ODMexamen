@@ -1,0 +1,40 @@
+table Oferta_por_Especialidad
+	lineageTag: 51768963-55cd-4517-bad0-6e5682d42a4f
+
+	column Especialidad
+		dataType: string
+		lineageTag: 8a65e19c-201a-4f9e-abfd-940e420253fc
+		summarizeBy: none
+		sourceColumn: Especialidad
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Oferta
+		dataType: int64
+		formatString: 0
+		lineageTag: ea55d710-5711-4022-9d98-25fe5ca091c8
+		summarizeBy: none
+		sourceColumn: Oferta
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Oferta_por_Especialidad = m
+		mode: import
+		source =
+				let
+				    Origen = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("fVPbbqQwDP2ViKdWqrQ7DJ3ZPrrBUEuQzDqhajXq///GOjEQoNW+IOTj2/E5ud+rG7YEkQnMp1n+LQQDHMlOA7QQqqeqqf9UX0/3yg7kBDajZFoQoL5cM+BwYm+Jp55y+KzpGjDkOnCRBvOwRMqoR0nX5tFb35ND6wevbU7X37s+PTpkGBLyrAg4DBEDlZLTKQM9hMgeXUResbPWeI4+zxfKkWEaIZbyRnNa5G24VpYWuC2jrhdt10UYxjLkshxk9K5E6x0RbfQOIZ2YBX/JcD4ruZWo+fzlzRps0XQw0jAv2uSSiY9L3gL9nVTT1FiVELa980E09ebm2dAIaUbS9tIUBQ+t0LXeMhUap2elHD3nMMi3L1WKvuHudBoUHeCWrRDRBXpXrVR474rks3PASYsxGWVuld121nwckWX7MqPRGWIztPEod+IZd6ZVhWCQLjIBZadx2nDMKOPBF99svvFwuZjD7pvffhb9UP5/Z64vKNkup3YU5nf7sBokxWyqZXyDVzFKBEvePZb9l1XESiIhfKx0fzwByLqLbt4sfyksu2AiOB+YV7s180v+oI2ku9Eb/kwdzvznToN/zc+7rl9EpK9/", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Postulantes = _t, Oferta = _t]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Postulantes", type text}, {"Oferta", Int64.Type}}),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Tipo cambiado",{{"Postulantes", "Especialidad"}})
+				in
+				    #"Columnas con nombre cambiado"
+
+	changedProperty = IsHidden
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+
