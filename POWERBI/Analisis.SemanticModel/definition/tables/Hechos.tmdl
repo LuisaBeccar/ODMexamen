@@ -48,7 +48,7 @@ table Hechos
 		annotation SummarizationSetBy = Automatic
 
 	column PROMEDIO_CARRERA
-		dataType: decimal
+		dataType: double
 		formatString: \$#,0.###############;-\$#,0.###############;\$#,0.###############
 		lineageTag: 66600df9-47a8-46fe-b61c-10a17101d7e7
 		summarizeBy: sum
@@ -106,34 +106,34 @@ table Hechos
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column ODM
+	column ODM_FINAL_ESP
 		dataType: int64
 		formatString: 0
 		lineageTag: 92bb319e-7215-41ab-b245-137c5a9fde9c
 		summarizeBy: sum
-		sourceColumn: ODM
+		sourceColumn: ODM_FINAL_ESP
 
 		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
-	column ODM_CRUDO
+	column ODM_CRUDO_ESP
 		dataType: int64
 		formatString: 0
 		lineageTag: 9076f605-9235-4990-a570-43266955301a
 		summarizeBy: sum
-		sourceColumn: ODM_CRUDO
+		sourceColumn: ODM_CRUDO_ESP
 
 		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
-	column ODM_GLOBAL
+	column ODM_GLOBAL_FINAL
 		dataType: int64
 		formatString: 0
 		lineageTag: b041c662-f37f-44a9-89b7-0b26b1d4b008
 		summarizeBy: sum
-		sourceColumn: ODM_GLOBAL
+		sourceColumn: ODM_GLOBAL_FINAL
 
 		changedProperty = IsHidden
 
@@ -173,9 +173,11 @@ table Hechos
 				    #"Tipo cambiado lat y long" = Table.TransformColumnTypes(#"Lat y Long cambio ""."" por "",""",{{"lat", type number}, {"long", type number}}),
 				    #"Nota_Examen % 10" = Table.TransformColumns(#"Tipo cambiado lat y long", {{"NOTA_EXAMEN", each _ / 10, type number}}),
 				    #"Tipo numero a Puntaje" = Table.TransformColumnTypes(#"Nota_Examen % 10",{{"PUNTAJE", type number}, {"PUNTAJE_CRUDO", type number}}),
-				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Tipo numero a Puntaje",{{"PUNTAJE", "PUNTAJE_FINAL"}})
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Tipo numero a Puntaje",{{"PUNTAJE", "PUNTAJE_FINAL"}}),
+				    #"Cambio tipo a Promedio_Carrera" = Table.TransformColumnTypes(#"Columnas con nombre cambiado",{{"PROMEDIO_CARRERA", type number}}),
+				    #"Columnas con nombre cambiado1" = Table.RenameColumns(#"Cambio tipo a Promedio_Carrera",{{"ODM", "ODM_FINAL_ESP"}, {"ODM_CRUDO", "ODM_CRUDO_ESP"}, {"ODM_GLOBAL", "ODM_GLOBAL_FINAL"}})
 				in
-				    #"Columnas con nombre cambiado"
+				    #"Columnas con nombre cambiado1"
 
 	changedProperty = IsHidden
 

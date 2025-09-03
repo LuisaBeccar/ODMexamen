@@ -6,7 +6,7 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
-annotation PBI_QueryOrder = ["Base_ODM2025","Hechos","Oferta_por_Especialidad","Medidas por puntaje","Medidas por alumno"]
+annotation PBI_QueryOrder = ["Base_ODM2025","Hechos","Oferta_por_Especialidad","Medidas por puntaje","Medidas por alumno","Medidas por Cupo","Medidas de Impacto"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
@@ -19,6 +19,8 @@ ref table Hechos
 ref table Oferta_por_Especialidad
 ref table 'Medidas por puntaje'
 ref table 'Medidas por alumno'
+ref table 'Medidas por Cupo'
+ref table 'Medidas de Impacto'
 
 ref cultureInfo es-ES
 

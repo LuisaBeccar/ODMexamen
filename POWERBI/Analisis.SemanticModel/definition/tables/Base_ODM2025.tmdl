@@ -3,25 +3,34 @@ table Base_ODM2025
 
 	column DNI
 		dataType: string
+		isHidden
 		lineageTag: d15d0813-5047-4f36-bf81-76466ba70203
 		summarizeBy: none
 		sourceColumn: DNI
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column NOMBRE
 		dataType: string
+		isHidden
 		lineageTag: 05e0bb1b-eba5-453c-9bef-9749ad4716f6
 		summarizeBy: none
 		sourceColumn: NOMBRE
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column APELLIDO
 		dataType: string
+		isHidden
 		lineageTag: 7137390e-6b6b-4d24-aaf1-c139db46168f
 		summarizeBy: none
 		sourceColumn: APELLIDO
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 

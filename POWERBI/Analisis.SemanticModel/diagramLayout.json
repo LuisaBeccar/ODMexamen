@@ -4,14 +4,14 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 226.38922799472275,
+        "x": 95.590277073936932,
         "y": 0
       },
       "nodes": [
         {
           "location": {
             "x": 270.73710572205545,
-            "y": 18.257308702199886
+            "y": 48.745353562581194
           },
           "nodeIndex": "Hechos",
           "nodeLineageTag": "702f924c-8361-45ae-b83d-eb04e6e4f53d",
@@ -24,7 +24,7 @@
         {
           "location": {
             "x": 590.67377026074814,
-            "y": 14.148738994063422
+            "y": 44.63678385444473
           },
           "nodeIndex": "Base_ODM2025",
           "nodeLineageTag": "af478c95-b92b-4fbd-8f0f-5f79fdd7187e",
@@ -37,7 +37,7 @@
         {
           "location": {
             "x": 946.2963260771927,
-            "y": 10.819890911193582
+            "y": 41.30793577157489
           },
           "nodeIndex": "Oferta_por_Especialidad",
           "nodeLineageTag": "51768963-55cd-4517-bad0-6e5682d42a4f",
@@ -49,8 +49,8 @@
         },
         {
           "location": {
-            "x": 1219.077912446015,
-            "y": 274.14289687212323
+            "x": 1316.2086278307595,
+            "y": 316.55927520080672
           },
           "nodeIndex": "Medidas por puntaje",
           "nodeLineageTag": "e777c51f-3b62-48bb-a9a9-f16cb3c6f68e",
@@ -62,8 +62,8 @@
         },
         {
           "location": {
-            "x": 1211.0906755772626,
-            "y": 6.0091609579834824
+            "x": 1313.3335338769937,
+            "y": 10.936491243432158
           },
           "nodeIndex": "Medidas por alumno",
           "nodeLineageTag": "c2edf489-a715-4388-8c20-1808407c64c6",
@@ -72,10 +72,36 @@
             "width": 234
           },
           "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 1329.471522108704,
+            "y": 254.47810064618528
+          },
+          "nodeIndex": "Medidas por Cupo",
+          "nodeLineageTag": "d2bdc078-51d1-40a3-ad9b-dba2b0e1aeae",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1342.7344163866485,
+            "y": 252.04776925875592
+          },
+          "nodeIndex": "Medidas de Impacto",
+          "nodeLineageTag": "4c4294b2-2534-46c9-ad30-03546635ed40",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "Todas las tablas",
-      "zoomValue": 73.76676067109203,
+      "zoomValue": 68.123012016116249,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,
