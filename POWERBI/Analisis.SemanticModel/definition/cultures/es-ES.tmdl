@@ -3177,15 +3177,15 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "hecho_has_medida_total_residentes": {
+			    "base_ODM2025_has_medida_total_residentes": {
 			      "Binding": {
-			        "ConceptualEntity": "Hechos"
+			        "ConceptualEntity": "Base_ODM2025"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "hecho": {
+			        "base_ODM2025": {
 			          "Target": {
-			            "Entity": "hecho"
+			            "Entity": "base_ODM2025"
 			          }
 			        },
 			        "medida.total_residentes": {
@@ -3198,7 +3198,7 @@ cultureInfo es-ES
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "hecho"
+			              "Role": "base_ODM2025"
 			            },
 			            "Object": {
 			              "Role": "medida.total_residentes"
@@ -3206,7 +3206,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hechos_have_total_residentes"
+			          "ID": "base_ODM2025_have_total_residentes"
 			        }
 			      ]
 			    },

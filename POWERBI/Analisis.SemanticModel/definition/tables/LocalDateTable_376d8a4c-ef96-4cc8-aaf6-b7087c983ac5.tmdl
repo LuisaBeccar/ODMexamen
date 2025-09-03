@@ -6,7 +6,6 @@ table LocalDateTable_376d8a4c-ef96-4cc8-aaf6-b7087c983ac5
 	column Date
 		dataType: dateTime
 		isHidden
-		formatString: General Date
 		lineageTag: 9a6026e1-00aa-446f-9e8e-e0990ba27b3e
 		dataCategory: PaddedDateTableDates
 		summarizeBy: none
@@ -18,7 +17,6 @@ table LocalDateTable_376d8a4c-ef96-4cc8-aaf6-b7087c983ac5
 	column Año = YEAR([Date])
 		dataType: int64
 		isHidden
-		formatString: 0
 		lineageTag: ee08ebbb-c239-4b22-851b-8caa590c7398
 		dataCategory: Years
 		summarizeBy: none
@@ -30,7 +28,6 @@ table LocalDateTable_376d8a4c-ef96-4cc8-aaf6-b7087c983ac5
 	column NroMes = MONTH([Date])
 		dataType: int64
 		isHidden
-		formatString: 0
 		lineageTag: 40e20dff-0d5b-4639-9043-42b4bc9810c5
 		dataCategory: MonthOfYear
 		summarizeBy: none
@@ -54,7 +51,6 @@ table LocalDateTable_376d8a4c-ef96-4cc8-aaf6-b7087c983ac5
 	column NroTrimestre = INT(([NroMes] + 2) / 3)
 		dataType: int64
 		isHidden
-		formatString: 0
 		lineageTag: c79c8b40-9f92-484d-a6fb-225feae9d5dd
 		dataCategory: QuarterOfYear
 		summarizeBy: none
@@ -78,7 +74,6 @@ table LocalDateTable_376d8a4c-ef96-4cc8-aaf6-b7087c983ac5
 	column Día = DAY([Date])
 		dataType: int64
 		isHidden
-		formatString: 0
 		lineageTag: 7ddced8b-9845-42ae-88a4-ff4ff9723120
 		dataCategory: DayOfMonth
 		summarizeBy: none
