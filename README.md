@@ -21,6 +21,12 @@ De manera similar cree *universidades.csv*. Fue todo un desafío ya que no solo 
 
 
 ## Analisis
+
+# enfoque original: 
+- Comparar el orden de merito definitivo ODM vs como hubiera quedado si no se hubiera asignado los 5 puntos a universidades argentinas ODM_CRUDO. Solo visualizando la posicion de los postulantes de universidad argentina o extranjera. para eso se creo la variable PUNTAJE_CRUDO, restandole el COMPONENTE al PUNTAJE. Para cad aespecialidad se uso ese PUNTAJE_CRUDO para crear ODM_CRUDO y luego el puntaje se uso para crar el ODM_GLOBAL y el puntaje crudo para el ODM_GLOBAL_CRUDO.
+Se creo un indicador que mide cuanto se separa el orden de merito definitivo con el odm crudo y que tan cerca está del odm extremo (que seria el igual a poner a todos los que estudiaron en universidades argentinas arriba en el orden de los que estudiaron en universidades extranjeras)
+
+## tradicional
 Del archivo geoespacial se crea un mapa donde se puede ver cuantos postulantes hay en cada región. 
 
 En cuanto a los datos **cualitativos**, querremos caracterizar en orden jerarquico: 
@@ -33,7 +39,7 @@ En cuanto a los datos **cualitativos**, querremos caracterizar en orden jerarqui
   + varones y mujeres, 
   + argentinos y extranjeros, 
   + universidad en argentina vs universidad extranjera 
-- Comparar el orden de merito definitivo ODM vs como hubiera quedado si no se hubiera asignado los 5 puntos a universidades argentinas. Solo visualizando la posicion de cada postulante en cuanto a si fue universidad argentina o extranjera
+
 
 
 Para datos **cuantitativos** podrían ser varios enfoques: 
