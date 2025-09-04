@@ -1,6 +1,7 @@
 
 # EXAMEN UNICO DE RESIDENCIAS MEDICAS 2025
-En este trabajo me propongo analizar la informacion que se puede recabar a partir del orden de merito establecido a partir del examen de residencias médicas.
+En este trabajo me propongo analizar la informacion que se puede recabar a partir del orden de merito establecido a partir del examen de residencias médicas. <br>
+[Un poco de contexto](https://docs.google.com/document/d/1e26gSZ5d6f15_OUe8-Te_XGt8p-8-QilXmxNJ96a44c/edit?usp=sharing)
 
 ## Base de datos: Base_ODM2025.csv
 
