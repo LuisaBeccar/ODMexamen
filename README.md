@@ -51,6 +51,8 @@ Luego
 - Hay diferencia estadisticamente significativa entre el promedio de varones y mujeres ? 
 - Hay diferencia estadísticamente significativa entre la nota media de quienes estudiaron en argentina vs quienes estudiaron en el exterior ?
 
+
+# (INCONCISTENCIAS EN DATOS FUENTE)[https://docs.google.com/document/d/1XMWdNzBpl-Tw5Lj3P3snbjPwlDUCqnMgbz2sC459_pA/edit?usp=sharing]
 - Hay relación entre la cantidad de días desde el titulo hasta el examen y la nota obtenida en el mismo? 
 - Hay alguna tendencia entre la eleccion de especialidad y la fecha de título ?
 
