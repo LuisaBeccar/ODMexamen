@@ -1,0 +1,51 @@
+table 'Medidas por puntaje'
+	lineageTag: e777c51f-3b62-48bb-a9a9-f16cb3c6f68e
+
+	measure Prom_Puntaje_Final = AVERAGE(Hechos[PUNTAJE_FINAL])
+		lineageTag: fd08d349-83e5-4bf5-8c70-75fb71beaa20
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Prom_Puntaje_Crudo = AVERAGE(Hechos[PUNTAJE_CRUDO])
+		lineageTag: 849fb481-d556-4685-8708-e7e46562e194
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Prom_EX_M = CALCULATE([Prom_EX], Base_ODM2025[SEXO] = "M")
+		lineageTag: 0af4bd0f-5471-4877-b350-b3cb890550aa
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Prom_EX_F = CALCULATE([Prom_EX], Base_ODM2025[SEXO] = "F")
+		lineageTag: ad7e4b52-33f3-46a8-8fd2-e1119b2c16b8
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Prom_EX = AVERAGE(Hechos[NOTA_EXAMEN])
+		lineageTag: 4dfc71da-da19-4650-aed1-e07e65199ef5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Prom_Dif_punt_Cr_vs_Final = [Prom_Puntaje_Final]-[Prom_Puntaje_Crudo]
+		lineageTag: 4e62c13b-dc58-4577-8659-67ddcde31e2a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Prom_Carrera = AVERAGE(Hechos[PROMEDIO_CARRERA])
+		formatString: \$#,0.###############;-\$#,0.###############;\$#,0.###############
+		lineageTag: c7cb84aa-5f21-4b03-9723-094502d3e258
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
+
+	partition 'Medidas por puntaje' = m
+		mode: import
+		source =
+				let
+				    Origen = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Columna1 = _t]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Columna1", type text}}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Tipo cambiado",{"Columna1"})
+				in
+				    #"Columnas quitadas"
+
+	annotation PBI_ResultType = Table
+

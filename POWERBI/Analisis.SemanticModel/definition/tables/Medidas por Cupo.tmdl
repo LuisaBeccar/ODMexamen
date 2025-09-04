@@ -1,0 +1,84 @@
+table 'Medidas por Cupo'
+	lineageTag: d2bdc078-51d1-40a3-ad9b-dba2b0e1aeae
+
+	measure En_Cupo_Final_Ext =
+			
+			VAR Cupo = MAX(Oferta_por_Especialidad[Oferta])
+			RETURN
+			CALCULATE(
+			    COUNTROWS(Base_ODM2025),
+			    Base_ODM2025[TIPO_UNI] = "E",
+			    FILTER(
+			        Base_ODM2025,
+			        RELATED(Hechos[ODM_FINAL_ESP]) <= Cupo
+			    )
+			)
+		formatString: 0
+		lineageTag: c3b4a796-a93a-47ea-bf39-d91bfca44890
+
+	measure En_Cupo_Crudo_Nac =
+			
+			VAR Cupo = MAX(Oferta_por_Especialidad[Oferta])
+			RETURN
+			CALCULATE(
+			    COUNTROWS(Base_ODM2025),
+			    Base_ODM2025[TIPO_UNI] = "N",
+			    FILTER(
+			        Base_ODM2025,
+			        RELATED(Hechos[ODM_CRUDO_ESP]) <= Cupo
+			    )
+			)
+		formatString: 0
+		lineageTag: 807cdab3-6d6d-483d-9e83-35449d7a4d0d
+
+	measure En_Cupo_Final_Nac =
+			
+			VAR Cupo = MAX(Oferta_por_Especialidad[Oferta])
+			RETURN
+			CALCULATE(
+			    COUNTROWS(Base_ODM2025),
+			    Base_ODM2025[TIPO_UNI] = "N",
+			    FILTER(
+			        Base_ODM2025,
+			        RELATED(Hechos[ODM_FINAL_ESP]) <= Cupo
+			    )
+			)
+		formatString: 0
+		lineageTag: 6bf993b1-fd08-4237-8a3c-fe933ba304fd
+
+	measure En_Cupo_Crudo_Ext =
+			
+			VAR Cupo = MAX(Oferta_por_Especialidad[Oferta])
+			RETURN
+			CALCULATE(
+			    COUNTROWS(Base_ODM2025),
+			    Base_ODM2025[TIPO_UNI] = "E",
+			    FILTER(
+			        Base_ODM2025,
+			        RELATED(Hechos[ODM_CRUDO_ESP]) <= Cupo
+			    )
+			)
+		formatString: 0
+		lineageTag: b9a268db-3f7b-4414-9872-6d34aec9c9b9
+
+	measure 'Cupo Maximo' =
+			
+			CALCULATE (
+			    MAX ( Oferta_por_Especialidad[Oferta] ),
+			    KEEPFILTERS ( VALUES ( Base_ODM2025[ESPECIALIDAD] ) )
+			)
+		formatString: 0
+		lineageTag: 7305db4d-b896-4304-8911-2d24211eae1a
+
+	partition 'Medidas por Cupo' = m
+		mode: import
+		source =
+				let
+				    Origen = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Columna1 = _t]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Columna1", type text}}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Tipo cambiado",{"Columna1"})
+				in
+				    #"Columnas quitadas"
+
+	annotation PBI_ResultType = Table
+
