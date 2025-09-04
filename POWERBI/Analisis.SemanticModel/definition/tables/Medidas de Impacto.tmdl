@@ -1,0 +1,23 @@
+table 'Medidas de Impacto'
+	lineageTag: 4c4294b2-2534-46c9-ad30-03546635ed40
+
+	measure Beneficiados_ARG = [En_Cupo_Final_Nac] - [En_Cupo_Crudo_Nac]
+		formatString: 0
+		lineageTag: 2dabbe64-82d4-4322-9adb-c580892d3b39
+
+	measure Sin_Cubrir = [Cupo Maximo] - [Total Residentes]
+		formatString: 0
+		lineageTag: f35ab7c3-719a-4d5b-8e4a-53a9fea73226
+
+	partition 'Medidas de Impacto' = m
+		mode: import
+		source =
+				let
+				    Origen = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Columna1 = _t]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Columna1", type text}}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Tipo cambiado",{"Columna1"})
+				in
+				    #"Columnas quitadas"
+
+	annotation PBI_ResultType = Table
+
