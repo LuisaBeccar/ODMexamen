@@ -55,7 +55,7 @@ Luego
 - Hay relación entre la cantidad de días desde el titulo hasta el examen y la nota obtenida en el mismo? 
 - Hay alguna tendencia entre la eleccion de especialidad y la fecha de título ?
 
-  ## Geo
-  Con los archivos *CrearGeoDF.py* se genera *datos.gpkg* y a partir de este archivo con coordenadas geolocalizables, con *mapa.py* se genera el mapa interactivo: *mapa_registros.html*
+## Geo
+Con los archivos *CrearGeoDF.py* se genera *datos.gpkg* y a partir de este archivo con coordenadas geolocalizables, con *mapa.py* se genera el mapa interactivo: *mapa_registros.html*
 
-  # [INCONCISTENCIAS EN DATOS FUENTE](https://docs.google.com/document/d/1XMWdNzBpl-Tw5Lj3P3snbjPwlDUCqnMgbz2sC459_pA/edit?usp=sharing)
+# [INCONCISTENCIAS EN DATOS FUENTE](https://docs.google.com/document/d/1XMWdNzBpl-Tw5Lj3P3snbjPwlDUCqnMgbz2sC459_pA/edit?usp=sharing)
