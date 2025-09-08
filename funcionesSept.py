@@ -94,9 +94,30 @@ def obtener_ODM2025(url_pdf: str, nombre_archivo: str = "ODM2025.pdf") -> pd.Dat
 ## Join odm (Nombre, Apellido) con ODM, a partir del DNI
 def mergeODFS (df1, df2):
   # df1 con columnas: DNI, NOMBRE, APELLIDO (dfodm)
-  # df2 con columnas incluyendo DNI, NOMBRE, APELLIDO, PUNTAJE_CRUDO, ODM_CRUDO, PROMEDIO, ESPECIALIDAD (dfODM2025)
+  # df2 con columnas incluyendo DNI, PUNTAJE_CRUDO, ODM_CRUDO, PROMEDIO, ESPECIALIDAD (dfODM2025)
   # Hacer merge con df1 para traer NOMBRE y APELLIDO
   df = df2.merge(df1[['DNI', 'NOMBRE', 'APELLIDO']], on='DNI', how='left')
+
+  faltantes = pd.DataFrame([
+    {"DNI": "41459766", "NOMBRE": "Valentina", "APELLIDO": "Basiglio Godoy",
+     "Institución formadora": "UNIVERSIDAD NACIONAL DE LA MATANZA",
+        "Promedio": 6.39,
+        "Fecha de Expedición de Título": "20-02-2025",
+        "Especialidad": "Terapia intensiva",
+        "Puntaje obtenido en el examen": 73,
+        "Tipo Uni": "N",
+        "Componente": 5,
+        "Puntaje Final": 47.89, "ODM": 17},
+    {"DNI": "33004858", "NOMBRE": "José Luis", "APELLIDO": "Rodriguez",
+     "Institución formadora": "NACIONAL ARTURO JAURETCHE",
+        "Promedio": 7.18,
+        "Fecha de Expedición de Título": "20-03-2025",
+        "Especialidad": "Anestesiología",
+        "Puntaje obtenido en el examen": 66,
+        "Tipo Uni": "N",
+        "Componente": "5",
+        "Puntaje Final": 45.18, "ODM": 421}])
+  df = pd.concat([df, faltantes], ignore_index=True)
 
   return df
 #-----------------

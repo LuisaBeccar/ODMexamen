@@ -1,4 +1,4 @@
-from funciones import obtener_odm_provisorio, obtener_ODM2025, mergeODFS, limpiar_df, mapear_sexo_por_primer_nombre, asignar_origen, ODM_crudo, ODM_global_crudo, ODM_global, mapear_universidades
+from funcionesSept import obtener_odm_provisorio, obtener_ODM2025, mergeODFS, limpiar_df, mapear_sexo_por_primer_nombre, asignar_origen, ODM_crudo, ODM_global_crudo, ODM_global, mapear_universidades
 
 if __name__ == "__main__":
     # Lógica principal
@@ -34,3 +34,4 @@ if __name__ == "__main__":
  
     df = df[nuevo_orden]
     df.to_csv('Base_ODM2025.csv', index=False)
+    print(df.info())
