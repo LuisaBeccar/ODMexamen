@@ -287,23 +287,31 @@ Procedo a desempatarlos con la siguiente funcion: """
 
 import pandas as pd
 
+import pandas as pd
+import numpy as np
+
 def desempate_ODM(df):
     """
-    Reescribe la columna ODM para eliminar empates.
+    Reescribe la columna ODM para eliminar empates, por especialidad.
 
     Parámetros:
-    df (pd.DataFrame): DataFrame de entrada que contiene la columna 'ODM'.
+    df (pd.DataFrame): DataFrame de entrada que contiene las columnas 'ODM' y 'ESPECIALIDAD'.
 
     Retorna:
-    pd.DataFrame: DataFrame con la columna 'ODM' actualizada con posiciones únicas.
+    pd.DataFrame: DataFrame con la columna 'ODM' actualizada con posiciones únicas por especialidad.
     """
-        
-    # Se ordena el DataFrame por el valor especialidad, ODM actual de ODM y DNI Asncendente
-    # Esto garantiza un orden único y reproducible para cada postulante
-    df_ordenado = df.sort_values(by=['ESPECIALIDAD','ODM', 'DNI'], ascending=[True, True, True])
+    # 1. Agrega una columna temporal con el índice original para usarla como desempate.
+    df['indice_original'] = df.index
     
-    # Se reasigna la columna ODM con un ranking único basado en el nuevo orden
-    df_ordenado['ODM'] = range(1, len(df_ordenado) + 1)
+    # 2. Ordena y reasigna el ranking dentro de cada grupo de especialidad.
+    df_ordenado = df.sort_values(by=['ESPECIALIDAD', 'ODM', 'indice_original'], ascending=[True, True, True])
     
+    # 3. Reescribe la columna 'ODM' utilizando `cumcount()` para asignar un ranking único
+    #    dentro de cada grupo de especialidad.
+    df_ordenado['ODM'] = df_ordenado.groupby('ESPECIALIDAD').cumcount() + 1
+    
+    # 4. Elimina la columna temporal.
+    df_ordenado = df_ordenado.drop('indice_original', axis=1)
     df = df_ordenado
+    
     return df
