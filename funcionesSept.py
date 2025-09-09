@@ -228,8 +228,8 @@ def asignar_origen(df, columna_dni='DNI'):
 ## ODM_CRUDO: sin los 5 puntos mas a TIPO_UNI == N (o sea con puntaje crudo)
 def ODM_crudo(df):
     df = df.sort_values(
-        by=['ESPECIALIDAD', 'PUNTAJE_CRUDO', 'NOTA_EXAMEN', 'PROMEDIO_CARRERA'],
-        ascending=[True, False, False, False]
+        by=['ESPECIALIDAD', 'PUNTAJE_CRUDO', 'NOTA_EXAMEN', 'PROMEDIO_CARRERA', 'DNI'],
+        ascending=[True, False, False, False, True]).reset_index(drop=True
     )
     df['ODM_CRUDO'] = df.groupby('ESPECIALIDAD').cumcount() + 1
     return df
@@ -237,8 +237,8 @@ def ODM_crudo(df):
 ## ODM_GLOBAL_CRUDO sin agrupar especialidades, con puntaje crudo
 def ODM_global_crudo(df):
     df = df.sort_values(
-        by=['PUNTAJE_CRUDO', 'NOTA_EXAMEN', 'PROMEDIO_CARRERA'],
-        ascending=[False, False, False]).reset_index(drop=True)
+        by=['PUNTAJE_CRUDO', 'NOTA_EXAMEN', 'PROMEDIO_CARRERA', 'DNI'],
+        ascending=[False, False, False,True]).reset_index(drop=True)
     df['ODM_GLOBAL_CRUDO'] = df.index + 1
     return df
 
@@ -273,4 +273,41 @@ def mapear_universidades(df, file_name, nombre_col_original='UNIVERSIDAD'):
     # Eliminar la columna original de universidad
     df = df.drop(columns=[nombre_col_original])
 
+    return df
+
+#-----------------
+""" Como el ODM original tiene valores repetidos en varias especialidades, por mismo puntaje, 
+misma nota de examen, mismo promedio; y necesito desempatarlos para el analisis posterior. Para los casos con 
+estos hallazgos dentro del rango de oferta de cargos:
+Clinica medica (185), 
+Pediatria y pediatricas articuladas (254), 
+Tocoginecología (107), 
+Psiquiatria (79) Intensiva,
+Procedo a desempatarlos con la siguiente funcion: """
+
+import pandas as pd
+
+def desempate_ODM(df):
+    """
+    Reescribe la columna ODM para eliminar empates.
+
+    Parámetros:
+    df (pd.DataFrame): DataFrame de entrada que contiene la columna 'ODM'.
+
+    Retorna:
+    pd.DataFrame: DataFrame con la columna 'ODM' actualizada con posiciones únicas.
+    """
+    # Se agrega una columna temporal con el índice original para usarla como desempate
+    df['indice_original'] = df.index
+    
+    # Se ordena el DataFrame por el valor actual de ODM y luego por el índice original
+    # Esto garantiza un orden único y reproducible para cada postulante
+    df_ordenado = df.sort_values(by=['ODM', 'indice_original'], ascending=[True, True])
+    
+    # Se reasigna la columna ODM con un ranking único basado en el nuevo orden
+    df_ordenado['ODM'] = range(1, len(df_ordenado) + 1)
+    
+    # Se elimina la columna temporal
+    df_ordenado = df_ordenado.drop('indice_original', axis=1)
+    
     return df
