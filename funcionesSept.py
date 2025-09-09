@@ -109,7 +109,7 @@ def mergeODFS (df1, df2):
         "Componente": 5,
         "Puntaje Final": 47.89, "ODM": 17},
     {"DNI": "33004858", "NOMBRE": "José Luis", "APELLIDO": "Rodriguez",
-     "Institución formadora": "NACIONAL ARTURO JAURETCHE",
+     "Institución formadora": "UNIVERSIDAD NACIONAL ARTURO JAURETCHE",
         "Promedio": 7.18,
         "Fecha de Expedición de Título": "20-03-2025",
         "Especialidad": "Anestesiología",
@@ -228,8 +228,8 @@ def asignar_origen(df, columna_dni='DNI'):
 ## ODM_CRUDO: sin los 5 puntos mas a TIPO_UNI == N (o sea con puntaje crudo)
 def ODM_crudo(df):
     df = df.sort_values(
-        by=['ESPECIALIDAD', 'PUNTAJE_CRUDO', 'NOTA_EXAMEN', 'PROMEDIO_CARRERA', 'DNI'],
-        ascending=[True, False, False, False, True]
+        by=['ESPECIALIDAD', 'PUNTAJE_CRUDO', 'NOTA_EXAMEN', 'PROMEDIO_CARRERA'],
+        ascending=[True, False, False, False]
     )
     df['ODM_CRUDO'] = df.groupby('ESPECIALIDAD').cumcount() + 1
     return df
@@ -237,8 +237,8 @@ def ODM_crudo(df):
 ## ODM_GLOBAL_CRUDO sin agrupar especialidades, con puntaje crudo
 def ODM_global_crudo(df):
     df = df.sort_values(
-        by=['PUNTAJE_CRUDO', 'NOTA_EXAMEN', 'PROMEDIO_CARRERA', 'DNI'],
-        ascending=[False, False, False, True]).reset_index(drop=True)
+        by=['PUNTAJE_CRUDO', 'NOTA_EXAMEN', 'PROMEDIO_CARRERA'],
+        ascending=[False, False, False]).reset_index(drop=True)
     df['ODM_GLOBAL_CRUDO'] = df.index + 1
     return df
 
