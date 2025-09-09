@@ -297,17 +297,13 @@ def desempate_ODM(df):
     Retorna:
     pd.DataFrame: DataFrame con la columna 'ODM' actualizada con posiciones únicas.
     """
-    # Se agrega una columna temporal con el índice original para usarla como desempate
-    df['indice_original'] = df.index
-    
-    # Se ordena el DataFrame por el valor actual de ODM y luego por el índice original
+        
+    # Se ordena el DataFrame por el valor especialidad, ODM actual de ODM y DNI Asncendente
     # Esto garantiza un orden único y reproducible para cada postulante
-    df_ordenado = df.sort_values(by=['ODM', 'indice_original'], ascending=[True, True])
+    df_ordenado = df.sort_values(by=['ESPECIALIDAD','ODM', 'DNI'], ascending=[True, True, True])
     
     # Se reasigna la columna ODM con un ranking único basado en el nuevo orden
     df_ordenado['ODM'] = range(1, len(df_ordenado) + 1)
     
-    # Se elimina la columna temporal
-    df_ordenado = df_ordenado.drop('indice_original', axis=1)
-    
+    df = df_ordenado
     return df
