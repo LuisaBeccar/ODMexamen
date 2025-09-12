@@ -119,6 +119,11 @@ def mergeODFS (df1, df2):
         "Puntaje Final": 45.18, "ODM": 421}])
   df = pd.concat([df, faltantes], ignore_index=True)
 
+  # aca cambio el TIPO_UNI, COMPONENTE y PUNTAJE de la chica de FASTA (universidad de mar del plata, argentina)
+  df.loc[df['DNI'] == "95454984", ['Tipo Uni', 'Componente', 'Puntaje Final']] = ['N', "5", 43.11]
+  # mas adelante, cuando se reordene el ODM por especialidad, puntaje, nota examen, promedio y dni, se le asignara el ODM correcto 
+  # (que igual no se le otorgo en la realidad, pero que al quedar fuera del rango de cargos ofrecidos y no impactaria en nada, 
+  # quizas para readjudicacion, pero no pareciera)
   return df
 #-----------------
 
@@ -284,11 +289,6 @@ Pediatria y pediatricas articuladas (254),
 Tocoginecología (107), 
 Psiquiatria (79) Intensiva,
 Procedo a desempatarlos con la siguiente funcion: """
-
-import pandas as pd
-
-import pandas as pd
-import numpy as np
 
 def desempate_ODM(df):
     """
