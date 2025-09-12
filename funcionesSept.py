@@ -121,9 +121,12 @@ def mergeODFS (df1, df2):
 
   # aca cambio el TIPO_UNI, COMPONENTE y PUNTAJE de la chica de FASTA (universidad de mar del plata, argentina)
   df.loc[df['DNI'] == "95454984", ['Tipo Uni', 'Componente', 'Puntaje Final']] = ['N', "5", 43.11]
-  # mas adelante, cuando se reordene el ODM por especialidad, puntaje, nota examen, promedio y dni, se le asignara el ODM correcto 
-  # (que igual no se le otorgo en la realidad, pero que al quedar fuera del rango de cargos ofrecidos y no impactaria en nada, 
-  # quizas para readjudicacion, pero no pareciera)
+
+
+  # no pude hasta el momento modificarle el ODM de manera cambiando todo los que esten entre su nuevo puesto que seria 350 
+  # y el 417 donde se encontrana en el ODM publicado. Decido no cambiarselo ya que no se le reconocio la queja y ademas  viendo el orden o cargos,
+  # igual quedaba fuera del rango de cargos ofrecidos 
+  
   return df
 #-----------------
 

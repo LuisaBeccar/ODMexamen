@@ -2,7 +2,7 @@ from funcionesSept import obtener_odm_provisorio, obtener_ODM2025, mergeODFS, li
 
 if __name__ == "__main__":
     # Lógica principal
-    print("Iniciando análisis")
+    print("Iniciando procesamiento de datos...")
    
     urlodm = "https://raw.githubusercontent.com/LuisaBeccar/ODMexamen/main/generar_data/odm_provisorio.pdf"
     dfodmp = obtener_odm_provisorio(urlodm)
