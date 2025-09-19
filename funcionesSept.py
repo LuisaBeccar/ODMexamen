@@ -3,6 +3,9 @@ import pandas as pd
 import pdfplumber
 import requests
 #-----------------
+""" AQUI CORRIJO EL DESEMPATE DE ODM PARA QUE SEA PUNTAJE, NOTA DE EXAMNE, FECHA DE TITULO (va a ganar el que se recibio hace más tiempo: FECHA MENOR, ORDEN ASCENDENTE) Y DNI (ORDEN ASCENDENTE) , TRUE. "
+ESO LO PONEMOS ES ODM CRUDO, ODM GLOBAL CRUDO Y ODM GLOBAL."""
+#####
 
 ## Obtener ODM provisorio (con nombres separados de apellidos)
 """(Solo necesito las columnas DNI, Nombre, Apellido. 
@@ -236,8 +239,8 @@ def asignar_origen(df, columna_dni='DNI'):
 ## ODM_CRUDO: sin los 5 puntos mas a TIPO_UNI == N (o sea con puntaje crudo)
 def ODM_crudo(df):
     df = df.sort_values(
-        by=['ESPECIALIDAD', 'PUNTAJE_CRUDO', 'NOTA_EXAMEN', 'PROMEDIO_CARRERA', 'DNI'],
-        ascending=[True, False, False, False, True]).reset_index(drop=True
+        by=['ESPECIALIDAD', 'PUNTAJE_CRUDO', 'NOTA_EXAMEN', 'FECHA_TITULO', 'DNI'],
+        ascending=[True, False, False, True, True]).reset_index(drop=True
     )
     df['ODM_CRUDO'] = df.groupby('ESPECIALIDAD').cumcount() + 1
     return df
@@ -245,16 +248,16 @@ def ODM_crudo(df):
 ## ODM_GLOBAL_CRUDO sin agrupar especialidades, con puntaje crudo
 def ODM_global_crudo(df):
     df = df.sort_values(
-        by=['PUNTAJE_CRUDO', 'NOTA_EXAMEN', 'PROMEDIO_CARRERA', 'DNI'],
-        ascending=[False, False, False,True]).reset_index(drop=True)
+        by=['PUNTAJE_CRUDO', 'NOTA_EXAMEN', 'FECHA_TITULO', 'DNI'],
+        ascending=[False, False, True,True]).reset_index(drop=True)
     df['ODM_GLOBAL_CRUDO'] = df.index + 1
     return df
 
 ## ODM_GLOBAL con puntaje que se usi con 5 puntos nacionales, sin agrupar especialidades
 def ODM_global(df):
     df = df.sort_values(
-        by=['PUNTAJE', 'NOTA_EXAMEN', 'PROMEDIO_CARRERA', 'DNI'],
-        ascending=[False, False, False, True]).reset_index(drop=True)
+        by=['PUNTAJE', 'NOTA_EXAMEN', 'FECHA_TITULO', 'DNI'],
+        ascending=[False, False, True, True]).reset_index(drop=True)
     df['ODM_GLOBAL'] = df.index + 1
     return df
 
